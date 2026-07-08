@@ -1,0 +1,905 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="FRENESIM — Desfile-festa de moda autoral e alternativa em Goiânia, GO. 2ª edição: 14 de novembro de 2026. Passarela, performance, música ao vivo, gastronomia." />
+  <meta name="theme-color" content="#090909" />
+  <title>FRENESIM — Desfile-Festa de Moda Autoral | 14.11.2026 | Goiânia, GO</title>
+  <link rel="icon" type="image/png" href="assets/images/logo/simbolo-azul.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body>
+
+  <!-- ============ NAVEGAÇÃO ============ -->
+  <nav id="nav" role="navigation" aria-label="Navegação principal">
+    <a href="#hero" class="nav-logo" aria-label="FRENESIM — Início">
+      <img src="assets/images/logo/logo-branco.png" alt="FRENESIM" class="nav-logo-img" id="nav-logo" />
+    </a>
+
+    <ul class="nav-links" role="list">
+      <li><a href="#sobre">Sobre</a></li>
+      <li><a href="#primeira-edicao">1ª Edição</a></li>
+      <li><a href="#ingressos">Ingressos</a></li>
+      <li><a href="#edital">Edital</a></li>
+      <li><a href="#patrocinadores">Parceiros</a></li>
+      <li><a href="#contato">Contato</a></li>
+    </ul>
+
+    <a href="#edital" class="nav-cta" id="nav-cta-top">Inscrever marca</a>
+
+    <button class="nav-hamburger" id="hamburger" aria-label="Abrir menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <!-- Menu mobile overlay -->
+  <div class="nav-mobile" id="nav-mobile" role="dialog" aria-label="Menu de navegação">
+    <button class="nav-mobile-close" id="nav-mobile-close" aria-label="Fechar menu">✕</button>
+    <nav>
+      <ul style="display:flex;flex-direction:column;align-items:center;gap:32px;list-style:none;" role="list">
+        <li><a href="#sobre" class="nav-mobile-link">Sobre</a></li>
+        <li><a href="#primeira-edicao" class="nav-mobile-link">1ª Edição</a></li>
+        <li><a href="#ingressos" class="nav-mobile-link">Ingressos</a></li>
+        <li><a href="#edital" class="nav-mobile-link">Edital</a></li>
+        <li><a href="#patrocinadores" class="nav-mobile-link">Parceiros</a></li>
+        <li><a href="#contato" class="nav-mobile-link">Contato</a></li>
+      </ul>
+    </nav>
+  </div>
+
+  <main>
+
+    <!-- ============ HERO — Cor principal: Azul ============ -->
+    <section id="hero" aria-label="Hero — FRENESIM 2ª Edição">
+      <div class="hero-accent-top" aria-hidden="true"></div>
+      <div class="hero-accent-corner" aria-hidden="true"></div>
+
+      <div class="hero-content">
+        <!-- Pré-label -->
+        <div class="hero-pre">
+          <span class="tag tag-azul">2ª Edição</span>
+          <span class="tag tag-verde" style="background:transparent;color:var(--verde);border:1px solid var(--verde);">2026</span>
+          <span class="line" aria-hidden="true"></span>
+        </div>
+
+        <!-- Logo oficial como elemento principal do hero -->
+        <div class="hero-logo-wrap">
+          <img src="assets/images/logo/logo-branco.png"
+               alt="Frenesim"
+               class="hero-logo-img"
+               id="hero-logo" />
+        </div>
+
+        <!-- Barra de dados -->
+        <div class="hero-bottom">
+          <div class="hero-date-block">
+            <span class="hero-date-label">Data</span>
+            <span class="hero-date">14 de Novembro de 2026</span>
+            <span class="hero-city">Goiânia &middot; GO &middot; Brasil</span>
+          </div>
+
+          <p class="hero-desc">
+            Desfile-festa de moda autoral e alternativa.<br>
+            Passarela &middot; Performance &middot; Música ao vivo &middot; Gastronomia
+          </p>
+
+          <div class="hero-ctas">
+            <button class="btn btn-disabled" disabled aria-label="Ingressos em breve">
+              Ingressos em breve
+            </button>
+            <a href="#edital" class="btn btn-outline-branco" id="cta-inscrever-hero">
+              Inscrever minha marca →
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Faixa de cores arco-íris -->
+      <div class="hero-stripe" aria-hidden="true">
+        <span style="background:#FF0098"></span>
+        <span style="background:#FFF800"></span>
+        <span style="background:#0000FF"></span>
+        <span style="background:#00FFBF"></span>
+        <span style="background:#FF0031"></span>
+        <span style="background:#FF66C1"></span>
+        <span style="background:#F4A525"></span>
+      </div>
+    </section>
+
+    <!-- ============ MARQUEE ============ -->
+    <div class="marquee-wrap" aria-hidden="true">
+      <div class="marquee-track" id="marquee-track">
+        <span>FRENESIM</span><span class="dot">·</span>
+        <span>MODA AUTORAL</span><span class="dot">·</span>
+        <span>PASSARELA</span><span class="dot">·</span>
+        <span>PERFORMANCE</span><span class="dot">·</span>
+        <span>GOIÂNIA</span><span class="dot">·</span>
+        <span>14 NOV 2026</span><span class="dot">·</span>
+        <span>DA PASSARELA PRA PISTA</span><span class="dot">·</span>
+        <span>MÚSICA AO VIVO</span><span class="dot">·</span>
+        <span>GASTRONOMIA</span><span class="dot">·</span>
+        <span>FRENESIM</span><span class="dot">·</span>
+        <span>MODA AUTORAL</span><span class="dot">·</span>
+        <span>PASSARELA</span><span class="dot">·</span>
+        <span>PERFORMANCE</span><span class="dot">·</span>
+        <span>GOIÂNIA</span><span class="dot">·</span>
+        <span>14 NOV 2026</span><span class="dot">·</span>
+        <span>DA PASSARELA PRA PISTA</span><span class="dot">·</span>
+        <span>MÚSICA AO VIVO</span><span class="dot">·</span>
+        <span>GASTRONOMIA</span><span class="dot">·</span>
+      </div>
+    </div>
+
+    <!-- ============ SOBRE — Cor principal: Amarelo ============ -->
+    <section id="sobre" class="section-pad" aria-labelledby="sobre-titulo">
+      <div class="container">
+        <div class="sobre-grid">
+          <!-- Coluna esquerda: Título + Texto -->
+          <div>
+            <div class="section-header">
+              <span class="tag tag-amarelo">Sobre o FRENESIM</span>
+            </div>
+
+            <h1 class="t-h1 sobre-titulo reveal" id="sobre-titulo">
+              PASSARELA.<br>
+              PISTA.<br>
+              <em>PERFORMANCE.</em>
+            </h1>
+
+            <div class="sobre-paragrafos reveal reveal-d1">
+              <p class="t-body">
+                O FRENESIM é uma plataforma independente que conecta criadores locais ao público
+                via experiência urbana. A passarela vira manifesto — festivo, cênico, coletivo.
+              </p>
+              <p class="t-body">
+                Não tem vitrine de moda corporativa aqui. Tem marca com proposta, corpo com
+                atitude, curadoria com critério.
+              </p>
+            </div>
+
+            <!-- Equipe -->
+            <div class="equipe-list reveal reveal-d2" style="margin-top: 48px;">
+              <div class="equipe-row">
+                <span class="equipe-label">Criação &amp; Direção</span>
+                <span class="equipe-nomes">Laura Calais &amp; Thayna Alves Morais</span>
+              </div>
+              <div class="equipe-row">
+                <span class="equipe-label">Cidade</span>
+                <span class="equipe-nomes">Goiânia, GO — Brasil</span>
+              </div>
+              <div class="equipe-row">
+                <span class="equipe-label">Formato</span>
+                <span class="equipe-nomes">Desfile-Festa Anual</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Coluna direita: blocos de destaque -->
+          <div class="sobre-right">
+            <!-- Prêmio UFG -->
+            <div class="sobre-premio reveal reveal-d1">
+              <span class="label">Reconhecimento</span>
+              <p>Reconhecido por Inovação pelo UFG Fashion Business</p>
+            </div>
+
+            <!-- Critério curatorial -->
+            <div class="sobre-criterio reveal reveal-d2">
+              <span class="label">Critério Curatorial</span>
+              <p class="t-body">
+                Curadoria por comissão multidisciplinar. Consideramos: identidade conceitual,
+                alinhamento estético, enraizamento e pertencimento — com valorização de lideranças
+                de grupos historicamente sub-representados — impacto cultural, maturidade produtiva
+                e consistência da proposta. Não é perfil comercial, é visão de moda.
+              </p>
+            </div>
+
+            <!-- Equipe: Criação -->
+            <div class="reveal reveal-d3">
+              <span class="equipe-secao-label">Criação</span>
+              <div class="equipe-cards">
+
+                <div class="equipe-card">
+                  <div class="equipe-foto" aria-label="Foto Laura Calais">
+                    <span class="equipe-foto-placeholder" aria-hidden="true">
+                      <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                        <circle cx="20" cy="14" r="8" stroke="currentColor" stroke-width="1.5"/>
+                        <path d="M4 38c0-8.837 7.163-16 16-16s16 7.163 16 16" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                      </svg>
+                    </span>
+                  </div>
+                  <div class="equipe-card-info">
+                    <p class="equipe-card-nome">Laura Calais</p>
+                    <p class="equipe-card-cargo">Criadora &amp; Diretora</p>
+                  </div>
+                </div>
+
+                <div class="equipe-card">
+                  <div class="equipe-foto" aria-label="Foto Thayna Alves Morais">
+                    <span class="equipe-foto-placeholder" aria-hidden="true">
+                      <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                        <circle cx="20" cy="14" r="8" stroke="currentColor" stroke-width="1.5"/>
+                        <path d="M4 38c0-8.837 7.163-16 16-16s16 7.163 16 16" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                      </svg>
+                    </span>
+                  </div>
+                  <div class="equipe-card-info">
+                    <p class="equipe-card-nome">Thayna Alves Morais</p>
+                    <p class="equipe-card-cargo">Criadora &amp; Diretora</p>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+
+            <!-- Equipe: Coordenação -->
+            <div class="reveal reveal-d4">
+              <span class="equipe-secao-label">Coordenação</span>
+              <div class="equipe-cards equipe-cards-coordenacao">
+
+                <div class="equipe-card">
+                  <div class="equipe-foto" aria-label="Foto Atojui">
+                    <span class="equipe-foto-placeholder" aria-hidden="true">
+                      <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                        <circle cx="20" cy="14" r="8" stroke="currentColor" stroke-width="1.5"/>
+                        <path d="M4 38c0-8.837 7.163-16 16-16s16 7.163 16 16" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                      </svg>
+                    </span>
+                  </div>
+                  <div class="equipe-card-info">
+                    <p class="equipe-card-nome">Atojui</p>
+                    <p class="equipe-card-cargo">Coordenação</p>
+                  </div>
+                </div>
+
+                <div class="equipe-card">
+                  <div class="equipe-foto" aria-label="Foto Cecília Rizette">
+                    <span class="equipe-foto-placeholder" aria-hidden="true">
+                      <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                        <circle cx="20" cy="14" r="8" stroke="currentColor" stroke-width="1.5"/>
+                        <path d="M4 38c0-8.837 7.163-16 16-16s16 7.163 16 16" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                      </svg>
+                    </span>
+                  </div>
+                  <div class="equipe-card-info">
+                    <p class="equipe-card-nome">Cecília Rizette</p>
+                    <p class="equipe-card-cargo">Coordenação</p>
+                  </div>
+                </div>
+
+                <div class="equipe-card">
+                  <div class="equipe-foto" aria-label="Foto Giovanna Souza">
+                    <span class="equipe-foto-placeholder" aria-hidden="true">
+                      <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                        <circle cx="20" cy="14" r="8" stroke="currentColor" stroke-width="1.5"/>
+                        <path d="M4 38c0-8.837 7.163-16 16-16s16 7.163 16 16" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                      </svg>
+                    </span>
+                  </div>
+                  <div class="equipe-card-info">
+                    <p class="equipe-card-nome">Giovanna Souza</p>
+                    <p class="equipe-card-cargo">Coordenação</p>
+                  </div>
+                </div>
+
+                <div class="equipe-card">
+                  <div class="equipe-foto" aria-label="Foto Hartman Ortiz">
+                    <span class="equipe-foto-placeholder" aria-hidden="true">
+                      <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                        <circle cx="20" cy="14" r="8" stroke="currentColor" stroke-width="1.5"/>
+                        <path d="M4 38c0-8.837 7.163-16 16-16s16 7.163 16 16" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                      </svg>
+                    </span>
+                  </div>
+                  <div class="equipe-card-info">
+                    <p class="equipe-card-nome">Hartman Ortiz</p>
+                    <p class="equipe-card-cargo">Coordenação</p>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="divider"></div>
+
+    <!-- ============ 1ª EDIÇÃO — Cor principal: Vermelho ============ -->
+    <section id="primeira-edicao" class="section-pad" aria-labelledby="edicao-titulo">
+      <div class="container">
+        <!-- Header -->
+        <div class="edicao-header">
+          <span class="edicao-ano-bg" aria-hidden="true">2024</span>
+          <div class="edicao-header-info">
+            <span class="tag tag-rosa">1ª Edição</span>
+            <h2 class="t-h2 reveal" id="edicao-titulo" style="color:var(--branco);">
+              Novembro de 2024
+            </h2>
+          </div>
+        </div>
+
+        <!-- Números de impacto -->
+        <div class="numeros-grid reveal">
+          <div class="numero-item">
+            <span class="numero-valor">+300</span>
+            <span class="numero-label">Pessoas pagantes</span>
+          </div>
+          <div class="numero-item">
+            <span class="numero-valor">6</span>
+            <span class="numero-label">Marcas locais</span>
+          </div>
+          <div class="numero-item">
+            <span class="numero-valor">165K</span>
+            <span class="numero-label">Alcance social</span>
+          </div>
+          <div class="numero-item">
+            <span class="numero-valor">+600</span>
+            <span class="numero-label">Looks na passarela</span>
+          </div>
+        </div>
+
+        <!-- Conteúdo -->
+        <div class="edicao-conteudo">
+          <!-- Ficha Técnica -->
+          <div class="reveal">
+            <span class="programacao-label">Ficha Técnica</span>
+            <div class="ficha-tecnica" role="table" aria-label="Ficha técnica da 1ª edição">
+
+              <div class="ficha-row" role="row">
+                <span class="ficha-cat" role="rowheader">Local</span>
+                <span class="ficha-val" role="cell">Base Ambiente</span>
+              </div>
+
+              <div class="ficha-row" role="row">
+                <span class="ficha-cat" role="rowheader">Público</span>
+                <span class="ficha-val" role="cell">+300 pessoas pagantes &middot; Marcas locais de Goiânia</span>
+              </div>
+
+              <div class="ficha-row" role="row">
+                <span class="ficha-cat" role="rowheader">Intervenção Visual</span>
+                <span class="ficha-val" role="cell">VJ Lucas Trabachini</span>
+              </div>
+
+              <div class="ficha-row" role="row">
+                <span class="ficha-cat" role="rowheader">Atrações Musicais</span>
+                <span class="ficha-val" role="cell">DJ Nalú &middot; DJ KFnoBeat</span>
+              </div>
+
+              <div class="ficha-row" role="row">
+                <span class="ficha-cat" role="rowheader">Gastronomia</span>
+                <span class="ficha-val" role="cell">No local do evento</span>
+              </div>
+
+              <div class="ficha-row ficha-row-destaque" role="row">
+                <span class="ficha-cat" role="rowheader">Patrocinador</span>
+                <span class="ficha-val" role="cell">TREME-TREME</span>
+              </div>
+
+              <div class="ficha-row" role="row">
+                <span class="ficha-cat" role="rowheader">Apoio</span>
+                <span class="ficha-val" role="cell">Tank Cheio</span>
+              </div>
+
+            </div>
+          </div>
+
+          <!-- Galeria -->
+          <div class="reveal reveal-d1">
+            <span class="galeria-label">Galeria — 1ª Edição</span>
+            <div class="galeria-grid" id="galeria" role="list" aria-label="Fotos da 1ª edição">
+              <div class="galeria-item" role="listitem" aria-label="Foto 1 da 1ª edição">
+                <div class="galeria-placeholder">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" aria-hidden="true">
+                    <rect x="3" y="3" width="18" height="18" rx="1"/>
+                    <circle cx="9" cy="9" r="2"/>
+                    <path d="m3 16 5-5 4 4 3-3 6 6"/>
+                  </svg>
+                  <span>Em breve</span>
+                </div>
+              </div>
+              <div class="galeria-item" role="listitem" aria-label="Foto 2 da 1ª edição">
+                <div class="galeria-placeholder">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" aria-hidden="true">
+                    <rect x="3" y="3" width="18" height="18" rx="1"/>
+                    <circle cx="9" cy="9" r="2"/>
+                    <path d="m3 16 5-5 4 4 3-3 6 6"/>
+                  </svg>
+                  <span>Em breve</span>
+                </div>
+              </div>
+              <div class="galeria-item" role="listitem" aria-label="Foto 3 da 1ª edição">
+                <div class="galeria-placeholder">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" aria-hidden="true">
+                    <rect x="3" y="3" width="18" height="18" rx="1"/>
+                    <circle cx="9" cy="9" r="2"/>
+                    <path d="m3 16 5-5 4 4 3-3 6 6"/>
+                  </svg>
+                  <span>Em breve</span>
+                </div>
+              </div>
+              <div class="galeria-item" role="listitem" aria-label="Foto 4 da 1ª edição">
+                <div class="galeria-placeholder">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" aria-hidden="true">
+                    <rect x="3" y="3" width="18" height="18" rx="1"/>
+                    <circle cx="9" cy="9" r="2"/>
+                    <path d="m3 16 5-5 4 4 3-3 6 6"/>
+                  </svg>
+                  <span>Em breve</span>
+                </div>
+              </div>
+              <div class="galeria-item" role="listitem" aria-label="Foto 5 da 1ª edição">
+                <div class="galeria-placeholder">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" aria-hidden="true">
+                    <rect x="3" y="3" width="18" height="18" rx="1"/>
+                    <circle cx="9" cy="9" r="2"/>
+                    <path d="m3 16 5-5 4 4 3-3 6 6"/>
+                  </svg>
+                  <span>Em breve</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="divider"></div>
+
+    <!-- ============ INGRESSOS — Cor principal: Magenta ============ -->
+    <section id="ingressos" class="section-pad" aria-labelledby="ingressos-titulo">
+      <div class="ingressos-deco" aria-hidden="true">
+        <span class="ingressos-deco-text">INGRESSOS</span>
+      </div>
+
+      <div class="container">
+        <div class="ingressos-inner">
+          <!-- Badge piscando -->
+          <div class="ingressos-badge" role="status" aria-live="polite">
+            <span class="dot" aria-hidden="true"></span>
+            <span class="t-label" style="color:var(--cinza-text);">Ingressos em breve</span>
+          </div>
+
+          <!-- Título -->
+          <div class="ingressos-titulo">
+            <h2 class="t-h1 reveal" id="ingressos-titulo">
+              A VENDA ABRE<br>
+              <em>EM BREVE.</em>
+            </h2>
+          </div>
+
+          <!-- Subtexto -->
+          <p class="t-body ingressos-sub reveal reveal-d1">
+            Ingressos disponíveis na plataforma <strong>Cheers</strong>.
+            Cadastre seu e-mail ou Instagram para ser avisado assim que abrir.
+          </p>
+
+          <!-- Formulário avise-me -->
+          <form class="avise-form reveal reveal-d2" id="avise-form" novalidate aria-label="Formulário avise-me de ingressos">
+            <div class="form-row">
+              <input
+                type="email"
+                id="avise-email"
+                class="form-input"
+                placeholder="seu@email.com"
+                autocomplete="email"
+                aria-label="Seu e-mail"
+              />
+              <input
+                type="text"
+                id="avise-instagram"
+                class="form-input"
+                placeholder="@seuinstagram"
+                autocomplete="off"
+                aria-label="Seu Instagram"
+              />
+            </div>
+            <button type="submit" class="btn btn-magenta" style="width:100%;" id="btn-avise-me">
+              Avise-me quando abrir
+            </button>
+            <p class="form-hint">Sem spam. Só te avisamos quando a venda abrir.</p>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <div class="divider"></div>
+
+    <!-- ============ EDITAL — Cor principal: Bordô, apoio: Mostarda ============ -->
+    <section id="edital" class="section-pad" aria-labelledby="edital-titulo">
+      <div class="container">
+        <div class="section-header">
+          <span class="tag tag-amarelo">Edital 2026</span>
+          <h2 class="t-h2 reveal" id="edital-titulo">Participação de Marcas</h2>
+        </div>
+
+        <!-- Grid info + cronograma -->
+        <div class="edital-grid">
+          <!-- Timeline do edital -->
+          <div class="reveal">
+            <div class="edital-timeline" role="table" aria-label="Cronograma do edital">
+              <div class="tl-row" role="row">
+                <div class="tl-data" role="rowheader">02/08</div>
+                <div class="tl-desc" role="cell">Publicação do edital</div>
+              </div>
+              <div class="tl-row" role="row">
+                <div class="tl-data" role="rowheader">03/08</div>
+                <div class="tl-desc" role="cell">
+                  <span>Abertura das inscrições</span>
+                </div>
+              </div>
+              <div class="tl-row" role="row">
+                <div class="tl-data" role="rowheader">03/09</div>
+                <div class="tl-desc" role="cell">
+                  <span>Encerramento</span>
+                  <small>até 23h59</small>
+                </div>
+              </div>
+              <div class="tl-row" role="row">
+                <div class="tl-data" role="rowheader">09/09</div>
+                <div class="tl-desc" role="cell">Resultado</div>
+              </div>
+              <div class="tl-row" role="row">
+                <div class="tl-data" role="rowheader">Até 21/09</div>
+                <div class="tl-desc" role="cell">
+                  <span>Contratação dos pacotes</span>
+                </div>
+              </div>
+              <div class="tl-row destaque" role="row">
+                <div class="tl-data" role="rowheader">14/11</div>
+                <div class="tl-desc" role="cell">
+                  <strong>Dia do evento</strong>
+                </div>
+              </div>
+              <div class="tl-row" role="row">
+                <div class="tl-data" role="rowheader">Nov</div>
+                <div class="tl-desc" role="cell">
+                  <span>Entrega de mídia</span>
+                  <small>fotos, fashion film, material editorial</small>
+                </div>
+              </div>
+            </div>
+
+            <!-- Vagas -->
+            <div class="vagas-display reveal reveal-d1">
+              <div class="vaga-box">
+                <span class="vaga-num">6</span>
+                <span class="vaga-desc">Vestuário</span>
+              </div>
+              <div class="vaga-box">
+                <span class="vaga-num">3</span>
+                <span class="vaga-desc">Acessórios</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Info geral -->
+          <div class="reveal reveal-d1">
+            <div class="edital-info-box">
+              <p>
+                <strong>Inscrição 100% gratuita</strong> · feita online por formulário.
+              </p>
+              <p>
+                Pagamento do pacote: <strong>Pix</strong> ou
+                <strong>crédito em até 12x</strong> (com taxa da maquininha).
+              </p>
+              <p style="margin-top:8px;font-size:0.78rem;">
+                <span class="highlight">✓</span> Critério: design autoral, alinhamento estético,
+                enraizamento e pertencimento, impacto cultural, maturidade produtiva,
+                consistência da proposta.
+              </p>
+            </div>
+
+            <!-- Símbolo da marca como elemento decorativo -->
+            <div style="margin-top:32px;display:flex;justify-content:flex-end;opacity:0.15;" aria-hidden="true">
+              <img src="assets/images/logo/simbolo-branco.png" alt="" style="height:180px;width:auto;filter:invert(1);" />
+            </div>
+          </div>
+        </div>
+
+        <!-- Tabs de pacotes -->
+        <div class="tabs-wrap" role="tablist" aria-label="Categoria de pacotes">
+          <button class="tab-btn active"
+                  role="tab"
+                  id="tab-vestuario"
+                  aria-controls="panel-vestuario"
+                  aria-selected="true"
+                  data-tab="vestuario">
+            Vestuário
+          </button>
+          <button class="tab-btn"
+                  role="tab"
+                  id="tab-acessorios"
+                  aria-controls="panel-acessorios"
+                  aria-selected="false"
+                  data-tab="acessorios">
+            Acessórios
+          </button>
+        </div>
+
+        <!-- Pacotes Vestuário -->
+        <div class="pacotes-panel active"
+             id="panel-vestuario"
+             role="tabpanel"
+             aria-labelledby="tab-vestuario">
+          <div class="pacotes-grid">
+
+            <!-- Vestuário básico -->
+            <article class="pacote-card reveal" aria-label="Pacote Vestuário">
+              <div>
+                <p class="pacote-nome">Pacote Vestuário</p>
+                <p class="pacote-nome-oficial">Pacote Essencial (apenas desfile)</p>
+              </div>
+              <p class="pacote-preco" aria-label="R$ 175,00">R$ 175,00</p>
+              <div>
+                <p class="pacote-inclui-label">O que inclui</p>
+                <ul class="pacote-inclui" role="list">
+                  <li>8 looks completos no desfile oficial</li>
+                  <li>Inclusão no mapa do evento</li>
+                  <li>Presença na campanha pré-evento</li>
+                  <li>Fotos de passarela pós-evento</li>
+                  <li>Participação no fashion film institucional</li>
+                  <li>1 ingresso + 1 credenciamento</li>
+                </ul>
+              </div>
+            </article>
+
+            <!-- Vestuário Plus — destaque -->
+            <article class="pacote-card destaque reveal reveal-d1" aria-label="Pacote Vestuário Plus — mais escolhido">
+              <div>
+                <p class="pacote-nome">Pacote Vestuário Plus</p>
+                <p class="pacote-nome-oficial">Pacote Expansão (desfile + exposição)</p>
+              </div>
+              <p class="pacote-preco" aria-label="R$ 350,00">R$ 350,00</p>
+              <div>
+                <p class="pacote-inclui-label">O que inclui</p>
+                <ul class="pacote-inclui" role="list">
+                  <li>Tudo do Pacote Vestuário</li>
+                  <li>Pop-up store no local do evento</li>
+                  <li>26 imagens de ensaio editorial exclusivo</li>
+                  <li>2 ingressos + 2 credenciamentos</li>
+                </ul>
+              </div>
+            </article>
+
+            <!-- Vestuário Premium -->
+            <article class="pacote-card reveal reveal-d2" aria-label="Pacote Vestuário Premium">
+              <div>
+                <p class="pacote-nome">Pacote Vestuário Premium</p>
+                <p class="pacote-nome-oficial">Pacote Exclusivo (desfile + exposição + mídia)</p>
+              </div>
+              <p class="pacote-preco" aria-label="R$ 600,00">R$ 600,00</p>
+              <div>
+                <p class="pacote-inclui-label">O que inclui</p>
+                <ul class="pacote-inclui" role="list">
+                  <li>Tudo do Pacote Vestuário Plus</li>
+                  <li>Feature exclusivo pré-evento</li>
+                  <li>Mini-documentário/fashion film exclusivo da marca</li>
+                  <li>48 imagens de ensaio editorial</li>
+                  <li>3 ingressos + 2 credenciamentos</li>
+                </ul>
+              </div>
+            </article>
+          </div>
+        </div>
+
+        <!-- Pacotes Acessórios -->
+        <div class="pacotes-panel"
+             id="panel-acessorios"
+             role="tabpanel"
+             aria-labelledby="tab-acessorios"
+             hidden>
+          <div class="pacotes-grid-2">
+
+            <!-- Acessórios básico -->
+            <article class="pacote-card reveal" aria-label="Pacote Acessórios">
+              <div>
+                <p class="pacote-nome">Pacote Acessórios</p>
+                <p class="pacote-nome-oficial">Pacote Essencial</p>
+              </div>
+              <p class="pacote-preco" aria-label="R$ 150,00">R$ 150,00</p>
+              <div>
+                <p class="pacote-inclui-label">O que inclui</p>
+                <ul class="pacote-inclui" role="list">
+                  <li>Curadoria de peças para até 16 looks</li>
+                  <li>Presença na campanha digital pré-evento</li>
+                  <li>Fotos pós-evento</li>
+                  <li>Participação no fashion film institucional</li>
+                  <li>1 ingresso + 1 credenciamento</li>
+                </ul>
+              </div>
+            </article>
+
+            <!-- Acessórios Plus -->
+            <article class="pacote-card destaque reveal reveal-d1" aria-label="Pacote Acessórios Plus">
+              <div>
+                <p class="pacote-nome">Pacote Acessórios Plus</p>
+                <p class="pacote-nome-oficial">Pacote Expansão</p>
+              </div>
+              <p class="pacote-preco" aria-label="R$ 300,00">R$ 300,00</p>
+              <div>
+                <p class="pacote-inclui-label">O que inclui</p>
+                <ul class="pacote-inclui" role="list">
+                  <li>Tudo do Pacote Acessórios</li>
+                  <li>Inclusão no mapa do evento</li>
+                  <li>Pop-up store no local</li>
+                  <li>Feature exclusivo pré-evento</li>
+                  <li>Material fotográfico editorial individualizado</li>
+                  <li>2 ingressos + 2 credenciamentos</li>
+                </ul>
+              </div>
+            </article>
+          </div>
+        </div>
+
+        <!-- Rodapé edital: CTAs -->
+        <div class="edital-footer">
+          <div class="edital-footer-info">
+            <p>Inscrições gratuitas · online · <strong>03/08 a 03/09/2026</strong></p>
+            <p>Pagamento: <strong>Pix</strong> ou <strong>crédito em até 12x</strong></p>
+          </div>
+          <div class="edital-footer-ctas">
+            <a href="#" class="btn btn-bordo" id="btn-inscrever-marca" aria-label="Inscrever minha marca">
+              Inscrever minha marca →
+            </a>
+            <a href="#" class="btn btn-outline-branco" id="btn-download-edital" aria-label="Baixar edital em PDF">
+              ↓ Baixar edital (PDF)
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="divider"></div>
+
+    <!-- ============ PATROCINADORES — Cor principal: Laranja ============ -->
+    <section id="patrocinadores" class="section-pad" aria-labelledby="patrocinadores-titulo">
+      <div class="container">
+        <div class="section-header">
+          <span class="tag tag-laranja">Patrocínio &amp; Parceiros</span>
+          <h2 class="t-h2 reveal" id="patrocinadores-titulo">Quem faz acontecer</h2>
+        </div>
+
+        <div class="patrocinadores-grid">
+
+          <!-- Glimmer — destaque -->
+          <div class="patrocinador-card destaque reveal">
+            <div class="patrocinador-logo">
+              <span class="patrocinador-logo-text">GLIMMER</span>
+            </div>
+            <div class="patrocinador-info">
+              <span class="patrocinador-cat">Parceiro Oficial de Bebidas</span>
+              <p class="patrocinador-nome">Glimmer</p>
+              <p class="patrocinador-desc">
+                Bebida low-calorie com e sem álcool. Ativação e open bar no FRENESIM 2ª edição.
+                Pra quem quer curtir sem pesada.
+              </p>
+            </div>
+          </div>
+
+          <!-- Slot vazio -->
+          <div class="patrocinador-card patrocinador-slot reveal reveal-d1" aria-label="Espaço para novo patrocinador">
+            <div class="patrocinador-logo" style="border:1px dashed var(--cinza-2);background:transparent;">
+              <span style="font-family:var(--font-label);font-size:1.5rem;color:var(--cinza-3);">+</span>
+            </div>
+            <div class="slot-inner">
+              <span class="slot-label">Sua marca aqui</span>
+              <a href="mailto:frenesimdf@gmail.com" class="slot-link">Fale com a gente →</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="divider"></div>
+
+    <!-- ============ LOCAL — Cor: Azul (repetida) ============ -->
+    <section id="local" class="section-pad" aria-labelledby="local-titulo">
+      <div class="container">
+        <div class="local-grid">
+          <div>
+            <div class="section-header">
+              <span class="tag tag-azul">Local</span>
+              <h2 class="t-h2 reveal" id="local-titulo">Goiânia, GO</h2>
+            </div>
+
+            <div class="local-badge">
+              <span class="local-badge-dot" aria-hidden="true"></span>
+              <span class="t-label" style="color:var(--cinza-text);">A ser anunciado em breve</span>
+            </div>
+
+            <p class="t-body local-desc reveal reveal-d1">
+              O espaço da 2ª edição ainda não foi confirmado.
+              Siga o <strong>@frenesimm</strong> para ser o primeiro a saber.
+            </p>
+          </div>
+
+          <div class="local-map-placeholder reveal reveal-d2">
+            <div class="local-map-inner">
+              <svg class="local-map-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" aria-hidden="true">
+                <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/>
+                <circle cx="12" cy="9" r="2.5"/>
+              </svg>
+              <p>Local a definir</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="divider"></div>
+
+    <!-- ============ CONTATO ============ -->
+    <section id="contato" class="section-pad" aria-labelledby="contato-titulo">
+      <div class="container">
+        <div class="section-header">
+          <span class="tag tag-outline">Contato &amp; Redes</span>
+          <h2 class="t-h2 reveal" id="contato-titulo">Fale com a gente</h2>
+        </div>
+
+        <div class="contato-grid">
+          <div class="contato-item reveal">
+            <span class="contato-label">E-mail</span>
+            <a href="mailto:frenesimdf@gmail.com" class="contato-link">
+              frenesimdf@gmail.com
+            </a>
+          </div>
+          <div class="contato-item reveal reveal-d1">
+            <span class="contato-label">Instagram</span>
+            <a href="https://instagram.com/frenesimm"
+               class="contato-link"
+               target="_blank"
+               rel="noopener noreferrer">
+              @frenesimm
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ============ FOOTER ============ -->
+  <footer>
+    <div class="footer-stripe" aria-hidden="true">
+      <span style="background:#FF0098"></span>
+      <span style="background:#FFF800"></span>
+      <span style="background:#0000FF"></span>
+      <span style="background:#00FFBF"></span>
+      <span style="background:#FF0031"></span>
+      <span style="background:#FF66C1"></span>
+      <span style="background:#F4A525"></span>
+    </div>
+    <div class="container">
+      <div class="footer-inner">
+        <a href="#hero" aria-label="FRENESIM — Voltar ao topo">
+          <img src="assets/images/logo/logo-branco.png"
+               alt="FRENESIM"
+               class="footer-logo" />
+        </a>
+
+        <p class="footer-credito">
+          Um projeto de <strong>Laura Calais</strong> &amp; <strong>Thayna Alves Morais</strong>
+          &nbsp;·&nbsp; Goiânia, GO &nbsp;·&nbsp; 2024–2026
+        </p>
+
+        <nav class="footer-nav" aria-label="Links do rodapé">
+          <a href="mailto:frenesimdf@gmail.com">E-mail</a>
+          <a href="https://instagram.com/frenesimm" target="_blank" rel="noopener noreferrer">Instagram</a>
+          <a href="#edital">Edital</a>
+        </nav>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Toast de confirmação -->
+  <div class="toast" id="toast" role="alert" aria-live="assertive" aria-atomic="true"></div>
+
+  <script type="module" src="assets/js/data.js"></script>
+  <script type="module" src="assets/js/main.js"></script>
+</body>
+</html>
