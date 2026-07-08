@@ -7,11 +7,11 @@
 // 1. NAVEGAÇÃO
 // =====================
 function initNav() {
-  const nav      = document.getElementById('nav');
-  const navLogo  = document.getElementById('nav-logo');
+  const nav = document.getElementById('nav');
+  const navLogo = document.getElementById('nav-logo');
   const hamburger = document.getElementById('hamburger');
   const navMobile = document.getElementById('nav-mobile');
-  const closeBtn  = document.getElementById('nav-mobile-close');
+  const closeBtn = document.getElementById('nav-mobile-close');
   const mobileLinks = document.querySelectorAll('.nav-mobile-link');
 
   // Scroll: adiciona classe .scrolled
@@ -89,7 +89,7 @@ function initMarquee() {
 // =====================
 function initTabs() {
   const tabBtns = document.querySelectorAll('.tab-btn');
-  const panels  = document.querySelectorAll('.pacotes-panel');
+  const panels = document.querySelectorAll('.pacotes-panel');
 
   tabBtns.forEach(btn => {
     btn.addEventListener('click', () => {
@@ -124,7 +124,7 @@ function initTabs() {
     // Keyboard: Arrow keys para trocar tabs
     btn.addEventListener('keydown', (e) => {
       const tabs = [...tabBtns];
-      const idx  = tabs.indexOf(e.currentTarget);
+      const idx = tabs.indexOf(e.currentTarget);
       if (e.key === 'ArrowRight') {
         tabs[(idx + 1) % tabs.length].focus();
         tabs[(idx + 1) % tabs.length].click();
@@ -152,19 +152,16 @@ function showToast(msg, duration = 3500) {
 // 6. FORMULÁRIO AVISE-ME
 // =====================
 function initAviseme() {
-  const form      = document.getElementById('avise-form');
+  const form = document.getElementById('avise-form');
   const emailInput = document.getElementById('avise-email');
-  const igInput   = document.getElementById('avise-instagram');
-  const btn       = document.getElementById('btn-avise-me');
+  const igInput = document.getElementById('avise-instagram');
+  const btn = document.getElementById('btn-avise-me');
   if (!form) return;
-
-  // IMPORTANTE: Cole aqui a URL do Web App gerada no Google Apps Script
-  const GOOGLE_SCRIPT_URL = 'COLE_AQUI_A_SUA_URL_DO_GOOGLE_APPS_SCRIPT';
 
   form.addEventListener('submit', async (e) => {
     e.preventDefault();
     const email = emailInput.value.trim();
-    const ig    = igInput.value.trim();
+    const ig = igInput.value.trim();
 
     if (!email && !ig) {
       showToast('Preencha e-mail ou Instagram.');
@@ -183,12 +180,7 @@ function initAviseme() {
     btn.textContent = 'Enviando...';
     btn.disabled = true;
 
-    if (GOOGLE_SCRIPT_URL === 'COLE_AQUI_A_SUA_URL_DO_GOOGLE_APPS_SCRIPT') {
-      showToast('Erro: URL do Google Sheets não configurada.');
-      btn.textContent = original;
-      btn.disabled = false;
-      return;
-    }
+    const GOOGLE_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbwbmKsK2fWhvc4WZRHkXfuA35lDxZqg37hfnzR1k20Ge8G05IzcCV0anma1MA6SpBEq/exec';
 
     try {
       const formData = new FormData(form);
@@ -234,7 +226,7 @@ function initEquipeCarousel() {
   const prevBtn = document.getElementById('equipe-prev');
   const nextBtn = document.getElementById('equipe-next');
   const dotsContainer = document.getElementById('equipe-dots');
-  
+
   if (!track || !prevBtn || !nextBtn || !dotsContainer) return;
 
   const slides = Array.from(track.children);
@@ -242,7 +234,7 @@ function initEquipeCarousel() {
   if (totalSlides === 0) return;
 
   let currentIndex = 0;
-  
+
   // Cria os dots
   slides.forEach((_, i) => {
     const dot = document.createElement('button');
@@ -251,7 +243,7 @@ function initEquipeCarousel() {
     dot.addEventListener('click', () => goToSlide(i));
     dotsContainer.appendChild(dot);
   });
-  
+
   const dots = Array.from(dotsContainer.children);
 
   function getItemsPerView() {
@@ -264,16 +256,16 @@ function initEquipeCarousel() {
     const itemsPerView = getItemsPerView();
     // Previne scroll para espaços em branco além dos últimos itens no carrossel
     const maxIndex = Math.max(0, totalSlides - itemsPerView);
-    
+
     if (currentIndex > maxIndex) {
       currentIndex = maxIndex;
     }
-    
+
     // Obtemos a largura do primeiro slide + gap
     const slideWidth = slides[0].offsetWidth;
     const gap = parseFloat(window.getComputedStyle(track).gap) || 0;
     const moveX = currentIndex * (slideWidth + gap);
-    
+
     track.style.transform = `translateX(-${moveX}px)`;
 
     dots.forEach((dot, i) => {
@@ -284,18 +276,18 @@ function initEquipeCarousel() {
   function goToSlide(index) {
     const itemsPerView = getItemsPerView();
     const maxIndex = Math.max(0, totalSlides - itemsPerView);
-    
+
     currentIndex = index;
     if (currentIndex > maxIndex) currentIndex = maxIndex;
     if (currentIndex < 0) currentIndex = 0;
-    
+
     updateCarousel();
   }
 
   function nextSlide() {
     const itemsPerView = getItemsPerView();
     const maxIndex = Math.max(0, totalSlides - itemsPerView);
-    
+
     if (currentIndex < maxIndex) {
       currentIndex++;
     } else {
@@ -325,7 +317,7 @@ function initEquipeCarousel() {
     // Adiciona um pequeno delay no resize para recalcular corretamente
     requestAnimationFrame(updateCarousel);
   });
-  
+
   // Atualiza layout logo após renderizar para setup inicial do translate
   setTimeout(updateCarousel, 0);
 }
