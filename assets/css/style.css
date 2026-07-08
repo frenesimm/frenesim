@@ -664,7 +664,7 @@ input, textarea { font-family: inherit; }
    ------------------- */
 /* Fundos alternados: bordô claro (#5B0C26) e bordô escuro (#4A0A1F) */
 #hero          { 
-  background: #4A0A1F url('../images/hero/BANNER SITE FRENESIM Capa.png') no-repeat center top / cover; 
+  background: #4A0A1F url('../images/hero/banner-site-frenesim-capa.png') no-repeat center top / cover; 
 }
 #hero::after {
   content: '';
