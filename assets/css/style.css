@@ -594,6 +594,12 @@ input, textarea { font-family: inherit; }
     grid-template-columns: 1fr;
     gap: var(--sp-3);
   }
+  .hero-date-box {
+    justify-self: start;
+  }
+  #hero {
+    background-position: center center;
+  }
 }
 
 /* Data em box — hero */
@@ -1997,38 +2003,4 @@ footer {
   }
 }
 
-/* -------------------
-   24. CARD PACOTE PREMIUM
-   ------------------- */
-.pacote-premium {
-  border-color: var(--magenta);
-  background: linear-gradient(160deg, rgba(255,0,152,0.08) 0%, var(--bg-card) 60%);
-  transform: scale(1.03);
-  z-index: 2;
-  box-shadow: 0 8px 40px rgba(255,0,152,0.18);
-}
-.pacote-premium:hover {
-  border-color: var(--magenta);
-  transform: scale(1.03) translateY(-4px);
-  box-shadow: 0 16px 48px rgba(255,0,152,0.28);
-}
-.pacote-premium::before {
-  content: 'MAIS COMPLETO';
-  position: absolute;
-  top: -1px;
-  left: var(--sp-4);
-  transform: translateY(-100%);
-  background: var(--magenta);
-  color: var(--branco);
-  font-family: var(--font-label);
-  font-size: 0.55rem;
-  letter-spacing: 0.14em;
-  padding: 3px 8px;
-}
-.pacote-premium .pacote-preco {
-  color: var(--magenta);
-}
-.pacote-premium .pacote-inclui li::before {
-  color: var(--magenta);
-}
 
