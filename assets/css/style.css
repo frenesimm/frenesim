@@ -596,9 +596,19 @@ input, textarea { font-family: inherit; }
   }
   .hero-date-box {
     justify-self: start;
+    max-width: fit-content;
   }
   #hero {
     background-position: center center;
+    padding-top: var(--sp-4);
+  }
+  .hero-ctas {
+    flex-direction: column;
+    width: 100%;
+  }
+  .hero-ctas .btn {
+    width: 100%;
+    text-align: center;
   }
 }
 
@@ -1200,7 +1210,7 @@ input, textarea { font-family: inherit; }
   display: flex;
   gap: var(--sp-1);
 }
-@media (max-width: 480px) {
+@media (max-width: 768px) {
   .form-row { flex-direction: column; }
 }
 
@@ -1511,6 +1521,16 @@ input, textarea { font-family: inherit; }
   display: flex;
   gap: var(--sp-2);
   flex-wrap: wrap;
+}
+@media (max-width: 768px) {
+  .edital-footer-ctas {
+    flex-direction: column;
+    width: 100%;
+  }
+  .edital-footer-ctas .btn {
+    width: 100%;
+    text-align: center;
+  }
 }
 
 /* -------------------
@@ -1975,6 +1995,12 @@ footer {
   display: flex;
   gap: 8px;
   align-items: center;
+}
+@media (max-width: 768px) {
+  .equipe-carousel-dots {
+    justify-content: center;
+    width: 100%;
+  }
 }
 .equipe-carousel-dot {
   width: 8px;
