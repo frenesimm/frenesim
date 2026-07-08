@@ -596,30 +596,38 @@ input, textarea { font-family: inherit; }
   }
 }
 
-.hero-date-block {
-  display: flex;
+/* Data em box — hero */
+.hero-date-box {
+  display: inline-flex;
   flex-direction: column;
-  gap: 4px;
+  gap: 3px;
+  border: 1px solid rgba(255,255,255,0.25);
+  padding: var(--sp-2) var(--sp-3);
+  background: rgba(255,255,255,0.06);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  align-self: end;
 }
-.hero-date-label {
+.hero-date-box-label {
   font-family: var(--font-label);
-  font-size: 0.6rem;
-  letter-spacing: 0.2em;
+  font-size: 0.55rem;
+  letter-spacing: 0.22em;
   text-transform: uppercase;
   color: var(--cinza-text);
 }
-.hero-date {
+.hero-date-box-value {
   font-family: var(--font-label);
   font-weight: 700;
-  font-size: clamp(1.1rem, 2.5vw, 1.6rem);
-  color: var(--azul);
+  font-size: clamp(1rem, 2.2vw, 1.5rem);
+  color: var(--branco);
   text-transform: uppercase;
-  letter-spacing: 0.05em;
+  letter-spacing: 0.06em;
+  line-height: 1;
 }
-.hero-city {
+.hero-date-box-city {
   font-family: var(--font-label);
-  font-size: 0.65rem;
-  letter-spacing: 0.15em;
+  font-size: 0.58rem;
+  letter-spacing: 0.14em;
   color: var(--cinza-text);
   text-transform: uppercase;
 }
@@ -655,7 +663,15 @@ input, textarea { font-family: inherit; }
 /* -------------------
    13. SOBRE — Cor: Amarelo principal
    ------------------- */
-#sobre { background: var(--bg-2); }
+/* Fundos alternados: bordô claro (#5B0C26) e bordô escuro (#4A0A1F) */
+#hero          { background: #4A0A1F; }
+#sobre         { background: #5B0C26; }
+#primeira-edicao { background: #4A0A1F; }
+#ingressos     { background: #5B0C26; }
+#edital        { background: #4A0A1F; }
+#patrocinadores { background: #5B0C26; }
+#local         { background: #4A0A1F; }
+#contato       { background: #5B0C26; }
 
 .sobre-grid {
   display: grid;
@@ -1851,3 +1867,144 @@ footer {
     --side-pad: var(--sp-2);   /* 16px em mobile */
   }
 }
+
+/* -------------------
+   23. CARROSSEL DE EQUIPE
+   ------------------- */
+.equipe-carousel-wrap {
+  margin-top: var(--sp-4);
+}
+
+.equipe-carousel {
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+}
+
+.equipe-carousel-track {
+  display: flex;
+  gap: var(--sp-3);
+  transition: transform 0.45s cubic-bezier(0.4, 0, 0.2, 1);
+  will-change: transform;
+}
+
+.equipe-slide {
+  flex: 0 0 calc((100% - 2 * var(--sp-3)) / 3);
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-2);
+  background: rgba(255,255,255,0.04);
+  border: 1px solid var(--cinza-2);
+  padding: var(--sp-3);
+  transition: border-color var(--t-mid);
+  min-width: 0;
+}
+.equipe-slide:hover { border-color: rgba(255,255,255,0.2); }
+
+.equipe-slide-tag {
+  display: inline-block;
+  font-family: var(--font-label);
+  font-size: 0.55rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  padding: 3px 8px;
+  width: fit-content;
+  margin-bottom: var(--sp-1);
+}
+.equipe-slide-tag.tag-amarelo { background: var(--amarelo); color: #1a0008; }
+.equipe-slide-tag.tag-rosa    { background: var(--rosa);    color: #1a0008; }
+
+/* Controles do carrossel */
+.equipe-carousel-controls {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--sp-3);
+  margin-top: var(--sp-4);
+}
+
+.equipe-carousel-btn {
+  font-family: var(--font-label);
+  font-size: 1rem;
+  color: var(--cinza-text);
+  background: var(--cinza-1);
+  border: 1px solid var(--cinza-2);
+  padding: 8px 16px;
+  cursor: pointer;
+  transition: color var(--t-fast), border-color var(--t-fast), background var(--t-fast);
+  line-height: 1;
+}
+.equipe-carousel-btn:hover {
+  color: var(--branco);
+  border-color: var(--amarelo);
+  background: rgba(255,248,0,0.08);
+}
+
+/* Dots */
+.equipe-carousel-dots {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+.equipe-carousel-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--cinza-2);
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  transition: background var(--t-fast), transform var(--t-fast);
+  flex-shrink: 0;
+}
+.equipe-carousel-dot.active {
+  background: var(--amarelo);
+  transform: scale(1.3);
+}
+
+@media (max-width: 768px) {
+  .equipe-slide {
+    flex: 0 0 calc((100% - var(--sp-3)) / 2);
+  }
+}
+@media (max-width: 480px) {
+  .equipe-slide {
+    flex: 0 0 100%;
+  }
+}
+
+/* -------------------
+   24. CARD PACOTE PREMIUM
+   ------------------- */
+.pacote-premium {
+  border-color: var(--magenta);
+  background: linear-gradient(160deg, rgba(255,0,152,0.08) 0%, var(--bg-card) 60%);
+  transform: scale(1.03);
+  z-index: 2;
+  box-shadow: 0 8px 40px rgba(255,0,152,0.18);
+}
+.pacote-premium:hover {
+  border-color: var(--magenta);
+  transform: scale(1.03) translateY(-4px);
+  box-shadow: 0 16px 48px rgba(255,0,152,0.28);
+}
+.pacote-premium::before {
+  content: 'MAIS COMPLETO';
+  position: absolute;
+  top: -1px;
+  left: var(--sp-4);
+  transform: translateY(-100%);
+  background: var(--magenta);
+  color: var(--branco);
+  font-family: var(--font-label);
+  font-size: 0.55rem;
+  letter-spacing: 0.14em;
+  padding: 3px 8px;
+}
+.pacote-premium .pacote-preco {
+  color: var(--magenta);
+}
+.pacote-premium .pacote-inclui li::before {
+  color: var(--magenta);
+}
+

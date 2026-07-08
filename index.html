@@ -76,10 +76,12 @@
 
         <!-- Barra de dados -->
         <div class="hero-bottom">
-          <div class="hero-date-block">
-            <span class="hero-date-label">Data</span>
-            <span class="hero-date">14 de Novembro de 2026</span>
-            <span class="hero-city">Goiânia &middot; GO &middot; Brasil</span>
+
+          <!-- Data em box -->
+          <div class="hero-date-box" aria-label="Data do evento">
+            <span class="hero-date-box-label">Data</span>
+            <span class="hero-date-box-value">14 NOV 2026</span>
+            <span class="hero-date-box-city">Goiânia · GO · Brasil</span>
           </div>
 
           <p class="hero-desc">
@@ -197,111 +199,108 @@
               </p>
             </div>
 
-            <!-- Equipe: Criação -->
-            <div class="reveal reveal-d3">
-              <span class="equipe-secao-label">Criação</span>
-              <div class="equipe-cards">
+            <!-- Carrossel de equipe infinito -->
+            <div class="equipe-carousel-wrap reveal reveal-d3" id="equipe-carousel-section">
+              <span class="equipe-secao-label" id="equipe-carousel-label">Equipe</span>
 
-                <div class="equipe-card">
-                  <div class="equipe-foto" aria-label="Foto Laura Calais">
-                    <span class="equipe-foto-placeholder" aria-hidden="true">
-                      <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-                        <circle cx="20" cy="14" r="8" stroke="currentColor" stroke-width="1.5"/>
-                        <path d="M4 38c0-8.837 7.163-16 16-16s16 7.163 16 16" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
-                      </svg>
-                    </span>
-                  </div>
-                  <div class="equipe-card-info">
-                    <p class="equipe-card-nome">Laura Calais</p>
-                    <p class="equipe-card-cargo">Criadora &amp; Diretora</p>
-                  </div>
-                </div>
+              <div class="equipe-carousel" id="equipe-carousel" aria-label="Carrossel de equipe" role="region">
+                <div class="equipe-carousel-track" id="equipe-carousel-track">
 
-                <div class="equipe-card">
-                  <div class="equipe-foto" aria-label="Foto Thayna Alves Morais">
-                    <span class="equipe-foto-placeholder" aria-hidden="true">
-                      <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-                        <circle cx="20" cy="14" r="8" stroke="currentColor" stroke-width="1.5"/>
-                        <path d="M4 38c0-8.837 7.163-16 16-16s16 7.163 16 16" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
-                      </svg>
-                    </span>
+                  <!-- Slide 1: Laura Calais -->
+                  <div class="equipe-slide" data-cat="criacao">
+                    <span class="equipe-slide-tag tag-amarelo">Criação</span>
+                    <div class="equipe-foto" aria-label="Foto Laura Calais">
+                      <span class="equipe-foto-placeholder" aria-hidden="true">
+                        <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="20" cy="14" r="8" stroke="currentColor" stroke-width="1.5"/><path d="M4 38c0-8.837 7.163-16 16-16s16 7.163 16 16" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+                      </span>
+                    </div>
+                    <div class="equipe-card-info">
+                      <p class="equipe-card-nome">Laura Calais</p>
+                      <p class="equipe-card-cargo">Criadora &amp; Diretora</p>
+                    </div>
                   </div>
-                  <div class="equipe-card-info">
-                    <p class="equipe-card-nome">Thayna Alves Morais</p>
-                    <p class="equipe-card-cargo">Criadora &amp; Diretora</p>
-                  </div>
-                </div>
 
+                  <!-- Slide 2: Thayna -->
+                  <div class="equipe-slide" data-cat="criacao">
+                    <span class="equipe-slide-tag tag-amarelo">Criação</span>
+                    <div class="equipe-foto" aria-label="Foto Thayna Alves Morais">
+                      <span class="equipe-foto-placeholder" aria-hidden="true">
+                        <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="20" cy="14" r="8" stroke="currentColor" stroke-width="1.5"/><path d="M4 38c0-8.837 7.163-16 16-16s16 7.163 16 16" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+                      </span>
+                    </div>
+                    <div class="equipe-card-info">
+                      <p class="equipe-card-nome">Thayna Alves Morais</p>
+                      <p class="equipe-card-cargo">Criadora &amp; Diretora</p>
+                    </div>
+                  </div>
+
+                  <!-- Slide 3: Atojui -->
+                  <div class="equipe-slide" data-cat="coord">
+                    <span class="equipe-slide-tag tag-rosa">Coordenação</span>
+                    <div class="equipe-foto" aria-label="Foto Atojui">
+                      <span class="equipe-foto-placeholder" aria-hidden="true">
+                        <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="20" cy="14" r="8" stroke="currentColor" stroke-width="1.5"/><path d="M4 38c0-8.837 7.163-16 16-16s16 7.163 16 16" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+                      </span>
+                    </div>
+                    <div class="equipe-card-info">
+                      <p class="equipe-card-nome">Atojui</p>
+                      <p class="equipe-card-cargo">Coordenação</p>
+                    </div>
+                  </div>
+
+                  <!-- Slide 4: Cecília -->
+                  <div class="equipe-slide" data-cat="coord">
+                    <span class="equipe-slide-tag tag-rosa">Coordenação</span>
+                    <div class="equipe-foto" aria-label="Foto Cecília Rizette">
+                      <span class="equipe-foto-placeholder" aria-hidden="true">
+                        <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="20" cy="14" r="8" stroke="currentColor" stroke-width="1.5"/><path d="M4 38c0-8.837 7.163-16 16-16s16 7.163 16 16" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+                      </span>
+                    </div>
+                    <div class="equipe-card-info">
+                      <p class="equipe-card-nome">Cecília Rizette</p>
+                      <p class="equipe-card-cargo">Coordenação</p>
+                    </div>
+                  </div>
+
+                  <!-- Slide 5: Giovanna -->
+                  <div class="equipe-slide" data-cat="coord">
+                    <span class="equipe-slide-tag tag-rosa">Coordenação</span>
+                    <div class="equipe-foto" aria-label="Foto Giovanna Souza">
+                      <span class="equipe-foto-placeholder" aria-hidden="true">
+                        <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="20" cy="14" r="8" stroke="currentColor" stroke-width="1.5"/><path d="M4 38c0-8.837 7.163-16 16-16s16 7.163 16 16" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+                      </span>
+                    </div>
+                    <div class="equipe-card-info">
+                      <p class="equipe-card-nome">Giovanna Souza</p>
+                      <p class="equipe-card-cargo">Coordenação</p>
+                    </div>
+                  </div>
+
+                  <!-- Slide 6: Hartman -->
+                  <div class="equipe-slide" data-cat="coord">
+                    <span class="equipe-slide-tag tag-rosa">Coordenação</span>
+                    <div class="equipe-foto" aria-label="Foto Hartman Ortiz">
+                      <span class="equipe-foto-placeholder" aria-hidden="true">
+                        <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="20" cy="14" r="8" stroke="currentColor" stroke-width="1.5"/><path d="M4 38c0-8.837 7.163-16 16-16s16 7.163 16 16" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+                      </span>
+                    </div>
+                    <div class="equipe-card-info">
+                      <p class="equipe-card-nome">Hartman Ortiz</p>
+                      <p class="equipe-card-cargo">Coordenação</p>
+                    </div>
+                  </div>
+
+                </div><!-- /track -->
+              </div><!-- /carousel -->
+
+              <!-- Controles -->
+              <div class="equipe-carousel-controls">
+                <button class="equipe-carousel-btn" id="equipe-prev" aria-label="Anterior">←</button>
+                <div class="equipe-carousel-dots" id="equipe-dots" aria-label="Posição no carrossel" role="tablist"></div>
+                <button class="equipe-carousel-btn" id="equipe-next" aria-label="Próximo">→</button>
               </div>
-            </div>
 
-            <!-- Equipe: Coordenação -->
-            <div class="reveal reveal-d4">
-              <span class="equipe-secao-label">Coordenação</span>
-              <div class="equipe-cards equipe-cards-coordenacao">
-
-                <div class="equipe-card">
-                  <div class="equipe-foto" aria-label="Foto Atojui">
-                    <span class="equipe-foto-placeholder" aria-hidden="true">
-                      <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-                        <circle cx="20" cy="14" r="8" stroke="currentColor" stroke-width="1.5"/>
-                        <path d="M4 38c0-8.837 7.163-16 16-16s16 7.163 16 16" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
-                      </svg>
-                    </span>
-                  </div>
-                  <div class="equipe-card-info">
-                    <p class="equipe-card-nome">Atojui</p>
-                    <p class="equipe-card-cargo">Coordenação</p>
-                  </div>
-                </div>
-
-                <div class="equipe-card">
-                  <div class="equipe-foto" aria-label="Foto Cecília Rizette">
-                    <span class="equipe-foto-placeholder" aria-hidden="true">
-                      <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-                        <circle cx="20" cy="14" r="8" stroke="currentColor" stroke-width="1.5"/>
-                        <path d="M4 38c0-8.837 7.163-16 16-16s16 7.163 16 16" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
-                      </svg>
-                    </span>
-                  </div>
-                  <div class="equipe-card-info">
-                    <p class="equipe-card-nome">Cecília Rizette</p>
-                    <p class="equipe-card-cargo">Coordenação</p>
-                  </div>
-                </div>
-
-                <div class="equipe-card">
-                  <div class="equipe-foto" aria-label="Foto Giovanna Souza">
-                    <span class="equipe-foto-placeholder" aria-hidden="true">
-                      <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-                        <circle cx="20" cy="14" r="8" stroke="currentColor" stroke-width="1.5"/>
-                        <path d="M4 38c0-8.837 7.163-16 16-16s16 7.163 16 16" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
-                      </svg>
-                    </span>
-                  </div>
-                  <div class="equipe-card-info">
-                    <p class="equipe-card-nome">Giovanna Souza</p>
-                    <p class="equipe-card-cargo">Coordenação</p>
-                  </div>
-                </div>
-
-                <div class="equipe-card">
-                  <div class="equipe-foto" aria-label="Foto Hartman Ortiz">
-                    <span class="equipe-foto-placeholder" aria-hidden="true">
-                      <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-                        <circle cx="20" cy="14" r="8" stroke="currentColor" stroke-width="1.5"/>
-                        <path d="M4 38c0-8.837 7.163-16 16-16s16 7.163 16 16" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
-                      </svg>
-                    </span>
-                  </div>
-                  <div class="equipe-card-info">
-                    <p class="equipe-card-nome">Hartman Ortiz</p>
-                    <p class="equipe-card-cargo">Coordenação</p>
-                  </div>
-                </div>
-
-              </div>
-            </div>
+            </div><!-- /wrap -->
           </div>
         </div>
       </div>
@@ -367,7 +366,7 @@
 
               <div class="ficha-row" role="row">
                 <span class="ficha-cat" role="rowheader">Atrações Musicais</span>
-                <span class="ficha-val" role="cell">DJ Nalú &middot; DJ KFnoBeat</span>
+                <span class="ficha-val" role="cell">DJ Nalí &middot; DJ KFnoBeat</span>
               </div>
 
               <div class="ficha-row" role="row">
@@ -666,8 +665,8 @@
               </div>
             </article>
 
-            <!-- Vestuário Premium -->
-            <article class="pacote-card reveal reveal-d2" aria-label="Pacote Vestuário Premium">
+            <!-- Vestuário Premium — destaque máximo -->
+            <article class="pacote-card pacote-premium reveal reveal-d2" aria-label="Pacote Vestuário Premium — mais completo">
               <div>
                 <p class="pacote-nome">Pacote Vestuário Premium</p>
                 <p class="pacote-nome-oficial">Pacote Exclusivo (desfile + exposição + mídia)</p>

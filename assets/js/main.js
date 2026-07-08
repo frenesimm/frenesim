@@ -158,6 +158,9 @@ function initAviseme() {
   const btn       = document.getElementById('btn-avise-me');
   if (!form) return;
 
+  // IMPORTANTE: Cole aqui a URL do Web App gerada no Google Apps Script
+  const GOOGLE_SCRIPT_URL = 'COLE_AQUI_A_SUA_URL_DO_GOOGLE_APPS_SCRIPT';
+
   form.addEventListener('submit', async (e) => {
     e.preventDefault();
     const email = emailInput.value.trim();
@@ -180,14 +183,33 @@ function initAviseme() {
     btn.textContent = 'Enviando...';
     btn.disabled = true;
 
-    // TODO: substituir por fetch real (Formspree, n8n, webhook, etc.)
-    // Exemplo: await fetch('https://formspree.io/f/SEU_ID', { method:'POST', body: new FormData(form) })
-    await new Promise(r => setTimeout(r, 800));
+    if (GOOGLE_SCRIPT_URL === 'COLE_AQUI_A_SUA_URL_DO_GOOGLE_APPS_SCRIPT') {
+      showToast('Erro: URL do Google Sheets não configurada.');
+      btn.textContent = original;
+      btn.disabled = false;
+      return;
+    }
 
-    btn.textContent = original;
-    btn.disabled = false;
-    form.reset();
-    showToast('Anotado! Te avisamos quando abrir. 🎉');
+    try {
+      const formData = new FormData(form);
+      const response = await fetch(GOOGLE_SCRIPT_URL, {
+        method: 'POST',
+        body: formData
+      });
+
+      if (response.ok) {
+        form.reset();
+        showToast('Anotado! Te avisamos quando abrir. 🎉');
+      } else {
+        throw new Error('Falha no envio');
+      }
+    } catch (error) {
+      showToast('Ocorreu um erro ao enviar. Tente novamente.');
+      console.error(error);
+    } finally {
+      btn.textContent = original;
+      btn.disabled = false;
+    }
   });
 }
 
@@ -205,6 +227,110 @@ function initLogoSwap() {
 }
 
 // =====================
+// 8. CARROSSEL DE EQUIPE
+// =====================
+function initEquipeCarousel() {
+  const track = document.getElementById('equipe-carousel-track');
+  const prevBtn = document.getElementById('equipe-prev');
+  const nextBtn = document.getElementById('equipe-next');
+  const dotsContainer = document.getElementById('equipe-dots');
+  
+  if (!track || !prevBtn || !nextBtn || !dotsContainer) return;
+
+  const slides = Array.from(track.children);
+  const totalSlides = slides.length;
+  if (totalSlides === 0) return;
+
+  let currentIndex = 0;
+  
+  // Cria os dots
+  slides.forEach((_, i) => {
+    const dot = document.createElement('button');
+    dot.className = 'equipe-carousel-dot' + (i === 0 ? ' active' : '');
+    dot.setAttribute('aria-label', `Ir para slide ${i + 1}`);
+    dot.addEventListener('click', () => goToSlide(i));
+    dotsContainer.appendChild(dot);
+  });
+  
+  const dots = Array.from(dotsContainer.children);
+
+  function getItemsPerView() {
+    if (window.innerWidth <= 480) return 1;
+    if (window.innerWidth <= 768) return 2;
+    return 3;
+  }
+
+  function updateCarousel() {
+    const itemsPerView = getItemsPerView();
+    // Previne scroll para espaços em branco além dos últimos itens no carrossel
+    const maxIndex = Math.max(0, totalSlides - itemsPerView);
+    
+    if (currentIndex > maxIndex) {
+      currentIndex = maxIndex;
+    }
+    
+    // Obtemos a largura do primeiro slide + gap
+    const slideWidth = slides[0].offsetWidth;
+    const gap = parseFloat(window.getComputedStyle(track).gap) || 0;
+    const moveX = currentIndex * (slideWidth + gap);
+    
+    track.style.transform = `translateX(-${moveX}px)`;
+
+    dots.forEach((dot, i) => {
+      dot.classList.toggle('active', i === currentIndex);
+    });
+  }
+
+  function goToSlide(index) {
+    const itemsPerView = getItemsPerView();
+    const maxIndex = Math.max(0, totalSlides - itemsPerView);
+    
+    currentIndex = index;
+    if (currentIndex > maxIndex) currentIndex = maxIndex;
+    if (currentIndex < 0) currentIndex = 0;
+    
+    updateCarousel();
+  }
+
+  function nextSlide() {
+    const itemsPerView = getItemsPerView();
+    const maxIndex = Math.max(0, totalSlides - itemsPerView);
+    
+    if (currentIndex < maxIndex) {
+      currentIndex++;
+    } else {
+      // Loop infinito: volta para o primeiro
+      currentIndex = 0;
+    }
+    updateCarousel();
+  }
+
+  function prevSlide() {
+    const itemsPerView = getItemsPerView();
+    const maxIndex = Math.max(0, totalSlides - itemsPerView);
+
+    if (currentIndex > 0) {
+      currentIndex--;
+    } else {
+      // Loop infinito: vai para o último slide possível
+      currentIndex = maxIndex;
+    }
+    updateCarousel();
+  }
+
+  nextBtn.addEventListener('click', nextSlide);
+  prevBtn.addEventListener('click', prevSlide);
+
+  window.addEventListener('resize', () => {
+    // Adiciona um pequeno delay no resize para recalcular corretamente
+    requestAnimationFrame(updateCarousel);
+  });
+  
+  // Atualiza layout logo após renderizar para setup inicial do translate
+  setTimeout(updateCarousel, 0);
+}
+
+// =====================
 // INIT
 // =====================
 document.addEventListener('DOMContentLoaded', () => {
@@ -214,4 +340,6 @@ document.addEventListener('DOMContentLoaded', () => {
   initTabs();
   initAviseme();
   initLogoSwap();
+  initEquipeCarousel();
 });
+
