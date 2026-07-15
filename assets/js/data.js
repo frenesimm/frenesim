@@ -1,5 +1,5 @@
 /**
- * FRENESIM — data.js v2
+ * FRENESIM — data.js v3
  * Constantes de conteúdo. Edite aqui para atualizar o site sem mexer no HTML.
  * Fonte da verdade: pastas ID/ (logo, fontes) e este arquivo (conteúdo).
  */
@@ -12,8 +12,9 @@ export const EVENTO = {
   cidade:     'Goiânia',
   estado:     'GO',
   pais:       'Brasil',
-  descricao:  'Desfile-festa de moda autoral e alternativa.',
-  formato:    ['Passarela', 'Performance', 'Música ao vivo', 'Gastronomia'],
+  descricao:  'Desfile-festa em Goiânia. Passarela, performance e pista na mesma noite.',
+  tagline:    'Moda é festa — Festa é moda',
+  formato:    ['Passarela', 'Performance', 'Pista'],
 
   localConfirmado: false,
   local:       null,              // Atualizar quando confirmar
@@ -43,25 +44,17 @@ export const EDITAL = {
     formato: 'Online',
   },
   resultado: '09/09/2026',
-  contratacao: 'Até 21/09/2026',
+  contratacao: '21/09/2026',
   pagamento: ['Pix', 'Crédito em até 12x (com taxa da maquininha)'],
   vagas: { vestuario: 6, acessorios: 3 },
-  criterios: [
-    'Design autoral',
-    'Alinhamento estético com a proposta do evento',
-    'Enraizamento e pertencimento (valorização de grupos sub-representados)',
-    'Impacto cultural',
-    'Maturidade produtiva',
-    'Consistência da proposta',
-  ],
 };
 
 export const PACOTES = {
   vestuario: [
     {
       id:       'vestuario-essencial',
-      nome:     'Pacote Vestuário',
-      nomeLong: 'Pacote Essencial (apenas desfile)',
+      nome:     'Essencial',
+      nomeLong: 'Apenas desfile',
       preco:    'R$ 175,00',
       destaque: false,
       inclui: [
@@ -74,28 +67,38 @@ export const PACOTES = {
       ],
     },
     {
-      id:       'vestuario-plus',
-      nome:     'Pacote Vestuário Plus',
-      nomeLong: 'Pacote Expansão (desfile + exposição)',
+      id:       'vestuario-expansao',
+      nome:     'Expansão',
+      nomeLong: 'Desfile + exposição',
       preco:    'R$ 350,00',
       destaque: true,
       inclui: [
-        'Tudo do Pacote Vestuário',
+        '8 looks completos no desfile oficial',
+        'Inclusão no mapa do evento',
+        'Presença na campanha pré-evento',
+        'Fotos de passarela pós-evento',
+        'Participação no fashion film institucional',
         'Pop-up store no local do evento',
         '26 imagens de ensaio editorial exclusivo',
         '2 ingressos + 2 credenciamentos',
       ],
     },
     {
-      id:       'vestuario-premium',
-      nome:     'Pacote Vestuário Premium',
-      nomeLong: 'Pacote Exclusivo (desfile + exposição + mídia)',
+      id:       'vestuario-exclusivo',
+      nome:     'Exclusivo',
+      nomeLong: 'Desfile + exposição + mídia',
       preco:    'R$ 600,00',
       destaque: false,
       inclui: [
-        'Tudo do Pacote Vestuário Plus',
+        '8 looks completos no desfile oficial',
+        'Inclusão no mapa do evento',
+        'Presença na campanha pré-evento',
+        'Fotos de passarela pós-evento',
+        'Participação no fashion film institucional',
+        'Pop-up store no local do evento',
+        '26 imagens de ensaio editorial exclusivo',
         'Feature exclusivo pré-evento',
-        'Mini-documentário/fashion film exclusivo da marca',
+        'Mini-documentário exclusivo da marca (fashion film)',
         '48 imagens de ensaio editorial',
         '3 ingressos + 2 credenciamentos',
       ],
@@ -104,8 +107,8 @@ export const PACOTES = {
   acessorios: [
     {
       id:       'acessorios-essencial',
-      nome:     'Pacote Acessórios',
-      nomeLong: 'Pacote Essencial',
+      nome:     'Essencial',
+      nomeLong: 'Acessórios',
       preco:    'R$ 150,00',
       destaque: false,
       inclui: [
@@ -117,13 +120,16 @@ export const PACOTES = {
       ],
     },
     {
-      id:       'acessorios-plus',
-      nome:     'Pacote Acessórios Plus',
-      nomeLong: 'Pacote Expansão',
+      id:       'acessorios-expansao',
+      nome:     'Expansão',
+      nomeLong: 'Acessórios',
       preco:    'R$ 300,00',
       destaque: true,
       inclui: [
-        'Tudo do Pacote Acessórios',
+        'Curadoria de peças para até 16 looks',
+        'Presença na campanha digital pré-evento',
+        'Fotos pós-evento',
+        'Participação no fashion film institucional',
         'Inclusão no mapa do evento',
         'Pop-up store no local',
         'Feature exclusivo pré-evento',
@@ -165,10 +171,9 @@ export const PATROCINADORES = [
 export const CRONOGRAMA = [
   { data: '02/08',    titulo: 'Publicação do Edital', sub: 'Abertura oficial das informações para marcas', destaque: false },
   { data: '03/08',    titulo: 'Inscrições Abertas',   sub: 'Online, gratuito, formulário', destaque: false },
-  { data: '03/09',    titulo: 'Encerramento',         sub: 'Até 23h59', destaque: false },
+  { data: '03/09',    titulo: 'Encerramento',         sub: 'Às 23h59', destaque: false },
   { data: '09/09',    titulo: 'Resultado do Edital',  sub: 'Divulgação das marcas selecionadas', destaque: false },
-  { data: 'Até 21/09',titulo: 'Contratação',          sub: 'Confirmação e pagamento dos pacotes', destaque: false },
+  { data: '21/09',    titulo: 'Prazo máximo para contratação dos pacotes', sub: 'Confirmação e pagamento dos pacotes', destaque: false },
   { data: 'Out-Nov',  titulo: 'Pré-Produção',         sub: 'Ensaios, curadoria de looks — datas a confirmar', destaque: false },
   { data: '14/11',    titulo: 'FRENESIM — 2ª Edição', sub: 'Goiânia, GO · Da passarela pra pista', destaque: true },
-  { data: 'Nov',      titulo: 'Pós-Evento',           sub: 'Entrega de fotos, fashion film e conteúdo editorial', destaque: false },
 ];

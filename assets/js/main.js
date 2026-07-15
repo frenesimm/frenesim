@@ -1,6 +1,6 @@
 /**
- * FRENESIM 2ª Edição — main.js v2
- * Módulos: nav, reveal, marquee, tabs, avise-me form, toast
+ * FRENESIM 2ª Edição — main.js v3
+ * Módulos: nav, reveal, marquee, tabs, avise-me form, toast, flip cards, lightbox, carousel
  */
 
 // =====================
@@ -8,7 +8,6 @@
 // =====================
 function initNav() {
   const nav = document.getElementById('nav');
-  const navLogo = document.getElementById('nav-logo');
   const hamburger = document.getElementById('hamburger');
   const navMobile = document.getElementById('nav-mobile');
   const closeBtn = document.getElementById('nav-mobile-close');
@@ -224,14 +223,12 @@ function initEditalButtons() {
 }
 
 // =====================
-// 7. LOGO NA NAV — troca para versão colorida ao scroll
-//    (hover efeito visual)
+// 7. LOGO NA NAV — animação
 // =====================
 function initLogoSwap() {
   const heroLogo = document.getElementById('hero-logo');
   if (!heroLogo) return;
 
-  // Logo branca no header sobre fundo escuro: mantida
   // Apenas anima entrada do hero logo
   heroLogo.style.transition = 'opacity 0.5s ease';
 }
@@ -265,9 +262,9 @@ function initEquipeCarousel() {
   const dots = Array.from(dotsContainer.children);
 
   function getItemsPerView() {
-    if (window.innerWidth <= 480) return 1;
-    if (window.innerWidth <= 768) return 2;
-    return 3;
+    if (window.innerWidth < 641) return 2;
+    if (window.innerWidth < 1200) return 3;
+    return 4;
   }
 
   function updateCarousel() {
@@ -341,6 +338,97 @@ function initEquipeCarousel() {
 }
 
 // =====================
+// 9. FLIP CARDS (EQUIPE) — Mobile/Touch
+// =====================
+function initFlipCards() {
+  const flipCards = document.querySelectorAll('.equipe-flip-card');
+  if (!flipCards.length) return;
+
+  // Detectar se é touch device
+  const isTouchDevice = () => {
+    return ('ontouchstart' in window) || (navigator.maxTouchPoints > 0);
+  };
+
+  flipCards.forEach(card => {
+    card.addEventListener('click', (e) => {
+      // Em dispositivos com hover (desktop), o CSS cuida do flip
+      // Em touch, usamos a classe .flipped
+      if (!isTouchDevice()) return;
+
+      e.stopPropagation();
+
+      // Se já está flipped, volta
+      if (card.classList.contains('flipped')) {
+        card.classList.remove('flipped');
+        return;
+      }
+
+      // Fecha todos os outros cards abertos
+      flipCards.forEach(c => c.classList.remove('flipped'));
+
+      // Abre este card
+      card.classList.add('flipped');
+    });
+  });
+
+  // Fechar ao clicar fora
+  document.addEventListener('click', (e) => {
+    if (!e.target.closest('.equipe-flip-card')) {
+      flipCards.forEach(c => c.classList.remove('flipped'));
+    }
+  });
+}
+
+// =====================
+// 10. LIGHTBOX (GALERIA)
+// =====================
+function initLightbox() {
+  const overlay = document.getElementById('lightbox-overlay');
+  const lightboxImg = document.getElementById('lightbox-img');
+  const closeBtn = document.getElementById('lightbox-close');
+  const galeriaItems = document.querySelectorAll('.galeria-item');
+
+  if (!overlay || !lightboxImg || !galeriaItems.length) return;
+
+  galeriaItems.forEach(item => {
+    item.addEventListener('click', () => {
+      const img = item.querySelector('img');
+      if (!img) return;
+
+      lightboxImg.src = img.src;
+      lightboxImg.alt = img.alt;
+      overlay.classList.add('active');
+      overlay.setAttribute('aria-hidden', 'false');
+      document.body.style.overflow = 'hidden';
+    });
+  });
+
+  function closeLightbox() {
+    overlay.classList.remove('active');
+    overlay.setAttribute('aria-hidden', 'true');
+    document.body.style.overflow = '';
+    lightboxImg.src = '';
+  }
+
+  closeBtn.addEventListener('click', (e) => {
+    e.stopPropagation();
+    closeLightbox();
+  });
+
+  overlay.addEventListener('click', (e) => {
+    if (e.target === overlay) {
+      closeLightbox();
+    }
+  });
+
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && overlay.classList.contains('active')) {
+      closeLightbox();
+    }
+  });
+}
+
+// =====================
 // INIT
 // =====================
 document.addEventListener('DOMContentLoaded', () => {
@@ -352,5 +440,6 @@ document.addEventListener('DOMContentLoaded', () => {
   initEditalButtons();
   initLogoSwap();
   initEquipeCarousel();
+  initFlipCards();
+  initLightbox();
 });
-
