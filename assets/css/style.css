@@ -558,7 +558,7 @@ input, textarea { font-family: inherit; }
   position: relative;
   overflow: hidden;
   padding-bottom: var(--sp-4);
-  background: #4A0A1F url('../images/hero/banner-site-frenesim-capa.png') no-repeat center top / cover;
+  background: #4A0A1F url('../images/hero/banner-site-frenesim-capa.png') no-repeat center center / cover;
 }
 
 @media (min-width: 641px) {
@@ -607,8 +607,9 @@ input, textarea { font-family: inherit; }
   align-items: center;
   gap: var(--sp-1);
   padding: 0 var(--side-pad);
-  margin-bottom: var(--sp-3);
+  margin-bottom: var(--sp-2);
   flex-wrap: wrap;
+  margin-top: -48px;
 }
 
 @media (min-width: 641px) {
@@ -725,6 +726,18 @@ input, textarea { font-family: inherit; }
   line-height: 1.1;
 }
 
+/* Destaque para a frase chave do hero */
+.hero-desc-destaque {
+  font-family: var(--font-title);
+  font-weight: 700;
+  font-size: clamp(1.05rem, 2.8vw, 1.4rem);
+  color: var(--branco);
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+  line-height: 1.2;
+  margin-top: 4px;
+}
+
 .hero-ctas {
   display: flex;
   flex-direction: column;
@@ -773,6 +786,7 @@ input, textarea { font-family: inherit; }
   grid-template-columns: 1fr;
   gap: var(--sp-6);
   align-items: start;
+  overflow: visible;
 }
 
 @media (min-width: 961px) {
@@ -803,6 +817,7 @@ input, textarea { font-family: inherit; }
   border-left: 3px solid var(--amarelo);
   padding: var(--sp-3) var(--sp-3);
   background: rgba(255, 248, 0, 0.04);
+  overflow: visible;
 }
 .sobre-premio .label {
   font-family: var(--font-label);
@@ -820,6 +835,8 @@ input, textarea { font-family: inherit; }
   text-transform: uppercase;
   color: var(--branco);
   line-height: 1.2;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
 }
 
 @media (min-width: 641px) {
@@ -886,6 +903,7 @@ input, textarea { font-family: inherit; }
   display: flex;
   flex-direction: column;
   gap: var(--sp-4);
+  overflow: visible;
 }
 
 /* Equipe — cards com foto placeholder */
@@ -947,6 +965,29 @@ input, textarea { font-family: inherit; }
   letter-spacing: 0.14em;
   text-transform: uppercase;
   color: var(--cinza-text);
+}
+
+/* Smaller text on mobile for 3-per-row cards */
+@media (max-width: 640px) {
+  .equipe-card-nome {
+    font-size: 0.7rem;
+  }
+  .equipe-card-cargo {
+    font-size: 0.42rem;
+  }
+  .equipe-slide-tag {
+    font-size: 0.4rem;
+    padding: 2px 4px;
+  }
+  .equipe-bio-text {
+    font-size: 0.6rem;
+  }
+  .equipe-bio-contact {
+    font-size: 0.45rem;
+  }
+  .equipe-flip-back {
+    padding: var(--sp-1);
+  }
 }
 
 /* -------------------
@@ -1146,7 +1187,7 @@ input, textarea { font-family: inherit; }
   display: flex;
   flex-direction: column;
   border: 1px solid var(--cinza-2);
-  overflow: hidden;
+  overflow: visible;
 }
 
 .ficha-row {
@@ -1474,7 +1515,8 @@ input, textarea { font-family: inherit; }
   color: var(--amarelo);
   background: var(--cinza-1);
   padding: var(--sp-2) var(--sp-2);
-  min-width: 70px;
+  min-width: 80px;
+  min-height: 52px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -2239,12 +2281,12 @@ footer {
 
 /* Cards menores */
 .equipe-slide {
-  flex: 0 0 calc(50% - var(--sp-1));
+  flex: 0 0 calc(33.333% - 11px);
   display: flex;
   flex-direction: column;
   background: rgba(255,255,255,0.04);
   border: 1px solid var(--cinza-2);
-  padding: var(--sp-2);
+  padding: var(--sp-1);
   transition: border-color var(--t-mid);
   min-width: 0;
 }

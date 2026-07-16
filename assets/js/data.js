@@ -46,7 +46,7 @@ export const EDITAL = {
   resultado: '09/09/2026',
   contratacao: '21/09/2026',
   pagamento: ['Pix', 'Crédito em até 12x (com taxa da maquininha)'],
-  vagas: { vestuario: 6, acessorios: 3 },
+  vagas: { vestuario: 6, acessorios: 4 },
 };
 
 export const PACOTES = {
@@ -143,10 +143,10 @@ export const PACOTES = {
 export const PRIMEIRA_EDICAO = {
   ano: '2024',
   numeros: [
-    { valor: '+300', label: 'Pessoas pagantes' },
+    { valor: '+330', label: 'Pessoas pagantes' },
     { valor: '6',    label: 'Marcas locais' },
     { valor: '165K', label: 'Alcance social' },
-    { valor: '+600', label: 'Looks na passarela' },
+    { valor: '25', label: 'Looks desfilados' },
   ],
   programacao: [
     'Marcas locais de Goiânia',

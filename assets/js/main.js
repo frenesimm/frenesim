@@ -262,7 +262,7 @@ function initEquipeCarousel() {
   const dots = Array.from(dotsContainer.children);
 
   function getItemsPerView() {
-    if (window.innerWidth < 641) return 2;
+    if (window.innerWidth < 641) return 3;
     if (window.innerWidth < 1200) return 3;
     return 4;
   }
