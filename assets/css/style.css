@@ -1075,12 +1075,14 @@ input, textarea { font-family: inherit; }
   padding: var(--sp-2);
 }
 
-/* Desktop: flip on hover */
+/* Desktop: flip on hover - DESABILITADO. Agora o flip ocorre no modal. */
+/*
 @media (hover: hover) and (pointer: fine) {
   .equipe-flip-card:hover .equipe-flip-inner {
     transform: rotateY(180deg);
   }
 }
+*/
 
 /* Mobile/touch: flip via class */
 .equipe-flip-card.flipped .equipe-flip-inner {
@@ -1100,20 +1102,66 @@ input, textarea { font-family: inherit; }
   font-family: var(--font-body);
   font-size: 0.72rem;
   color: var(--cinza-sub);
-  line-height: 1.45;
+  line-height: 1.4;
+  margin-bottom: var(--sp-2);
 }
 
 .equipe-bio-contact {
   font-family: var(--font-label);
-  font-size: 0.55rem;
-  letter-spacing: 0.08em;
-  color: var(--cinza-text);
-  margin-top: auto;
-  line-height: 1.6;
+  font-size: 0.6rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--pessego);
 }
 
 /* -------------------
-   14. 1ª EDIÇÃO — Cor: Rosa claro principal
+   13.6 EQUIPE MODAL (Pop-up Flip)
+   ------------------- */
+.equipe-modal-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  background: rgba(0, 0, 0, 0.85);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity var(--t-mid), visibility var(--t-mid);
+  padding: var(--side-pad);
+}
+.equipe-modal-overlay.show {
+  opacity: 1;
+  visibility: visible;
+}
+.equipe-modal-content {
+  position: relative;
+  width: 100%;
+  max-width: 400px; /* Tamanho confortável para desktop e mobile */
+  aspect-ratio: 3/4; /* Mantém a proporção do card */
+  /* Removemos bg e padding daqui pois o .equipe-flip-card clonado já traz tudo */
+}
+.equipe-modal-close {
+  position: absolute;
+  top: -40px;
+  right: 0;
+  color: var(--branco);
+  font-size: 2rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  line-height: 1;
+  z-index: 10;
+}
+/* Fontes maiores EXCLUSIVAS para o modal */
+.equipe-modal-content .equipe-card-nome { font-size: 1.2rem; }
+.equipe-modal-content .equipe-card-cargo { font-size: 0.8rem; }
+.equipe-modal-content .equipe-slide-tag { font-size: 0.65rem; padding: 4px 8px; }
+.equipe-modal-content .equipe-bio-text { font-size: 0.95rem; }
+.equipe-modal-content .equipe-bio-contact { font-size: 0.75rem; }
+
+/* -------------------
+   14. SEÇÃO 1ª EDIÇÃO — Cor: Rosa claro principal
    ------------------- */
 #primeira-edicao {
   background: var(--bg);

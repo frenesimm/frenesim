@@ -472,6 +472,58 @@ function initLightbox() {
   });
 }
 
+function initEquipeModal() {
+  const modalOverlay = document.getElementById('equipe-modal');
+  const modalContent = document.getElementById('equipe-modal-content');
+  const closeBtn = document.getElementById('equipe-modal-close');
+
+  if (!modalOverlay || !modalContent) return;
+
+  // Fecha o modal
+  function closeModal() {
+    modalOverlay.classList.remove('show');
+    document.body.style.overflow = '';
+    // Limpa o conteúdo clonado após a animação de saída (300ms)
+    setTimeout(() => {
+      // Mantém o closeBtn e remove apenas os clones
+      Array.from(modalContent.children).forEach(child => {
+        if (child.id !== 'equipe-modal-close') {
+          child.remove();
+        }
+      });
+    }, 300);
+  }
+
+  closeBtn.addEventListener('click', closeModal);
+  modalOverlay.addEventListener('click', (e) => {
+    if (e.target === modalOverlay) closeModal();
+  });
+
+  // Abre o modal ao clicar num card da equipe
+  const equipeSlides = document.querySelectorAll('.equipe-slide');
+  equipeSlides.forEach(slide => {
+    const flipCard = slide.querySelector('.equipe-flip-card');
+    if (!flipCard) return;
+
+    flipCard.addEventListener('click', () => {
+      // Clona o card original
+      const clone = flipCard.cloneNode(true);
+      
+      // Anexa no modal
+      modalContent.appendChild(clone);
+      
+      // Exibe o modal
+      modalOverlay.classList.add('show');
+      document.body.style.overflow = 'hidden';
+
+      // Aguarda um pequeno delay e aplica a classe 'flipped' para a animação ocorrer no centro
+      setTimeout(() => {
+        clone.classList.add('flipped');
+      }, 100);
+    });
+  });
+}
+
 // =====================
 // INIT
 // =====================
@@ -484,6 +536,6 @@ document.addEventListener('DOMContentLoaded', () => {
   initEditalButtons();
   initLogoSwap();
   initEquipeCarousel();
-  initFlipCards();
   initLightbox();
+  initEquipeModal();
 });
