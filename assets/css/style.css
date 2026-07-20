@@ -2361,9 +2361,7 @@ footer {
 /* Mobile pequeno (< 481px): 2 cards por tela */
 @media (max-width: 480px) {
   .equipe-carousel-wrap {
-    max-width: 65%;
-    margin-left: auto;
-    margin-right: auto;
+    min-width: 0;
   }
   .equipe-slide {
     flex: 0 0 calc((100% - 16px) / 2);
