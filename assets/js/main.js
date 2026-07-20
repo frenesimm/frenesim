@@ -250,16 +250,35 @@ function initEquipeCarousel() {
 
   let currentIndex = 0;
 
-  // Cria os dots
-  slides.forEach((_, i) => {
-    const dot = document.createElement('button');
-    dot.className = 'equipe-carousel-dot' + (i === 0 ? ' active' : '');
-    dot.setAttribute('aria-label', `Ir para slide ${i + 1}`);
-    dot.addEventListener('click', () => goToSlide(i));
-    dotsContainer.appendChild(dot);
+  function renderDots() {
+    dotsContainer.innerHTML = '';
+    const itemsPerView = getItemsPerView();
+    const maxIndex = Math.max(0, totalSlides - itemsPerView);
+    
+    for (let i = 0; i <= maxIndex; i++) {
+      const dot = document.createElement('button');
+      dot.className = 'equipe-carousel-dot' + (i === currentIndex ? ' active' : '');
+      dot.setAttribute('aria-label', `Ir para posição ${i + 1}`);
+      dot.addEventListener('click', () => goToSlide(i));
+      dotsContainer.appendChild(dot);
+    }
+  }
+
+  // Generate initial dots
+  renderDots();
+
+  // Recalculate on resize
+  window.addEventListener('resize', () => {
+    const itemsPerView = getItemsPerView();
+    const maxIndex = Math.max(0, totalSlides - itemsPerView);
+    if (currentIndex > maxIndex) currentIndex = maxIndex;
+    renderDots();
+    updateCarousel();
   });
 
-  const dots = Array.from(dotsContainer.children);
+  function getDots() {
+    return Array.from(dotsContainer.children);
+  }
 
   function getItemsPerView() {
     if (window.innerWidth < 481) return 2; /* 2 cards em telas muito pequenas — mais legível */
@@ -284,7 +303,7 @@ function initEquipeCarousel() {
 
     track.style.transform = `translateX(-${moveX}px)`;
 
-    dots.forEach((dot, i) => {
+    getDots().forEach((dot, i) => {
       dot.classList.toggle('active', i === currentIndex);
     });
   }
