@@ -516,7 +516,7 @@ textarea {
 }
 
 #nav.scrolled {
-  background: rgba(83, 12, 38, 0.97);
+  background: rgba(42, 5, 16, 0.5); /* 50% transparente para efeito glass (blur) */
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
   border-bottom-color: var(--cinza-2);
