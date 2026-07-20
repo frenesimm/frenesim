@@ -798,6 +798,7 @@ input, textarea { font-family: inherit; }
   gap: var(--sp-6);
   align-items: start;
   overflow: visible;
+  min-width: 0;
 }
 
 @media (min-width: 961px) {
@@ -915,6 +916,7 @@ input, textarea { font-family: inherit; }
   flex-direction: column;
   gap: var(--sp-4);
   overflow: visible;
+  min-width: 0;
 }
 
 /* Equipe — cards com foto placeholder */
@@ -2319,6 +2321,7 @@ footer {
    ------------------- */
 .equipe-carousel-wrap {
   margin-top: var(--sp-4);
+  min-width: 0;
 }
 
 .equipe-carousel {
