@@ -253,9 +253,10 @@ function initEquipeCarousel() {
   function renderDots() {
     dotsContainer.innerHTML = '';
     const itemsPerView = getItemsPerView();
-    const maxIndex = Math.max(0, totalSlides - itemsPerView);
+    // Quantidade total de "páginas" necessárias para ver todos os slides
+    const pages = Math.ceil(Math.max(0, totalSlides - itemsPerView)) + 1;
     
-    for (let i = 0; i <= maxIndex; i++) {
+    for (let i = 0; i < pages; i++) {
       const dot = document.createElement('button');
       dot.className = 'equipe-carousel-dot' + (i === currentIndex ? ' active' : '');
       dot.setAttribute('aria-label', `Ir para posição ${i + 1}`);
@@ -270,7 +271,7 @@ function initEquipeCarousel() {
   // Recalculate on resize
   window.addEventListener('resize', () => {
     const itemsPerView = getItemsPerView();
-    const maxIndex = Math.max(0, totalSlides - itemsPerView);
+    const maxIndex = Math.ceil(Math.max(0, totalSlides - itemsPerView));
     if (currentIndex > maxIndex) currentIndex = maxIndex;
     renderDots();
     updateCarousel();
@@ -281,25 +282,28 @@ function initEquipeCarousel() {
   }
 
   function getItemsPerView() {
-    if (window.innerWidth < 481) return 2; /* 2 cards em telas muito pequenas — mais legível */
-    if (window.innerWidth < 641) return 3;
-    if (window.innerWidth < 1200) return 3;
-    return 4;
+    if (window.innerWidth < 481) return 1.6; /* 25% maior no mobile */
+    if (window.innerWidth < 641) return 2.2; /* um pouco maior no tablet */
+    if (window.innerWidth < 1200) return 2.5; 
+    return 2.85; /* 40% maior no desktop */
   }
 
   function updateCarousel() {
     const itemsPerView = getItemsPerView();
-    // Previne scroll para espaços em branco além dos últimos itens no carrossel
-    const maxIndex = Math.max(0, totalSlides - itemsPerView);
+    const maxIndex = Math.ceil(Math.max(0, totalSlides - itemsPerView));
 
     if (currentIndex > maxIndex) {
       currentIndex = maxIndex;
     }
 
-    // Obtemos a largura do primeiro slide + gap
     const slideWidth = slides[0].offsetWidth;
     const gap = parseFloat(window.getComputedStyle(track).gap) || 0;
-    const moveX = currentIndex * (slideWidth + gap);
+    
+    // Cálculo exato de quanto podemos transladar sem sobrar espaço vazio
+    const maxTranslate = Math.max(0, track.scrollWidth - track.parentElement.offsetWidth);
+    
+    let moveX = currentIndex * (slideWidth + gap);
+    if (moveX > maxTranslate) moveX = maxTranslate;
 
     track.style.transform = `translateX(-${moveX}px)`;
 
