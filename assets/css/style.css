@@ -733,12 +733,13 @@ textarea {
   position: relative;
   overflow: hidden;
   padding-bottom: var(--sp-4);
-  background: var(--bg) url('../images/hero/banner-site-frenesim-capa.png') no-repeat center center / cover;
+  background: var(--bg) url('../images/hero/banner-site-frenesim-capa.png') no-repeat 75% center / cover;
 }
 
 @media (min-width: 641px) {
   #hero {
     padding-bottom: var(--sp-6);
+    background-position: center center;
   }
 }
 
