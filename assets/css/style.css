@@ -73,16 +73,16 @@
   --pessego: #FFC253;
   --laranja: #F4A525;
 
-  /* Base — fundo bordô variando */
-  --bg: #5B0C26;
-  --bg-2: #4A0A1F;
-  --bg-card: #4A0A1F;
+  /* Base — fundo escurecido a pedido para teste de contraste */
+  --bg: #2A0510;
+  --bg-2: #2A0510;
+  --bg-card: #4A0A1F; /* mantive os cards levemente mais claros para destacarem do fundo super escuro */
   --bg-input: #4A0A1F;
   --branco: #FFFFFF;
-  --cinza-1: #2a0510;
+  --cinza-1: #150208; /* escureci ainda mais o cinza-1 caso seja usado para sombras */
   --cinza-2: #6e1535;
   --cinza-3: #9a2050;
-  --cinza-text: #f0b8cc;
+  --cinza-text: #f0b8cc; /* texto claro, perfeitamente legível no fundo #2A0510 */
   /* clarificado para ratio ~5.0:1 (WCAG AA) */
   --cinza-sub: #f5ccd8;
 
@@ -623,7 +623,7 @@ textarea {
   position: fixed;
   inset: 0;
   z-index: 9990;
-  background: #5B0C26;
+  background: var(--bg);
   flex-direction: column;
   align-items: center;
   justify-content: center;
@@ -684,7 +684,7 @@ textarea {
   border-bottom: 1px solid var(--cinza-2);
   padding: 10px 0;
   white-space: nowrap;
-  background: #4a0a1f;
+  background: var(--bg);
 }
 
 .marquee-track {
@@ -733,7 +733,7 @@ textarea {
   position: relative;
   overflow: hidden;
   padding-bottom: var(--sp-4);
-  background: #4A0A1F url('../images/hero/banner-site-frenesim-capa.png') no-repeat center center / cover;
+  background: var(--bg) url('../images/hero/banner-site-frenesim-capa.png') no-repeat center center / cover;
 }
 
 @media (min-width: 641px) {
@@ -965,31 +965,31 @@ textarea {
    13. SOBRE — Cor: Amarelo principal
    ------------------- */
 #sobre {
-  background: #5B0C26;
+  background: var(--bg);
 }
 
 #primeira-edicao {
-  background: #4A0A1F;
+  background: var(--bg);
 }
 
 #ingressos {
-  background: #5B0C26;
+  background: var(--bg);
 }
 
 #edital {
-  background: #4A0A1F;
+  background: var(--bg);
 }
 
 #patrocinadores {
-  background: #5B0C26;
+  background: var(--bg);
 }
 
 #local {
-  background: #4A0A1F;
+  background: var(--bg);
 }
 
 #contato {
-  background: #5B0C26;
+  background: var(--bg);
 }
 
 .sobre-grid {
@@ -2689,7 +2689,7 @@ textarea {
 
 /* Footer */
 footer {
-  background: #4a0a1f;
+  background: var(--bg);
   border-top: 1px solid var(--cinza-2);
 }
 
