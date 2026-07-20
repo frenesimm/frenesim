@@ -300,6 +300,30 @@ function initEquipeCarousel() {
     updateCarousel();
   }
 
+  // --- TOUCH SWIPE SUPPORT ---
+  let touchStartX = 0;
+  let touchEndX = 0;
+
+  track.addEventListener('touchstart', e => {
+    touchStartX = e.changedTouches[0].screenX;
+  }, { passive: true });
+
+  track.addEventListener('touchend', e => {
+    touchEndX = e.changedTouches[0].screenX;
+    handleSwipe();
+  }, { passive: true });
+
+  function handleSwipe() {
+    const swipeThreshold = 40;
+    if (touchEndX < touchStartX - swipeThreshold) {
+      nextSlide();
+    }
+    if (touchEndX > touchStartX + swipeThreshold) {
+      prevSlide();
+    }
+  }
+  // ---------------------------
+
   function nextSlide() {
     const itemsPerView = getItemsPerView();
     const maxIndex = Math.max(0, totalSlides - itemsPerView);

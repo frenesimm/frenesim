@@ -2339,13 +2339,7 @@ footer {
   .equipe-carousel-track { gap: var(--sp-3); }
 }
 
-/* Mobile pequeno (< 481px): 2 cards por tela */
-@media (max-width: 480px) {
-  .equipe-slide {
-    flex: 0 0 calc((100% - 16px) / 2);
-    max-width: calc((100% - 16px) / 2);
-  }
-}
+
 
 /* Padrão: 3 por tela no mobile médio */
 .equipe-slide {
@@ -2359,6 +2353,14 @@ footer {
   transition: border-color var(--t-mid);
   min-width: 0;
   box-sizing: border-box;
+}
+
+/* Mobile pequeno (< 481px): 2 cards por tela */
+@media (max-width: 480px) {
+  .equipe-slide {
+    flex: 0 0 calc((100% - 16px) / 2);
+    max-width: calc((100% - 16px) / 2);
+  }
 }
 
 @media (min-width: 641px) {
