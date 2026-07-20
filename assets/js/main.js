@@ -520,10 +520,10 @@ function initEquipeModal() {
       modalOverlay.classList.add('show');
       document.body.style.overflow = 'hidden';
 
-      // Aguarda 1.6s (1.5s a mais) para a pessoa ver a foto grande antes de virar
+      // Aplica a classe 'flipped' quase imediatamente para a animação lenta de 1.6s começar
       setTimeout(() => {
         clone.classList.add('flipped');
-      }, 1600);
+      }, 50);
     });
   });
 }
