@@ -1,4 +1,4 @@
-/**
+﻿/**
  * FRENESIM — data.js v3
  * Constantes de conteúdo. Edite aqui para atualizar o site sem mexer no HTML.
  * Fonte da verdade: pastas ID/ (logo, fontes) e este arquivo (conteúdo).
@@ -6,7 +6,7 @@
 
 export const EVENTO = {
   nome:       'FRENESIM',
-  edicao:     '2ª Edição',
+  edicao:     '2º edição',
   data:       '14 de Novembro de 2026',
   dataISO:    '2026-11-14',
   cidade:     'Goiânia',
@@ -162,7 +162,7 @@ export const PATROCINADORES = [
     id:        'glimmer',
     nome:      'Glimmer',
     categoria: 'Parceiro Oficial de Bebidas',
-    descricao: 'Bebida low-calorie com e sem álcool. Ativação e open bar no FRENESIM 2ª edição.',
+    descricao: 'Bebida low-calorie com e sem álcool. Ativação e open bar no FRENESIM 2º edição.',
     logo:      null,             // Substituir com caminho da logo quando disponível
     destaque:  true,
   },
@@ -175,5 +175,5 @@ export const CRONOGRAMA = [
   { data: '09/09',    titulo: 'Resultado do Edital',  sub: 'Divulgação das marcas selecionadas', destaque: false },
   { data: '21/09',    titulo: 'Prazo máximo para contratação dos pacotes', sub: 'Confirmação e pagamento dos pacotes', destaque: false },
   { data: 'Out-Nov',  titulo: 'Pré-Produção',         sub: 'Ensaios, curadoria de looks — datas a confirmar', destaque: false },
-  { data: '14/11',    titulo: 'FRENESIM — 2ª Edição', sub: 'Goiânia, GO · Da passarela pra pista', destaque: true },
+  { data: '14/11',    titulo: 'FRENESIM — 2º edição', sub: 'Goiânia, GO · Da passarela pra pista', destaque: true },
 ];

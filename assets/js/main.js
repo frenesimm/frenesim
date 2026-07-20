@@ -1,5 +1,5 @@
-/**
- * FRENESIM 2ª Edição — main.js v3
+﻿/**
+ * FRENESIM 2º edição — main.js v3
  * Módulos: nav, reveal, marquee, tabs, avise-me form, toast, flip cards, lightbox, carousel
  */
 

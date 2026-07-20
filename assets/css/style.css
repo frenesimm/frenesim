@@ -569,7 +569,7 @@ input, textarea { font-family: inherit; }
   position: relative;
   overflow: hidden;
   padding-bottom: var(--sp-4);
-  background: #4A0A1F url('../images/hero/banner-site-frenesim-capa.webp') no-repeat center center / cover;
+  background: #4A0A1F url('../images/hero/banner-site-frenesim-capa.png') no-repeat center center / cover;
 }
 
 @media (min-width: 641px) {
@@ -614,19 +614,22 @@ input, textarea { font-family: inherit; }
 
 /* Pré-label */
 .hero-pre {
+  position: absolute;
+  top: 100px; /* Mais perto do menu */
+  left: 0;
+  right: 0;
   display: flex;
   align-items: center;
   gap: var(--sp-1);
   padding: 0 var(--side-pad);
-  margin-bottom: var(--sp-2);
   flex-wrap: wrap;
-  margin-top: -24px;
+  z-index: 10;
 }
 
 @media (min-width: 641px) {
   .hero-pre {
+    top: 120px;
     gap: var(--sp-2);
-    margin-bottom: var(--sp-4);
   }
 }
 
