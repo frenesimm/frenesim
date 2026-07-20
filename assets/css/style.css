@@ -615,7 +615,7 @@ input, textarea { font-family: inherit; }
 /* Pré-label */
 .hero-pre {
   position: absolute;
-  top: 60px; /* Exatamente na base do menu (mobile) */
+  top: 20px; /* Conforme pedido (bem acima) */
   left: 0;
   right: 0;
   display: flex;
@@ -628,7 +628,7 @@ input, textarea { font-family: inherit; }
 
 @media (min-width: 641px) {
   .hero-pre {
-    top: 64px; /* Exatamente na base do menu (desktop) */
+    top: 20px; /* Conforme pedido (desktop) */
     gap: var(--sp-2);
   }
 }
