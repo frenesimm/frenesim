@@ -615,7 +615,7 @@ input, textarea { font-family: inherit; }
 /* Pré-label */
 .hero-pre {
   position: absolute;
-  top: 100px; /* Mais perto do menu */
+  top: 70px; /* Grudado no menu no mobile */
   left: 0;
   right: 0;
   display: flex;
@@ -628,7 +628,7 @@ input, textarea { font-family: inherit; }
 
 @media (min-width: 641px) {
   .hero-pre {
-    top: 120px;
+    top: 80px; /* Grudado no menu no desktop */
     gap: var(--sp-2);
   }
 }
