@@ -283,9 +283,9 @@ function initEquipeCarousel() {
 
   function getItemsPerView() {
     if (window.innerWidth < 481) return 1.6; /* 25% maior no mobile */
-    if (window.innerWidth < 641) return 2.2; /* um pouco maior no tablet */
-    if (window.innerWidth < 1200) return 2.5; 
-    return 2.85; /* 40% maior no desktop */
+    if (window.innerWidth < 641) return 2; 
+    if (window.innerWidth < 1200) return 2; 
+    return 2; /* Desktop: 2 cards por vez (bem maior) */
   }
 
   function updateCarousel() {

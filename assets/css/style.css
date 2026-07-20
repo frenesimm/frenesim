@@ -2419,17 +2419,17 @@ footer {
 
 @media (min-width: 641px) {
   .equipe-slide {
-    flex: 0 0 calc((100% - var(--sp-3)) / 2.2);
-    max-width: calc((100% - var(--sp-3)) / 2.2);
+    flex: 0 0 calc((100% - var(--sp-3)) / 2);
+    max-width: calc((100% - var(--sp-3)) / 2);
     padding: var(--sp-2);
   }
 }
 
 @media (min-width: 1200px) {
   .equipe-slide {
-    /* Desktop: 40% maior que 25% = 35% (aprox 2.85 cards por view) */
-    flex: 0 0 calc((100% - 2 * var(--sp-3)) / 2.85);
-    max-width: calc((100% - 2 * var(--sp-3)) / 2.85);
+    /* Desktop: Exatamente 2 cards por tela (pedido explícito) */
+    flex: 0 0 calc((100% - var(--sp-3)) / 2);
+    max-width: calc((100% - var(--sp-3)) / 2);
   }
 }
 
