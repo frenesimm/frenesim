@@ -40,7 +40,7 @@
   <div class="nav-mobile" id="nav-mobile" role="dialog" aria-label="Menu de navegação">
     <button class="nav-mobile-close" id="nav-mobile-close" aria-label="Fechar menu">✕</button>
     <nav>
-      <ul style="display:flex;flex-direction:column;align-items:center;gap:32px;list-style:none;" role="list">
+      <ul class="nav-mobile-list" role="list">
         <li><a href="#sobre" class="nav-mobile-link">Sobre</a></li>
         <li><a href="#primeira-edicao" class="nav-mobile-link">1ª Edição</a></li>
         <li><a href="#ingressos" class="nav-mobile-link">Ingressos</a></li>
@@ -657,7 +657,7 @@
 
             <!-- Símbolo da marca como elemento decorativo -->
             <div style="margin-top:32px;display:flex;justify-content:flex-end;opacity:0.15;" aria-hidden="true">
-              <img src="assets/images/logo/simbolo-branco.png" alt="" style="height:180px;width:auto;filter:invert(1);" />
+              <img src="assets/images/logo/simbolo-branco.png" alt="" loading="lazy" style="height:180px;width:auto;filter:invert(1);" />
             </div>
           </div>
         </div>
@@ -817,12 +817,12 @@
             <p>Pagamento: <strong>Pix</strong> ou <strong>crédito em até 12x</strong></p>
           </div>
           <div class="edital-footer-ctas">
-            <a href="#" class="btn btn-bordo" id="btn-inscrever-marca" aria-label="Inscrever minha marca">
+            <button type="button" class="btn btn-bordo" id="btn-inscrever-marca" aria-label="Inscrever minha marca">
               Inscrever minha marca →
-            </a>
-            <a href="#" class="btn btn-outline-branco" id="btn-download-edital" aria-label="Baixar edital em PDF">
+            </button>
+            <button type="button" class="btn btn-outline-branco" id="btn-download-edital" aria-label="Baixar edital em PDF">
               ↓ Baixar edital (PDF)
-            </a>
+            </button>
           </div>
         </div>
       </div>

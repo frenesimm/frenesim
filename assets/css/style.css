@@ -48,7 +48,7 @@
 }
 
 /* Inter via Google Fonts — corpo de texto */
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap');
+/* @import removido — Inter já carregada via <link> no HTML (mais performático) */
 
 /* -------------------
    2. TOKENS DE DESIGN
@@ -79,7 +79,7 @@
   --cinza-1:    #2a0510;
   --cinza-2:    #6e1535;
   --cinza-3:    #9a2050;
-  --cinza-text: #e8a0b8;
+  --cinza-text: #f0b8cc; /* clarificado para ratio ~5.0:1 (WCAG AA) */
   --cinza-sub:  #f5ccd8;
 
   /* === TIPOGRAFIA === */
@@ -406,11 +406,11 @@ input, textarea { font-family: inherit; }
 .nav-links {
   display: none;
   align-items: center;
-  gap: var(--sp-4);
+  gap: clamp(16px, 2vw, 32px); /* gap responsivo — evita links cortados em 961-1100px */
   margin-left: auto;
 }
 
-@media (min-width: 961px) {
+@media (min-width: 1024px) {
   .nav-links { display: flex; }
 }
 
@@ -440,7 +440,7 @@ input, textarea { font-family: inherit; }
   transition: box-shadow var(--t-fast), transform var(--t-fast);
 }
 
-@media (min-width: 961px) {
+@media (min-width: 1024px) {
   .nav-cta { display: inline-flex; }
 }
 
@@ -465,7 +465,7 @@ input, textarea { font-family: inherit; }
   transition: transform var(--t-fast), opacity var(--t-fast);
 }
 
-@media (min-width: 961px) {
+@media (min-width: 1024px) {
   .nav-hamburger { display: none; }
 }
 
@@ -482,6 +482,17 @@ input, textarea { font-family: inherit; }
   gap: var(--sp-6);
 }
 .nav-mobile.open { display: flex; }
+
+/* Lista do menu mobile — substitui inline style removido do HTML */
+.nav-mobile-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 32px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
 
 .nav-mobile a {
   font-family: var(--font-title);
@@ -967,23 +978,46 @@ input, textarea { font-family: inherit; }
   color: var(--cinza-text);
 }
 
-/* Smaller text on mobile for 3-per-row cards */
-@media (max-width: 640px) {
+/* Mobile pequeno (< 481px): 2 cards por tela — fontes legíveis */
+@media (max-width: 480px) {
   .equipe-card-nome {
-    font-size: 0.7rem;
+    font-size: 0.78rem;
   }
   .equipe-card-cargo {
-    font-size: 0.42rem;
+    font-size: 0.52rem;
   }
   .equipe-slide-tag {
-    font-size: 0.4rem;
-    padding: 2px 4px;
+    font-size: 0.45rem;
+    padding: 2px 6px;
   }
   .equipe-bio-text {
-    font-size: 0.6rem;
+    font-size: 0.68rem;
   }
   .equipe-bio-contact {
-    font-size: 0.45rem;
+    font-size: 0.52rem;
+  }
+  .equipe-flip-back {
+    padding: var(--sp-1);
+  }
+}
+
+/* Mobile médio (481-640px): 3 cards — fontes ajustadas */
+@media (min-width: 481px) and (max-width: 640px) {
+  .equipe-card-nome {
+    font-size: 0.72rem;
+  }
+  .equipe-card-cargo {
+    font-size: 0.48rem;
+  }
+  .equipe-slide-tag {
+    font-size: 0.44rem;
+    padding: 2px 6px;
+  }
+  .equipe-bio-text {
+    font-size: 0.64rem;
+  }
+  .equipe-bio-contact {
+    font-size: 0.48rem;
   }
   .equipe-flip-back {
     padding: var(--sp-1);
@@ -1025,7 +1059,9 @@ input, textarea { font-family: inherit; }
   position: absolute;
   top: 0;
   left: 0;
-  height: 100%;
+  min-height: 100%; /* min-height evita corte de conteúdo biográfico longo */
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
   transform: rotateY(180deg);
   z-index: 1;
   display: flex;
@@ -1079,7 +1115,14 @@ input, textarea { font-family: inherit; }
    ------------------- */
 #primeira-edicao {
   background: var(--bg);
-  border-left: 4px solid var(--rosa);
+  border-top: 4px solid var(--rosa); /* border-top no mobile — não rouba largura */
+}
+
+@media (min-width: 961px) {
+  #primeira-edicao {
+    border-top: none;
+    border-left: 4px solid var(--rosa); /* border-left apenas no desktop */
+  }
 }
 
 .edicao-header {
@@ -1114,6 +1157,10 @@ input, textarea { font-family: inherit; }
   flex-direction: column;
   gap: var(--sp-1);
   padding-bottom: 8px;
+}
+
+.edicao-header-info .tag {
+  width: fit-content;
 }
 
 /* Grid de números */
@@ -1382,7 +1429,7 @@ input, textarea { font-family: inherit; }
 .ingressos-deco-text {
   font-family: var(--font-title);
   font-weight: 900;
-  font-size: clamp(5rem, 20vw, 20rem);
+  font-size: clamp(3rem, 18vw, 20rem); /* reduzido de 20vw — menos impacto em 320px */
   text-transform: uppercase;
   color: var(--cinza-1);
   opacity: 0.35;
@@ -1447,6 +1494,16 @@ input, textarea { font-family: inherit; }
   display: flex;
   flex-direction: column;
   gap: var(--sp-1);
+}
+
+/* Garantir empilhamento vertical em mobile pequeno */
+@media (max-width: 480px) {
+  .form-row {
+    flex-direction: column;
+  }
+  .form-row .form-input {
+    width: 100%;
+  }
 }
 
 @media (min-width: 481px) {
@@ -1693,6 +1750,8 @@ input, textarea { font-family: inherit; }
   .pacotes-grid-2 {
     grid-template-columns: repeat(2, 1fr);
     max-width: 720px;
+    margin-left: auto;  /* centralizar grid de acessórios */
+    margin-right: auto;
   }
 }
 
@@ -2280,7 +2339,15 @@ footer {
   .equipe-carousel-track { gap: var(--sp-3); }
 }
 
-/* Cards menores — 3 por tela no mobile */
+/* Mobile pequeno (< 481px): 2 cards por tela */
+@media (max-width: 480px) {
+  .equipe-slide {
+    flex: 0 0 calc((100% - 16px) / 2);
+    max-width: calc((100% - 16px) / 2);
+  }
+}
+
+/* Padrão: 3 por tela no mobile médio */
 .equipe-slide {
   flex: 0 0 calc((100% - 2 * 16px) / 3);
   max-width: calc((100% - 2 * 16px) / 3);
@@ -2337,6 +2404,9 @@ footer {
   justify-content: center;
   gap: var(--sp-2);
   margin-top: var(--sp-3);
+  max-width: 100%;     /* impede que controles vazem da viewport */
+  overflow: hidden;
+  flex-wrap: wrap;     /* dots quebram linha se necessário */
 }
 
 @media (min-width: 641px) {
