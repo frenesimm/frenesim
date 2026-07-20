@@ -1453,7 +1453,7 @@ textarea {
   font-weight: 900;
   font-size: clamp(4rem, 14vw, 11rem);
   line-height: 0.85;
-  color: var(--cinza-1);
+  color: #FF66C1;
   user-select: none;
   flex-shrink: 0;
 }
@@ -1769,10 +1769,10 @@ textarea {
   font-family: var(--font-title);
   font-weight: 900;
   font-size: clamp(3rem, 18vw, 20rem);
-  /* reduzido de 20vw — menos impacto em 320px */
+  /* reduzido de 20vw - menos impacto em 320px */
   text-transform: uppercase;
-  color: var(--cinza-1);
-  opacity: 0.35;
+  color: #150208;
+  opacity: 1;
   white-space: nowrap;
   user-select: none;
   letter-spacing: -0.02em;
