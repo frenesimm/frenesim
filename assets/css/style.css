@@ -140,6 +140,8 @@ html {
   scroll-behavior: smooth;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+  width: 100%;
 }
 
 html,
@@ -372,6 +374,11 @@ textarea {
 
 .btn:active {
   transform: translateY(0);
+}
+
+.btn:focus-visible, .form-input:focus-visible {
+  outline: 2px solid var(--branco);
+  outline-offset: 3px;
 }
 
 /* Sólidos */
@@ -1591,6 +1598,13 @@ textarea {
   line-height: 1.3;
 }
 
+@media (max-width: 375px) {
+  .ficha-cat {
+    min-width: 110px;
+    width: 110px;
+  }
+}
+
 @media (min-width: 481px) {
   .ficha-cat {
     font-size: 0.75rem;
@@ -1955,6 +1969,13 @@ textarea {
   border-right: 1px solid var(--cinza-2);
   flex-shrink: 0;
   line-height: 1.3;
+}
+
+@media (max-width: 375px) {
+  .tl-data {
+    min-width: 110px;
+    width: 110px;
+  }
 }
 
 @media (min-width: 481px) {
