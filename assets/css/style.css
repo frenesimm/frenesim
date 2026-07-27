@@ -1126,7 +1126,8 @@ textarea {
   letter-spacing: 0.14em;
   text-transform: uppercase;
   color: var(--cinza-text);
-  min-width: 100px;
+  min-width: 150px;
+  width: 150px;
   flex-shrink: 0;
 }
 
