@@ -137,11 +137,10 @@ export const PRIMEIRA_EDICAO = {
 export const PATROCINADORES = [];
 
 export const CRONOGRAMA = [
-
-  { data: '03/08',    titulo: 'Inscrições Abertas',   sub: 'Online, gratuito, formulário', destaque: false },
-  { data: '03/09',    titulo: 'Encerramento',         sub: 'Às 23h59', destaque: false },
-  { data: '09/09',    titulo: 'Resultado do Edital',  sub: 'Divulgação das marcas selecionadas', destaque: false },
-  { data: '21/09',    titulo: 'Prazo máximo para contratação dos pacotes', sub: 'Confirmação e pagamento dos pacotes', destaque: false },
-  { data: 'Out-Nov',  titulo: 'Pré-Produção',         sub: 'Ensaios, curadoria de looks — datas a confirmar', destaque: false },
-
+  { data: '03/08/2026',         titulo: 'Abertura das inscrições online', sub: '', destaque: false },
+  { data: '03/09/2026',         titulo: 'Encerramento das inscrições', sub: '— até 23h59', destaque: false },
+  { data: '04/09 a 08/09/2026', titulo: 'Período de análise curatorial', sub: '', destaque: false },
+  { data: '09/09/2026',         titulo: 'Publicação dos resultados preliminares com pontuações', sub: '', destaque: false },
+  { data: '10/09 a 14/09/2026', titulo: 'Prazo para recurso administrativo', sub: '', destaque: false },
+  { data: '15/09/2026',         titulo: 'Publicação final dos resultados', sub: '', destaque: true },
 ];
