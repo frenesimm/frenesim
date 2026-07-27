@@ -160,7 +160,7 @@ export const PRIMEIRA_EDICAO = {
 export const PATROCINADORES = [];
 
 export const CRONOGRAMA = [
-  { data: '02/08',    titulo: 'Publicação do Edital', sub: 'Abertura oficial das informações para marcas', destaque: false },
+
   { data: '03/08',    titulo: 'Inscrições Abertas',   sub: 'Online, gratuito, formulário', destaque: false },
   { data: '03/09',    titulo: 'Encerramento',         sub: 'Às 23h59', destaque: false },
   { data: '09/09',    titulo: 'Resultado do Edital',  sub: 'Divulgação das marcas selecionadas', destaque: false },
