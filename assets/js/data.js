@@ -1,4 +1,4 @@
-﻿/**
+/**
  * FRENESIM — data.js v3
  * Constantes de conteúdo. Edite aqui para atualizar o site sem mexer no HTML.
  * Fonte da verdade: pastas ID/ (logo, fontes) e este arquivo (conteúdo).
@@ -157,16 +157,7 @@ export const PRIMEIRA_EDICAO = {
   ],
 };
 
-export const PATROCINADORES = [
-  {
-    id:        'glimmer',
-    nome:      'Glimmer',
-    categoria: 'Parceiro Oficial de Bebidas',
-    descricao: 'Bebida low-calorie com e sem álcool. Ativação e open bar no FRENESIM 2º edição.',
-    logo:      null,             // Substituir com caminho da logo quando disponível
-    destaque:  true,
-  },
-];
+export const PATROCINADORES = [];
 
 export const CRONOGRAMA = [
   { data: '02/08',    titulo: 'Publicação do Edital', sub: 'Abertura oficial das informações para marcas', destaque: false },
