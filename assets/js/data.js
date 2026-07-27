@@ -76,10 +76,10 @@ export const PACOTES = {
         'Inserção em toda a campanha de comunicação pré-evento (feed, stories, assessoria de imprensa)',
         'Entrega de material fotográfico de passarela pós-evento (alta resolução com tratamento de cor)',
         'Participação e veiculação da marca no fashion film institucional da edição (com inserção nos créditos)',
-        '26 imagens em formato de ensaio editorial exclusivo, editadas e tratadas pós-evento',
-        'Produção e veiculação de feature promocional (conteúdo audiovisual exclusivo) nas redes do Frenesim antes do evento',
-        'Produção e entrega de fashion film individualizado e exclusivo para uso livre da marca',
-        '2 ingressos de acesso geral + 1 credenciamento para o representante'
+        '<strong>26 imagens em formato de ensaio editorial exclusivo, editadas e tratadas pós-evento</strong>',
+        '<strong>Produção e veiculação de feature promocional (conteúdo audiovisual exclusivo) nas redes do Frenesim antes do evento</strong>',
+        '<strong>Produção e entrega de fashion film individualizado e exclusivo para uso livre da marca</strong>',
+        '<strong>2 ingressos de acesso geral + 1 credenciamento para o representante</strong>'
       ],
     }
   ],
@@ -109,9 +109,9 @@ export const PACOTES = {
         'Inserção na campanha de comunicação digital pré-evento (feed, stories, assessoria de imprensa)',
         'Entrega de material fotográfico de passarela (detalhes e geral) pós-evento',
         'Participação e veiculação da marca no fashion film institucional da edição (com inserção nos créditos)',
-        'Produção e veiculação de feature promocional (conteúdo audiovisual exclusivo) nas redes do Frenesim antes do evento',
-        '26 imagens em formato de ensaio editorial individualizado e editado de cada acessório participante, entregue pós-evento',
-        '2 ingressos de acesso geral + 1 credenciamento para o representante'
+        '<strong>Produção e veiculação de feature promocional (conteúdo audiovisual exclusivo) nas redes do Frenesim antes do evento</strong>',
+        '<strong>26 imagens em formato de ensaio editorial individualizado e editado de cada acessório participante, entregue pós-evento</strong>',
+        '<strong>2 ingressos de acesso geral + 1 credenciamento para o representante</strong>'
       ],
     }
   ],
