@@ -2188,10 +2188,9 @@ textarea {
 
 @media (min-width: 641px) {
   .pacotes-grid-2 {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: 1fr;
     max-width: 720px;
     margin-left: auto;
-    /* centralizar grid de acessórios */
     margin-right: auto;
   }
 }
