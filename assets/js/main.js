@@ -1,4 +1,4 @@
-﻿/**
+/**
  * FRENESIM 2º edição — main.js v3
  * Módulos: nav, reveal, marquee, tabs, avise-me form, toast, flip cards, lightbox, carousel
  */
@@ -215,7 +215,7 @@ function initEditalButtons() {
 
   const handler = (e) => {
     e.preventDefault();
-    showToast('Disponível em breve!');
+    showToast('Em breve');
   };
 
   if (btnInscrever) btnInscrever.addEventListener('click', handler);

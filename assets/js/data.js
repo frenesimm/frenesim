@@ -143,5 +143,5 @@ export const CRONOGRAMA = [
   { data: '09/09',    titulo: 'Resultado do Edital',  sub: 'Divulgação das marcas selecionadas', destaque: false },
   { data: '21/09',    titulo: 'Prazo máximo para contratação dos pacotes', sub: 'Confirmação e pagamento dos pacotes', destaque: false },
   { data: 'Out-Nov',  titulo: 'Pré-Produção',         sub: 'Ensaios, curadoria de looks — datas a confirmar', destaque: false },
-  { data: '14/11',    titulo: 'FRENESIM — 2º edição', sub: 'Goiânia, GO · Da passarela pra pista', destaque: true },
+
 ];
