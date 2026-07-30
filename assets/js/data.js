@@ -55,31 +55,31 @@ export const PACOTES = {
       id:       'vestuario-essencial',
       nome:     'Essencial',
       nomeLong: 'Apenas desfile',
-      preco:    'R$ 175,00',
+      preco:    'R$ 250,00',
       destaque: false,
       inclui: [
         'Apresentação de 8 (oito) looks completos no desfile oficial',
-        'Inserção em toda a campanha de comunicação pré-evento (feed, stories, assessoria de imprensa)',
-        'Entrega de material fotográfico de passarela pós-evento (alta resolução com tratamento de cor)',
+        'Inserção na campanha de comunicação pré-evento (feed, stories, assessoria de imprensa)',
+        'Entrega de material fotográfico de passarela pós-evento (alta resolução, com tratamento de cor)',
         'Participação e veiculação da marca no fashion film institucional da edição (com inserção nos créditos)',
-        '1 ingresso de acesso geral + 1 credenciamento para o representante/estilista da marca'
+        '1 (um) credenciamento para o representante da marca'
       ],
     },
     {
       id:       'vestuario-expansao',
       nome:     'Expansão',
       nomeLong: 'Desfile + exposição',
-      preco:    'R$ 350,00',
+      preco:    'R$ 420,00',
       destaque: true,
       inclui: [
         'Apresentação de 8 (oito) looks completos no desfile oficial',
-        'Inserção em toda a campanha de comunicação pré-evento (feed, stories, assessoria de imprensa)',
-        'Entrega de material fotográfico de passarela pós-evento (alta resolução com tratamento de cor)',
+        'Inserção na campanha de comunicação pré-evento (feed, stories, assessoria de imprensa)',
+        'Entrega de material fotográfico de passarela pós-evento (alta resolução, com tratamento de cor)',
         'Participação e veiculação da marca no fashion film institucional da edição (com inserção nos créditos)',
-        '<strong>26 imagens em formato de ensaio editorial exclusivo, editadas e tratadas pós-evento</strong>',
-        '<strong>Produção e veiculação de feature promocional (conteúdo audiovisual exclusivo) nas redes do Frenesim antes do evento</strong>',
-        '<strong>Produção e entrega de fashion film individualizado e exclusivo para uso livre da marca</strong>',
-        '<strong>2 ingressos de acesso geral + 1 credenciamento para o representante</strong>'
+        '<strong>Disponibilização de espaço físico para Pop-up Store durante o evento (item 7.5)</strong>',
+        '<strong>26 (vinte e seis) imagens em formato de ensaio editorial exclusivo, editadas e tratadas pós-evento</strong>',
+        '<strong>Produção e veiculação de feature promocional (conteúdo audiovisual exclusivo) nas redes do FRENESIM antes do evento</strong>',
+        '<strong>1 (um) ingressos de acesso geral e 1 (um) credenciamento para o representante da marca + 1 para operador de vendas</strong>'
       ],
     }
   ],
@@ -88,30 +88,31 @@ export const PACOTES = {
       id:       'acessorios-essencial',
       nome:     'Essencial',
       nomeLong: 'Acessórios',
-      preco:    'R$ 150,00',
+      preco:    'R$ 220,00',
       destaque: false,
       inclui: [
-        'Disponibilização e curadoria de peças para composição de até 16 (dezesseis) looks na passarela oficial (em colaboração com as marcas de vestuário ou styling do evento)',
+        'Disponibilização e curadoria de peças para composição de até 16 (dezesseis) looks na passarela oficial, em colaboração com as marcas de vestuário ou o styling do evento',
         'Inserção na campanha de comunicação digital pré-evento (feed, stories, assessoria de imprensa)',
         'Entrega de material fotográfico de passarela (detalhes e geral) pós-evento',
         'Participação e veiculação da marca no fashion film institucional da edição (com inserção nos créditos)',
-        '1 ingresso de acesso geral + 1 credenciamento para o representante da marca'
+        '1 (um) credenciamento para o representante da marca'
       ],
     },
     {
       id:       'acessorios-expansao',
       nome:     'Expansão',
       nomeLong: 'Acessórios',
-      preco:    'R$ 300,00',
+      preco:    'R$ 390,00',
       destaque: true,
       inclui: [
-        'Disponibilização e curadoria de peças para composição de até 16 (dezesseis) looks na passarela oficial (em colaboração com as marcas de vestuário ou styling do evento)',
+        'Disponibilização e curadoria de peças para composição de até 16 (dezesseis) looks na passarela oficial, em colaboração com as marcas de vestuário ou o styling do evento',
         'Inserção na campanha de comunicação digital pré-evento (feed, stories, assessoria de imprensa)',
         'Entrega de material fotográfico de passarela (detalhes e geral) pós-evento',
         'Participação e veiculação da marca no fashion film institucional da edição (com inserção nos créditos)',
-        '<strong>Produção e veiculação de feature promocional (conteúdo audiovisual exclusivo) nas redes do Frenesim antes do evento</strong>',
-        '<strong>26 imagens em formato de ensaio editorial individualizado e editado de cada acessório participante, entregue pós-evento</strong>',
-        '<strong>2 ingressos de acesso geral + 1 credenciamento para o representante</strong>'
+        '<strong>Disponibilização de espaço físico para Pop-up Store durante o evento (item 7.5)</strong>',
+        '<strong>Produção e veiculação de feature promocional (conteúdo audiovisual exclusivo) nas redes do FRENESIM antes do evento</strong>',
+        '<strong>26 (vinte e seis) imagens em formato de ensaio editorial individualizado, editadas por acessório participante, entregues pós-evento</strong>',
+        '<strong>1 (um) ingressos de acesso geral e 1 (um) credenciamento para o representante da marca + 1 para operador de vendas</strong>'
       ],
     }
   ],
