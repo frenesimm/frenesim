@@ -35,7 +35,7 @@ export const CONTATO = {
 
 export const EDITAL = {
   formularioUrl: 'https://forms.gle/Ueeq2hEm9h1hAn3H7',
-  pdfUrl:        '#',       // Substituir com link do PDF do edital
+  pdfUrl:        'assets/docs/edital-frenesim-2026.pdf',
   inscricoes: {
     inicio: '03/08/2026',
     fim:    '03/09/2026',

@@ -207,17 +207,10 @@ function initAviseme() {
 }
 
 // =====================
-// 6.5 BOTÕES DO EDITAL (EM BREVE)
+// 6.5 BOTÕES DO EDITAL
 // =====================
 function initEditalButtons() {
-  const btnDownload = document.getElementById('btn-download-edital');
-
-  const handler = (e) => {
-    e.preventDefault();
-    showToast('Em breve');
-  };
-
-  if (btnDownload) btnDownload.addEventListener('click', handler);
+  // Botões de inscrição (Google Forms) e download do edital (PDF) ativos via HTML
 }
 
 // =====================
