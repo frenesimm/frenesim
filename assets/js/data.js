@@ -22,7 +22,7 @@ export const EVENTO = {
 };
 
 export const EQUIPE = [
-  { funcao: 'Criação & Direção', nomes: 'Laura Calais & Thayna Alves Morais' },
+  { funcao: 'Criação & Direção', nomes: 'Laura Calais & Thayna Morais' },
   { funcao: 'Cidade',            nomes: 'Goiânia, GO — Brasil' },
   { funcao: 'Formato',           nomes: 'Desfile-Festa Anual' },
 ];
@@ -34,7 +34,7 @@ export const CONTATO = {
 };
 
 export const EDITAL = {
-  formularioUrl: '#',       // Substituir com link real do formulário
+  formularioUrl: 'https://forms.gle/Ueeq2hEm9h1hAn3H7',
   pdfUrl:        '#',       // Substituir com link do PDF do edital
   inscricoes: {
     inicio: '03/08/2026',

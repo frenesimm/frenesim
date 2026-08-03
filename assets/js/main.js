@@ -210,7 +210,6 @@ function initAviseme() {
 // 6.5 BOTÕES DO EDITAL (EM BREVE)
 // =====================
 function initEditalButtons() {
-  const btnInscrever = document.getElementById('btn-inscrever-marca');
   const btnDownload = document.getElementById('btn-download-edital');
 
   const handler = (e) => {
@@ -218,7 +217,6 @@ function initEditalButtons() {
     showToast('Em breve');
   };
 
-  if (btnInscrever) btnInscrever.addEventListener('click', handler);
   if (btnDownload) btnDownload.addEventListener('click', handler);
 }
 
