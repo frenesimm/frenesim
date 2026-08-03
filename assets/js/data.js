@@ -7,8 +7,8 @@
 export const EVENTO = {
   nome:       'FRENESIM',
   edicao:     '2º edição',
-  data:       '14 de Novembro de 2026',
-  dataISO:    '2026-11-14',
+  data:       'Novembro de 2026',
+  dataISO:    '2026-11',
   cidade:     'Goiânia',
   estado:     'GO',
   pais:       'Brasil',
