@@ -73,10 +73,18 @@
   --pessego: #FFC253;
   --laranja: #F4A525;
 
-  /* Base — fundo escurecido a pedido para teste de contraste */
+  /* Base — degradê atmosférico Bordô sofisticado */
   --bg: #2A0510;
-  --bg-2: #2A0510;
-  --bg-card: #4A0A1F; /* mantive os cards levemente mais claros para destacarem do fundo super escuro */
+  --bg-dark: #150208;
+  --bg-deep: #1A030A;
+  --bg-rich: #3D0719;
+  --bg-light: #560B24;
+  --bg-gradient: radial-gradient(ellipse 90% 60% at 50% -10%, rgba(131, 0, 44, 0.45), transparent 70%),
+                 radial-gradient(circle at 90% 40%, rgba(91, 12, 38, 0.35), transparent 50%),
+                 radial-gradient(circle at 10% 70%, rgba(74, 10, 31, 0.4), transparent 50%),
+                 linear-gradient(180deg, #160209 0%, #2A0510 30%, #22040D 65%, #130107 100%);
+  --bg-2: #22040D;
+  --bg-card: rgba(74, 10, 31, 0.85); /* cards levemente mais claros com translucidez para o degradê */
   --bg-input: #4A0A1F;
   --branco: #FFFFFF;
   --cinza-1: #150208; /* escureci ainda mais o cinza-1 caso seja usado para sombras */
@@ -151,13 +159,88 @@ body {
 }
 
 body {
-  background: var(--bg);
+  background-color: #160209;
+  background-image: var(--bg-gradient);
+  background-attachment: fixed;
+  background-size: cover;
   color: var(--branco);
   font-family: var(--font-body);
   font-size: 16px;
   line-height: 1.6;
   overflow-wrap: break-word;
   word-wrap: break-word;
+  position: relative;
+  min-height: 100vh;
+}
+
+/* Camada marcante de textura / granulação analógica de poster */
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix type='matrix' values='1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 1.2 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.12'/%3E%3C/svg%3E");
+  background-repeat: repeat;
+  background-size: 180px 180px;
+  pointer-events: none;
+  z-index: 9999;
+  mix-blend-mode: overlay;
+}
+
+/* Animações Neon Sutis / Respiração Noturna */
+@keyframes neonPulse {
+  0%, 100% {
+    filter: drop-shadow(0 0 3px currentColor);
+    opacity: 0.88;
+  }
+  50% {
+    filter: drop-shadow(0 0 10px currentColor) drop-shadow(0 0 18px currentColor);
+    opacity: 1;
+  }
+}
+
+@keyframes neonBoxPulseMagenta {
+  0%, 100% {
+    box-shadow: 4px 4px 0px rgba(0, 0, 0, 0.8), 0 0 10px rgba(255, 0, 152, 0.35);
+  }
+  50% {
+    box-shadow: 4px 4px 0px rgba(0, 0, 0, 0.8), 0 0 22px rgba(255, 0, 152, 0.65), 0 0 36px rgba(255, 0, 152, 0.3);
+  }
+}
+
+@keyframes neonDotPulse {
+  0%, 100% {
+    text-shadow: 0 0 4px var(--azul);
+    transform: scale(1);
+    opacity: 0.85;
+  }
+  50% {
+    text-shadow: 0 0 10px var(--azul), 0 0 18px var(--azul);
+    transform: scale(1.18);
+    opacity: 1;
+  }
+}
+
+@keyframes neonBarPulse {
+  0%, 100% {
+    box-shadow: 0 0 8px rgba(0, 0, 255, 0.4);
+    opacity: 0.9;
+  }
+  50% {
+    box-shadow: 0 0 18px rgba(0, 0, 255, 0.8), 0 0 28px rgba(0, 0, 255, 0.4);
+    opacity: 1;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
 }
 
 img {
@@ -691,7 +774,9 @@ textarea {
   border-bottom: 1px solid var(--cinza-2);
   padding: 10px 0;
   white-space: nowrap;
-  background: var(--bg);
+  background: rgba(26, 3, 10, 0.75);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
 }
 
 .marquee-track {
@@ -717,6 +802,8 @@ textarea {
 
 .marquee-track span.dot {
   color: var(--azul);
+  display: inline-block;
+  animation: neonDotPulse 3.2s ease-in-out infinite alternate;
 }
 
 @keyframes marquee {
@@ -765,7 +852,7 @@ textarea {
   z-index: 2;
 }
 
-/* Acento azul no topo */
+/* Acento azul no topo — com respiração neon */
 .hero-accent-top {
   position: absolute;
   top: 0;
@@ -773,9 +860,10 @@ textarea {
   right: 0;
   height: 4px;
   background: var(--azul);
+  animation: neonBarPulse 4.5s ease-in-out infinite alternate;
 }
 
-/* Detalhe verde-menta pontual */
+/* Detalhe verde-menta pontual — com respiração neon */
 .hero-accent-corner {
   position: absolute;
   top: 4px;
@@ -783,6 +871,7 @@ textarea {
   width: 120px;
   height: 4px;
   background: var(--verde);
+  animation: neonPulse 3.8s ease-in-out infinite alternate;
 }
 
 .hero-content {
@@ -851,42 +940,156 @@ textarea {
   }
 }
 
-/* Data em box — hero */
+/* =====================================================
+   STICKER "SAVE THE DATE" — Estética Poster / Flyer
+   ===================================================== */
+.sticker-save-the-date {
+  display: inline-flex;
+  flex-direction: column;
+  position: relative;
+  background: var(--magenta);
+  color: var(--branco);
+  padding: 0;
+  border-radius: 2px;
+  transform: rotate(-2deg);
+  transition: transform var(--t-fast), box-shadow var(--t-fast);
+  box-shadow: 4px 4px 0px rgba(0, 0, 0, 0.8), 0 0 14px rgba(255, 0, 152, 0.35);
+  animation: neonBoxPulseMagenta 4.5s ease-in-out infinite alternate;
+  align-self: flex-start;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  user-select: none;
+  cursor: default;
+}
+
+.sticker-save-the-date:hover {
+  transform: rotate(0deg) scale(1.03);
+  box-shadow: 5px 5px 0px rgba(0, 0, 0, 0.9), 0 0 24px rgba(255, 0, 152, 0.7);
+}
+
+.sticker-ribbon {
+  background: var(--branco);
+  color: #120208;
+  padding: 3px 12px;
+  font-family: var(--font-title);
+  font-weight: 900;
+  font-size: 0.72rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  border-bottom: 2px solid rgba(0, 0, 0, 0.18);
+}
+
+.sticker-ribbon-text {
+  display: inline-block;
+  letter-spacing: 0.18em;
+}
+
+.sticker-body {
+  padding: 8px 16px 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  background: linear-gradient(135deg, var(--magenta) 0%, #D40068 100%);
+  position: relative;
+  min-width: 170px;
+}
+
+.sticker-date-wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+}
+
+.sticker-date-main {
+  font-family: var(--font-title);
+  font-weight: 900;
+  font-size: clamp(1.35rem, 2.8vw, 1.85rem);
+  line-height: 0.95;
+  letter-spacing: -0.01em;
+  text-transform: uppercase;
+  color: var(--branco);
+  text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.35);
+}
+
+.sticker-location {
+  font-family: var(--font-label);
+  font-size: 0.58rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--amarelo);
+  text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.4);
+}
+
+.sticker-edition-tag {
+  position: absolute;
+  bottom: 6px;
+  right: 8px;
+  font-family: var(--font-label);
+  font-size: 0.5rem;
+  font-weight: 900;
+  letter-spacing: 0.1em;
+  background: var(--bg);
+  color: var(--verde);
+  padding: 2px 5px;
+  border: 1px solid var(--verde);
+  transform: rotate(3deg);
+  border-radius: 1px;
+  box-shadow: 1px 1px 0px rgba(0, 0, 0, 0.5);
+}
+
+/* Data em box — hero (aumentada e de alto impacto estilo poster) */
 .hero-date-box {
   display: inline-flex;
   flex-direction: column;
-  gap: 3px;
-  border: none;
-  padding: var(--sp-2) var(--sp-3);
+  gap: 5px;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  padding: 14px 22px;
   background: var(--azul);
   align-self: flex-start;
   border-radius: 4px;
+  box-shadow: 4px 4px 0px rgba(0, 0, 0, 0.7), 0 0 20px rgba(0, 0, 255, 0.45);
+  animation: neonBarPulse 4.5s ease-in-out infinite alternate;
+  transition: transform var(--t-fast), box-shadow var(--t-fast);
+  user-select: none;
+}
+
+.hero-date-box:hover {
+  transform: scale(1.03);
+  box-shadow: 6px 6px 0px rgba(0, 0, 0, 0.85), 0 0 30px rgba(0, 0, 255, 0.7);
 }
 
 .hero-date-box-label {
   font-family: var(--font-label);
-  font-size: 0.55rem;
-  letter-spacing: 0.22em;
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.24em;
   text-transform: uppercase;
-  color: rgba(255, 255, 255, 0.8);
+  color: rgba(255, 255, 255, 0.9);
 }
 
 .hero-date-box-value {
-  font-family: var(--font-label);
-  font-weight: 700;
-  font-size: clamp(1rem, 2.2vw, 1.5rem);
+  font-family: var(--font-title);
+  font-weight: 900;
+  font-size: clamp(1.8rem, 3.8vw, 2.9rem);
   color: var(--branco);
   text-transform: uppercase;
-  letter-spacing: 0.06em;
-  line-height: 1;
+  letter-spacing: -0.01em;
+  line-height: 0.92;
+  text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.35);
 }
 
 .hero-date-box-city {
   font-family: var(--font-label);
-  font-size: 0.58rem;
-  letter-spacing: 0.14em;
-  color: rgba(255, 255, 255, 0.8);
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  color: var(--verde);
   text-transform: uppercase;
+  text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.4);
 }
 
 .hero-desc-wrap {
