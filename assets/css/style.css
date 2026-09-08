@@ -2163,6 +2163,11 @@ textarea {
   display: flex;
   flex-direction: column;
   gap: 4px;
+  transition: opacity var(--t-mid);
+}
+
+.tl-row.past-date {
+  opacity: 0.4;
 }
 
 .tl-row::before {

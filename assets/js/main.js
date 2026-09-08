@@ -520,6 +520,40 @@ function initEquipeModal() {
 }
 
 // =====================
+// 11. CRONOGRAMA FADE (Datas passadas)
+// =====================
+function initTimelineFade() {
+  const rows = document.querySelectorAll('.tl-row');
+  if (!rows.length) return;
+
+  const now = new Date();
+  // Zera horas para comparar apenas datas
+  const today = new Date(now.getFullYear(), now.getMonth(), now.getDate());
+
+  rows.forEach(row => {
+    const dataEl = row.querySelector('.tl-data');
+    if (!dataEl) return;
+
+    const text = dataEl.textContent.trim();
+    // Extrai todas as datas no formato DD/MM/YYYY
+    const dateMatches = text.match(/\d{2}\/\d{2}\/\d{4}/g);
+
+    if (dateMatches && dateMatches.length > 0) {
+      // Pega a última data (ex: fim do período)
+      const lastDateStr = dateMatches[dateMatches.length - 1];
+      const parts = lastDateStr.split('/');
+      if (parts.length === 3) {
+        const rowDate = new Date(parts[2], parts[1] - 1, parts[0]);
+        // Se a data do evento já passou ou é o dia de hoje (já chegou)
+        if (rowDate <= today) {
+          row.classList.add('past-date');
+        }
+      }
+    }
+  });
+}
+
+// =====================
 // INIT
 // =====================
 document.addEventListener('DOMContentLoaded', () => {
@@ -533,4 +567,5 @@ document.addEventListener('DOMContentLoaded', () => {
   initEquipeCarousel();
   initLightbox();
   initEquipeModal();
+  initTimelineFade();
 });
