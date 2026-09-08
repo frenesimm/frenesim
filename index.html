@@ -598,214 +598,51 @@
           <h2 class="t-h2 reveal" id="edital-titulo">Participação de Marcas</h2>
         </div>
 
-        <!-- Grid info + cronograma -->
-        <div class="edital-grid">
-          <!-- Timeline do edital -->
-          <div class="reveal">
-            <div class="edital-timeline" role="table" aria-label="Cronograma do edital">
+        <!-- Cronograma -->
+        <div class="edital-timeline-container reveal" style="max-width: 800px; margin: 0 auto;">
+          <div class="edital-timeline" role="table" aria-label="Cronograma do edital">
 
-              <div class="tl-row" role="row">
-                <div class="tl-data" role="rowheader">03/08/2026</div>
-                <div class="tl-desc" role="cell">
-                  <span>Abertura das inscrições online</span>
-                </div>
-              </div>
-              <div class="tl-row" role="row">
-                <div class="tl-data" role="rowheader">03/09/2026</div>
-                <div class="tl-desc" role="cell">
-                  <span>Encerramento das inscrições</span>
-                  <small>— até 23h59</small>
-                </div>
-              </div>
-              <div class="tl-row" role="row">
-                <div class="tl-data" role="rowheader">04/09 a 08/09/2026</div>
-                <div class="tl-desc" role="cell">
-                  <span>Período de análise curatorial</span>
-                </div>
-              </div>
-              <div class="tl-row" role="row">
-                <div class="tl-data" role="rowheader">09/09/2026</div>
-                <div class="tl-desc" role="cell">
-                  <span>Publicação dos resultados preliminares com pontuações</span>
-                </div>
-              </div>
-              <div class="tl-row" role="row">
-                <div class="tl-data" role="rowheader">10/09 a 14/09/2026</div>
-                <div class="tl-desc" role="cell">
-                  <span>Prazo para recurso administrativo</span>
-                </div>
-              </div>
-              <div class="tl-row destaque" role="row">
-                <div class="tl-data" role="rowheader">15/09/2026</div>
-                <div class="tl-desc" role="cell">
-                  <strong>Publicação final dos resultados</strong>
-                </div>
+            <div class="tl-row" role="row">
+              <div class="tl-data" role="rowheader">03/08/2026</div>
+              <div class="tl-desc" role="cell">
+                <span>Abertura das inscrições online</span>
               </div>
             </div>
-
-            <!-- Vagas -->
-            <div class="vagas-display reveal reveal-d1">
-              <div class="vaga-box">
-                <span class="vaga-num">6</span>
-                <span class="vaga-desc">Vestuário</span>
-              </div>
-              <div class="vaga-box">
-                <span class="vaga-num">4</span>
-                <span class="vaga-desc">Acessórios</span>
+            <div class="tl-row" role="row">
+              <div class="tl-data" role="rowheader">03/09/2026</div>
+              <div class="tl-desc" role="cell">
+                <span>Encerramento das inscrições</span>
+                <small>— até 23h59</small>
               </div>
             </div>
-          </div>
-
-          <!-- Info geral -->
-          <div class="reveal reveal-d1">
-            <div class="edital-info-box">
-              <p>
-                <strong>Inscrição 100% gratuita</strong> · feita online por formulário.
-              </p>
-              <p>
-                Pagamento do pacote: <strong>Pix</strong> ou
-                <strong>crédito em até 12x</strong> (com taxa da maquininha).
-              </p>
+            <div class="tl-row" role="row">
+              <div class="tl-data" role="rowheader">04/09 a 08/09/2026</div>
+              <div class="tl-desc" role="cell">
+                <span>Período de análise curatorial</span>
+              </div>
+            </div>
+            <div class="tl-row" role="row">
+              <div class="tl-data" role="rowheader">09/09/2026</div>
+              <div class="tl-desc" role="cell">
+                <span>Publicação dos resultados preliminares com pontuações</span>
+              </div>
+            </div>
+            <div class="tl-row" role="row">
+              <div class="tl-data" role="rowheader">10/09 a 14/09/2026</div>
+              <div class="tl-desc" role="cell">
+                <span>Prazo para recurso administrativo</span>
+              </div>
+            </div>
+            <div class="tl-row destaque" role="row">
+              <div class="tl-data" role="rowheader">15/09/2026</div>
+              <div class="tl-desc" role="cell">
+                <strong>Publicação final dos resultados</strong>
+              </div>
             </div>
           </div>
         </div>
 
-        <!-- Tabs de pacotes -->
-        <div class="tabs-wrap" role="tablist" aria-label="Categoria de pacotes">
-          <button class="tab-btn active"
-                  role="tab"
-                  id="tab-vestuario"
-                  aria-controls="panel-vestuario"
-                  aria-selected="true"
-                  data-tab="vestuario">
-            Vestuário
-          </button>
-          <button class="tab-btn"
-                  role="tab"
-                  id="tab-acessorios"
-                  aria-controls="panel-acessorios"
-                  aria-selected="false"
-                  data-tab="acessorios">
-            Acessórios
-          </button>
-        </div>
 
-        <!-- Pacotes Vestuário -->
-        <div class="pacotes-panel active"
-             id="panel-vestuario"
-             role="tabpanel"
-             aria-labelledby="tab-vestuario">
-          <div class="pacotes-grid-2">
-
-            <!-- Essencial -->
-            <article class="pacote-card reveal" aria-label="Pacote Essencial">
-              <div>
-                <p class="pacote-nome">Essencial</p>
-                <p class="pacote-nome-oficial">Apenas desfile</p>
-              </div>
-              <p class="pacote-preco" aria-label="R$ 250,00">R$ 250,00</p>
-              <div>
-                <p class="pacote-inclui-label">O que inclui</p>
-                <ul class="pacote-inclui" role="list">
-                  <li>Apresentação de 8 (oito) looks completos no desfile oficial;</li>
-                  <li>Inserção na campanha de comunicação pré-evento (feed, stories, assessoria de imprensa);</li>
-                  <li>Entrega de material fotográfico de passarela pós-evento (alta resolução, com tratamento de cor);</li>
-                  <li>Participação e veiculação da marca no fashion film institucional da edição (com inserção nos créditos);</li>
-                  <li>1 (um) credenciamento para o representante da marca.</li>
-                </ul>
-              </div>
-            </article>
-
-            <!-- Expansão -->
-            <article class="pacote-card destaque reveal reveal-d1" aria-label="Pacote Expansão">
-              <div>
-                <p class="pacote-nome">Expansão</p>
-                <p class="pacote-nome-oficial">Desfile + exposição</p>
-              </div>
-              <p class="pacote-preco" aria-label="R$ 420,00">R$ 420,00</p>
-              <div>
-                <p class="pacote-inclui-label">O que inclui</p>
-                <ul class="pacote-inclui" role="list">
-                  <li>Apresentação de 8 (oito) looks completos no desfile oficial;</li>
-                  <li>Inserção na campanha de comunicação pré-evento (feed, stories, assessoria de imprensa);</li>
-                  <li>Entrega de material fotográfico de passarela pós-evento (alta resolução, com tratamento de cor);</li>
-                  <li>Participação e veiculação da marca no fashion film institucional da edição (com inserção nos créditos);</li>
-                  <li><strong>Disponibilização de espaço físico para Pop-up Store durante o evento (item 7.5);</strong></li>
-                  <li><strong>26 (vinte e seis) imagens em formato de ensaio editorial exclusivo, editadas e tratadas pós-evento;</strong></li>
-                  <li><strong>Produção e veiculação de feature promocional (conteúdo audiovisual exclusivo) nas redes do FRENESIM antes do evento;</strong></li>
-                  <li><strong>1 (um) ingressos de acesso geral e 1 (um) credenciamento para o representante da marca + 1 para operador de vendas.</strong></li>
-                </ul>
-              </div>
-            </article>
-          </div>
-        </div>
-
-        <!-- Pacotes Acessórios -->
-        <div class="pacotes-panel"
-             id="panel-acessorios"
-             role="tabpanel"
-             aria-labelledby="tab-acessorios"
-             hidden>
-          <div class="pacotes-grid-2">
-
-            <!-- Essencial -->
-            <article class="pacote-card reveal" aria-label="Pacote Essencial Acessórios">
-              <div>
-                <p class="pacote-nome">Essencial</p>
-                <p class="pacote-nome-oficial">Acessórios</p>
-              </div>
-              <p class="pacote-preco" aria-label="R$ 220,00">R$ 220,00</p>
-              <div>
-                <p class="pacote-inclui-label">O que inclui</p>
-                <ul class="pacote-inclui" role="list">
-                  <li>Disponibilização e curadoria de peças para composição de até 16 (dezesseis) looks na passarela oficial, em colaboração com as marcas de vestuário ou o styling do evento;</li>
-                  <li>Inserção na campanha de comunicação digital pré-evento (feed, stories, assessoria de imprensa);</li>
-                  <li>Entrega de material fotográfico de passarela (detalhes e geral) pós-evento;</li>
-                  <li>Participação e veiculação da marca no fashion film institucional da edição (com inserção nos créditos);</li>
-                  <li>1 (um) credenciamento para o representante da marca.</li>
-                </ul>
-              </div>
-            </article>
-
-            <!-- Expansão -->
-            <article class="pacote-card destaque reveal reveal-d1" aria-label="Pacote Expansão Acessórios">
-              <div>
-                <p class="pacote-nome">Expansão</p>
-                <p class="pacote-nome-oficial">Acessórios</p>
-              </div>
-              <p class="pacote-preco" aria-label="R$ 390,00">R$ 390,00</p>
-              <div>
-                <p class="pacote-inclui-label">O que inclui</p>
-                <ul class="pacote-inclui" role="list">
-                  <li>Disponibilização e curadoria de peças para composição de até 16 (dezesseis) looks na passarela oficial, em colaboração com as marcas de vestuário ou o styling do evento;</li>
-                  <li>Inserção na campanha de comunicação digital pré-evento (feed, stories, assessoria de imprensa);</li>
-                  <li>Entrega de material fotográfico de passarela (detalhes e geral) pós-evento;</li>
-                  <li>Participação e veiculação da marca no fashion film institucional da edição (com inserção nos créditos);</li>
-                  <li><strong>Disponibilização de espaço físico para Pop-up Store durante o evento (item 7.5);</strong></li>
-                  <li><strong>Produção e veiculação de feature promocional (conteúdo audiovisual exclusivo) nas redes do FRENESIM antes do evento;</strong></li>
-                  <li><strong>26 (vinte e seis) imagens em formato de ensaio editorial individualizado, editadas por acessório participante, entregues pós-evento;</strong></li>
-                  <li><strong>1 (um) ingressos de acesso geral e 1 (um) credenciamento para o representante da marca + 1 para operador de vendas.</strong></li>
-                </ul>
-              </div>
-            </article>
-          </div>
-        </div>
-
-        <!-- Rodapé edital: CTAs -->
-        <div class="edital-footer">
-          <div class="edital-footer-info">
-            <p>Inscrições gratuitas · online · <strong>03/08 a 03/09/2026</strong></p>
-            <p>Pagamento: <strong>Pix</strong> ou <strong>crédito em até 12x</strong></p>
-          </div>
-          <div class="edital-footer-ctas">
-            <a href="https://forms.gle/Ueeq2hEm9h1hAn3H7" target="_blank" rel="noopener noreferrer" class="btn btn-bordo" id="btn-inscrever-marca" aria-label="Inscrever minha marca">
-              Inscrever minha marca →
-            </a>
-            <a href="assets/docs/edital-frenesim-2026.pdf" download="Edital-de-Selecao-de-Marcas-FRENESIM-2026.pdf" target="_blank" class="btn btn-outline-branco" id="btn-download-edital" aria-label="Baixar edital em PDF">
-              ↓ Baixar edital (PDF)
-            </a>
-          </div>
-        </div>
       </div>
     </section>
 
