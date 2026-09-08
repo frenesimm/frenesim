@@ -2283,9 +2283,10 @@ textarea {
 
 .edital-botoes .btn {
   width: 100%;
-  max-width: 320px;
+  max-width: 480px;
   text-align: center;
   justify-content: center;
+  white-space: normal;
 }
 
 /* Vagas */
