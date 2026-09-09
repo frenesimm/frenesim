@@ -210,7 +210,33 @@ function initAviseme() {
 // 6.5 BOTÕES DO EDITAL
 // =====================
 function initEditalButtons() {
-  // Botões de inscrição (Google Forms) e download do edital (PDF) ativos via HTML
+  const resultButton = document.getElementById('btn-resultado-preliminar');
+  if (!resultButton) return;
+
+  // Liberação do resultado às 18:00 do dia 09/09/2026 (Horário de Brasília)
+  const targetDate = new Date('2026-09-09T18:00:00-03:00');
+
+  function checkTime() {
+    const now = new Date();
+    if (now >= targetDate) {
+      const link = document.createElement('a');
+      link.href = 'assets/docs/Resultado%20Preliminar%20Curadoria%20FRENESIM%202026.pdf';
+      link.download = 'Resultado-Preliminar-Curadoria-FRENESIM-2026.pdf';
+      link.target = '_blank';
+      link.className = 'btn btn-outline-branco';
+      link.setAttribute('aria-label', 'Baixar os Resultados Preliminares');
+      link.innerHTML = '↓ Resultados preliminares (PDF)';
+      
+      if (resultButton.parentNode) {
+        resultButton.parentNode.replaceChild(link, resultButton);
+      }
+    } else {
+      // Checa novamente em 30 segundos
+      setTimeout(checkTime, 30000);
+    }
+  }
+
+  checkTime();
 }
 
 // =====================
