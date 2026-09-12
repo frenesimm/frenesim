@@ -1,4 +1,4 @@
-/**
+﻿/**
  * FRENESIM 2º edição — main.js v3
  * Módulos: nav, reveal, marquee, tabs, avise-me form, toast, flip cards, lightbox, carousel
  */
@@ -214,7 +214,7 @@ function initEditalButtons() {
   if (!resultButton) return;
 
   // Liberação do resultado às 18:00 do dia 09/09/2026 (Horário de Brasília)
-  const targetDate = new Date('2026-09-09T18:00:00-03:00');
+  const targetDate = new Date('2026-09-09T18:00:00-03:00'); 
 
   function checkTime() {
     const now = new Date();

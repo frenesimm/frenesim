@@ -662,20 +662,23 @@ textarea {
 .nav-cta {
   display: none;
   flex-shrink: 0;
-  padding: 10px 20px;
+  padding: 10px 18px;
   font-family: var(--font-label);
   font-size: 0.65rem;
   font-weight: 700;
-  letter-spacing: 0.14em;
+  letter-spacing: 0.12em;
   text-transform: uppercase;
   background: var(--azul);
   color: var(--branco);
   transition: box-shadow var(--t-fast), transform var(--t-fast);
+  white-space: nowrap;
 }
 
 @media (min-width: 1024px) {
   .nav-cta {
     display: inline-flex;
+    align-items: center;
+    justify-content: center;
   }
 }
 
@@ -1145,6 +1148,10 @@ textarea {
 .hero-ctas .btn {
   width: 100%;
   text-align: center;
+  justify-content: center;
+  padding: clamp(12px, 2.5vw, 14px) clamp(16px, 3.5vw, 24px);
+  font-size: clamp(0.72rem, 2.2vw, 0.8rem);
+  white-space: nowrap;
 }
 
 @media (min-width: 769px) {
@@ -1156,6 +1163,8 @@ textarea {
 
   .hero-ctas .btn {
     width: auto;
+    padding: 14px 24px;
+    font-size: 0.78rem;
   }
 }
 
