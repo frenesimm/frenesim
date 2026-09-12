@@ -12,7 +12,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet" />
   <link rel="preload" as="image" href="assets/images/hero/banner-site-frenesim-capa.webp" fetchpriority="high" media="(max-width: 640px)" />
   <link rel="preload" as="image" href="assets/images/hero/banner-site-frenesim-capa.png" fetchpriority="high" media="(min-width: 641px)" />
-  <link rel="stylesheet" href="assets/css/style.css?v=28" />
+  <link rel="stylesheet" href="assets/css/style.css?v=30" />
 </head>
 <body>
 
@@ -26,6 +26,7 @@
       <li><a href="#sobre">Sobre</a></li>
       <li><a href="#primeira-edicao">1º edição</a></li>
       <li><a href="#ingressos">Ingressos</a></li>
+      <li><a href="#produtos">Produtos</a></li>
       <li><a href="#edital">Edital</a></li>
       <li><a href="#contato">Contato</a></li>
     </ul>
@@ -45,6 +46,7 @@
         <li><a href="#sobre" class="nav-mobile-link">Sobre</a></li>
         <li><a href="#primeira-edicao" class="nav-mobile-link">1º edição</a></li>
         <li><a href="#ingressos" class="nav-mobile-link">Ingressos</a></li>
+        <li><a href="#produtos" class="nav-mobile-link">Produtos</a></li>
         <li><a href="#edital" class="nav-mobile-link">Edital</a></li>
         <li><a href="#contato" class="nav-mobile-link">Contato</a></li>
       </ul>
@@ -590,6 +592,121 @@
 
     <div class="divider"></div>
 
+    <!-- ============ PRODUTOS — Cor principal: Magenta ============ -->
+    <section id="produtos" class="section-pad" aria-labelledby="produtos-titulo">
+      <div class="container">
+        <div class="section-header">
+          <span class="tag tag-magenta">Loja Oficial</span>
+          <h2 class="t-h2 reveal" id="produtos-titulo">PRODUTOS FRENESIM</h2>
+          <p class="t-sub reveal reveal-d1">Leve a energia do desfile-festa com você. Edição limitada exclusiva.</p>
+        </div>
+
+        <div class="produto-card reveal reveal-d2">
+          <!-- Galeria de fotos do produto -->
+          <div class="produto-gallery">
+            <div class="produto-main-wrap">
+              <img
+                id="produto-main-img"
+                src="assets/images/produtos/copo-frenesim-1.png"
+                alt="Copo Frenesim Oficial — 2º Edição 2026"
+                class="produto-main-img"
+                loading="lazy"
+              />
+              <span class="produto-badge">Drop Oficial</span>
+              <button class="produto-zoom-trigger" id="produto-zoom-btn" type="button" aria-label="Ampliar foto do Copo Frenesim">
+                <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                  <circle cx="11" cy="11" r="7"></circle>
+                  <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                  <line x1="11" y1="8" x2="11" y2="14"></line>
+                  <line x1="8" y1="11" x2="14" y2="11"></line>
+                </svg>
+              </button>
+            </div>
+
+            <!-- Miniaturas para alternar fotos -->
+            <div class="produto-thumbs" role="tablist" aria-label="Fotos do produto">
+              <button
+                type="button"
+                class="produto-thumb active"
+                data-src="assets/images/produtos/copo-frenesim-1.png"
+                data-alt="Copo Frenesim — Mockup dos 3 copos com texto promocional"
+                role="tab"
+                aria-selected="true"
+                aria-label="Ver Mockup dos Copos"
+              >
+                <img src="assets/images/produtos/copo-frenesim-1.png" alt="Miniatura Mockup Copos" loading="lazy" />
+                <span class="produto-thumb-label">Mockup</span>
+              </button>
+              <button
+                type="button"
+                class="produto-thumb"
+                data-src="assets/images/produtos/copo-frenesim-2.jpg"
+                data-alt="Copo Frenesim — Estampa gráfica autoral completa"
+                role="tab"
+                aria-selected="false"
+                aria-label="Ver Estampa Oficial Completa"
+              >
+                <img src="assets/images/produtos/copo-frenesim-2.jpg" alt="Miniatura Estampa Gráfica" loading="lazy" />
+                <span class="produto-thumb-label">Estampa</span>
+              </button>
+            </div>
+          </div>
+
+          <!-- Informações e Compra -->
+          <div class="produto-details">
+            <div class="produto-tagline-wrap">
+              <span class="produto-category">Acessórios · Drop Oficial 2026</span>
+              <h3 class="produto-name">Copo Frenesim</h3>
+              <div class="produto-price-box">
+                <span class="produto-price-prefix">A partir de</span>
+                <span class="produto-price-val">R$ 19,90</span>
+              </div>
+            </div>
+
+            <p class="produto-description">
+              O copo oficial do FRENESIM. Design autoral, cores vibrantes e a identidade da festa na sua mão. Para beber, dançar e carregar o FRENESIM por aí.
+            </p>
+
+            <ul class="produto-highlights" role="list">
+              <li>
+                <span class="produto-highlight-bullet" aria-hidden="true">★</span>
+                <span><strong>Identidade Visual Autoral:</strong> Arte gráfica conceitual em sintonia com a passarela e a pista da 2º edição.</span>
+              </li>
+              <li>
+                <span class="produto-highlight-bullet" aria-hidden="true">✦</span>
+                <span><strong>Eco-friendly &amp; Reutilizável:</strong> Curta a noite toda sem copos descartáveis e guarde como item colecionável.</span>
+              </li>
+              <li>
+                <span class="produto-highlight-bullet" aria-hidden="true">📍</span>
+                <span><strong>Retirada no Evento:</strong> Retire no dia do desfile-festa (12 de Novembro a partir das 19h em Goiânia).</span>
+              </li>
+            </ul>
+
+            <div class="produto-cta-block">
+              <a
+                href="https://cheers.com.br/produto/109630"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="btn btn-magenta produto-btn"
+                id="btn-comprar-copo"
+                aria-label="Comprar Copo Frenesim na plataforma Cheers (abre em nova aba)"
+              >
+                Garantir meu copo →
+              </a>
+              <p class="produto-safety">
+                <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                  <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                </svg>
+                <span>Venda oficial e pagamento seguro pela plataforma <strong>Cheers</strong></span>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="divider"></div>
+
     <!-- ============ EDITAL — Cor principal: Bordô, apoio: Mostarda ============ -->
     <section id="edital" class="section-pad" aria-labelledby="edital-titulo">
       <div class="container">
@@ -750,6 +867,7 @@
         <nav class="footer-nav" aria-label="Links do rodapé">
           <a href="mailto:frenesimdf@gmail.com">E-mail</a>
           <a href="https://instagram.com/frenesimm" target="_blank" rel="noopener noreferrer">Instagram</a>
+          <a href="#produtos">Produtos</a>
           <a href="#edital">Edital</a>
         </nav>
       </div>
@@ -773,6 +891,6 @@
     <img class="lightbox-img" id="lightbox-img" alt="Foto ampliada" />
   </div>
 
-  <script src="assets/js/main.js?v=27"></script>
+  <script src="assets/js/main.js?v=30"></script>
 </body>
 </html>

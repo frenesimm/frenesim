@@ -2126,6 +2126,324 @@ textarea {
 }
 
 /* -------------------
+   15.5 PRODUTOS — Cor: Magenta principal
+   ------------------- */
+#produtos {
+  background: var(--bg);
+  position: relative;
+}
+
+.produto-card {
+  background: var(--bg-card);
+  border: 1px solid rgba(255, 0, 152, 0.25);
+  border-radius: 4px;
+  overflow: hidden;
+  box-shadow: 0 12px 36px rgba(0, 0, 0, 0.45), 0 0 20px rgba(255, 0, 152, 0.15);
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-4);
+  padding: var(--sp-3);
+  transition: border-color var(--t-fast), box-shadow var(--t-fast);
+}
+
+.produto-card:hover {
+  border-color: rgba(255, 0, 152, 0.45);
+  box-shadow: 0 16px 44px rgba(0, 0, 0, 0.6), 0 0 30px rgba(255, 0, 152, 0.25);
+}
+
+@media (min-width: 641px) {
+  .produto-card {
+    padding: var(--sp-5);
+    gap: var(--sp-5);
+  }
+}
+
+@media (min-width: 961px) {
+  .produto-card {
+    display: grid;
+    grid-template-columns: 1.05fr 1fr;
+    gap: var(--sp-6);
+    padding: var(--sp-6);
+    align-items: center;
+  }
+}
+
+/* Galeria do produto */
+.produto-gallery {
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-2);
+  width: 100%;
+}
+
+.produto-main-wrap {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  background: #120106;
+  border-radius: 3px;
+  overflow: hidden;
+  border: 1px solid var(--cinza-2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.produto-main-img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+  transition: transform var(--t-mid), opacity 0.25s ease;
+  cursor: pointer;
+}
+
+.produto-main-wrap:hover .produto-main-img {
+  transform: scale(1.02);
+}
+
+.produto-badge {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  background: var(--magenta);
+  color: var(--branco);
+  font-family: var(--font-label);
+  font-size: 0.62rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  padding: 4px 10px;
+  border-radius: 2px;
+  box-shadow: 2px 2px 0px rgba(0, 0, 0, 0.6), 0 0 12px rgba(255, 0, 152, 0.4);
+  pointer-events: none;
+  z-index: 2;
+}
+
+.produto-zoom-trigger {
+  position: absolute;
+  bottom: 12px;
+  right: 12px;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: rgba(22, 2, 9, 0.85);
+  border: 1px solid var(--cinza-2);
+  color: var(--branco);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background var(--t-fast), border-color var(--t-fast), transform var(--t-fast);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  z-index: 2;
+}
+
+.produto-zoom-trigger:hover {
+  background: var(--magenta);
+  border-color: var(--magenta);
+  transform: scale(1.08);
+  box-shadow: 0 0 16px rgba(255, 0, 152, 0.5);
+}
+
+/* Miniaturas */
+.produto-thumbs {
+  display: flex;
+  gap: var(--sp-2);
+  width: 100%;
+}
+
+.produto-thumb {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 10px;
+  background: rgba(22, 2, 9, 0.6);
+  border: 1px solid var(--cinza-2);
+  border-radius: 3px;
+  cursor: pointer;
+  transition: all var(--t-fast);
+}
+
+.produto-thumb img {
+  width: 42px;
+  height: 42px;
+  object-fit: cover;
+  border-radius: 2px;
+  flex-shrink: 0;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.produto-thumb-label {
+  font-family: var(--font-label);
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--cinza-text);
+  transition: color var(--t-fast);
+}
+
+.produto-thumb:hover {
+  border-color: rgba(255, 0, 152, 0.5);
+  background: rgba(255, 0, 152, 0.08);
+}
+
+.produto-thumb:hover .produto-thumb-label {
+  color: var(--branco);
+}
+
+.produto-thumb.active {
+  border-color: var(--magenta);
+  background: rgba(255, 0, 152, 0.15);
+  box-shadow: 0 0 12px rgba(255, 0, 152, 0.25);
+}
+
+.produto-thumb.active .produto-thumb-label {
+  color: var(--magenta);
+}
+
+/* Informações do produto */
+.produto-details {
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-3);
+}
+
+.produto-tagline-wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.produto-category {
+  font-family: var(--font-label);
+  font-size: 0.65rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--cinza-text);
+}
+
+.produto-name {
+  font-family: var(--font-title);
+  font-weight: 900;
+  font-size: clamp(2rem, 4vw, 3rem);
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  color: var(--branco);
+  line-height: 1;
+}
+
+.produto-price-box {
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+  margin-top: 6px;
+}
+
+.produto-price-prefix {
+  font-family: var(--font-label);
+  font-size: 0.7rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--cinza-text);
+}
+
+.produto-price-val {
+  font-family: var(--font-title);
+  font-weight: 900;
+  font-size: clamp(1.8rem, 3.5vw, 2.5rem);
+  color: var(--magenta);
+  letter-spacing: -0.01em;
+  line-height: 1;
+  text-shadow: 0 0 18px rgba(255, 0, 152, 0.45);
+}
+
+.produto-description {
+  font-family: var(--font-body);
+  font-size: 0.92rem;
+  color: var(--cinza-sub);
+  line-height: 1.6;
+}
+
+.produto-highlights {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  border-top: 1px solid var(--cinza-2);
+  border-bottom: 1px solid var(--cinza-2);
+  padding: var(--sp-2) 0;
+}
+
+.produto-highlights li {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  font-family: var(--font-body);
+  font-size: 0.85rem;
+  color: var(--cinza-text);
+  line-height: 1.45;
+}
+
+.produto-highlights li strong {
+  color: var(--branco);
+}
+
+.produto-highlight-bullet {
+  color: var(--magenta);
+  font-size: 0.9rem;
+  line-height: 1.3;
+  flex-shrink: 0;
+}
+
+.produto-cta-block {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 4px;
+}
+
+.produto-btn {
+  width: 100%;
+  text-align: center;
+  justify-content: center;
+  padding: 16px 28px;
+  font-size: 0.85rem;
+  letter-spacing: 0.14em;
+  box-shadow: 0 0 24px rgba(255, 0, 152, 0.4);
+}
+
+.produto-btn:hover {
+  box-shadow: 0 0 32px rgba(255, 0, 152, 0.7);
+  transform: translateY(-2px);
+}
+
+.produto-safety {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  font-family: var(--font-body);
+  font-size: 0.75rem;
+  color: var(--cinza-text);
+  margin: 0;
+}
+
+.produto-safety svg {
+  color: var(--verde);
+  flex-shrink: 0;
+}
+
+.produto-safety strong {
+  color: var(--branco);
+}
+
+/* -------------------
    16. EDITAL — Cor: Amarelo principal
    ------------------- */
 #edital {

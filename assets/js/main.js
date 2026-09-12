@@ -1,4 +1,4 @@
-﻿/**
+/**
  * FRENESIM 2º edição — main.js v3
  * Módulos: nav, reveal, marquee, tabs, avise-me form, toast, flip cards, lightbox, carousel
  */
@@ -580,6 +580,59 @@ function initTimelineFade() {
 }
 
 // =====================
+// 12. GALERIA DO PRODUTO (COPO FRENESIM)
+// =====================
+function initProdutoGallery() {
+  const mainImg = document.getElementById('produto-main-img');
+  const zoomBtn = document.getElementById('produto-zoom-btn');
+  const thumbs = document.querySelectorAll('.produto-thumb');
+  const overlay = document.getElementById('lightbox-overlay');
+  const lightboxImg = document.getElementById('lightbox-img');
+
+  if (!mainImg || !thumbs.length) return;
+
+  thumbs.forEach(thumb => {
+    thumb.addEventListener('click', () => {
+      const src = thumb.getAttribute('data-src');
+      const alt = thumb.getAttribute('data-alt');
+      if (!src) return;
+
+      thumbs.forEach(t => {
+        t.classList.remove('active');
+        t.setAttribute('aria-selected', 'false');
+      });
+
+      thumb.classList.add('active');
+      thumb.setAttribute('aria-selected', 'true');
+
+      mainImg.style.opacity = '0';
+      setTimeout(() => {
+        mainImg.src = src;
+        if (alt) mainImg.alt = alt;
+        mainImg.style.opacity = '1';
+      }, 150);
+    });
+  });
+
+  function openZoom() {
+    if (!overlay || !lightboxImg) return;
+    lightboxImg.src = mainImg.src;
+    lightboxImg.alt = mainImg.alt;
+    overlay.classList.add('active');
+    overlay.setAttribute('aria-hidden', 'false');
+    document.body.style.overflow = 'hidden';
+  }
+
+  mainImg.addEventListener('click', openZoom);
+  if (zoomBtn) {
+    zoomBtn.addEventListener('click', (e) => {
+      e.stopPropagation();
+      openZoom();
+    });
+  }
+}
+
+// =====================
 // INIT
 // =====================
 document.addEventListener('DOMContentLoaded', () => {
@@ -594,4 +647,5 @@ document.addEventListener('DOMContentLoaded', () => {
   initLightbox();
   initEquipeModal();
   initTimelineFade();
+  initProdutoGallery();
 });
