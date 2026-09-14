@@ -571,37 +571,39 @@
 
           <div style="width: 100%; height: 1px; background: rgba(0,0,0,0.1); max-width: 300px; margin: 0 auto 32px;" class="reveal reveal-d2"></div>
 
-          <p class="t-body ingressos-sub reveal reveal-d2" style="font-size: 0.95rem; margin-bottom: 24px; color: var(--cinza-text);">
-            Quer ser avisado em primeira mão quando as vendas abrirem? Deixe seus dados abaixo:
-          </p>
+          <div class="ingressos-avise-wrapper" style="width: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center; position: relative;">
+            <p class="t-body ingressos-sub reveal reveal-d2" style="font-size: 0.95rem; margin-bottom: 24px; color: var(--cinza-text);">
+              Quer ser avisado em primeira mão?
+            </p>
 
-          <!-- Formulário avise-me -->
-          <form class="avise-form reveal reveal-d2" id="avise-form" novalidate aria-label="Formulário avise-me de ingressos">
-            <div class="form-row">
-              <input
-                type="email"
-                name="email"
-                id="avise-email"
-                class="form-input"
-                placeholder="seu@email.com"
-                autocomplete="email"
-                aria-label="Seu e-mail"
-              />
-              <input
-                type="text"
-                name="instagram"
-                id="avise-instagram"
-                class="form-input"
-                placeholder="@seuinstagram"
-                autocomplete="off"
-                aria-label="Seu Instagram"
-              />
-            </div>
-            <button type="submit" class="btn btn-magenta" style="width:100%;" id="btn-avise-me">
-              Avise-me quando abrir
-            </button>
-            <p class="form-hint">Sem spam. A gente promete.</p>
-          </form>
+            <!-- Formulário avise-me -->
+            <form class="avise-form reveal reveal-d2" id="avise-form" novalidate aria-label="Formulário avise-me de ingressos">
+              <div class="form-row">
+                <input
+                  type="email"
+                  name="email"
+                  id="avise-email"
+                  class="form-input"
+                  placeholder="seu@email.com"
+                  autocomplete="email"
+                  aria-label="Seu e-mail"
+                />
+                <input
+                  type="text"
+                  name="instagram"
+                  id="avise-instagram"
+                  class="form-input"
+                  placeholder="@seuinstagram"
+                  autocomplete="off"
+                  aria-label="Seu Instagram"
+                />
+              </div>
+              <button type="submit" class="btn btn-magenta" style="width:100%;" id="btn-avise-me">
+                Avise-me
+              </button>
+              <p class="form-hint">Sem spam. A gente promete.</p>
+            </form>
+          </div>
         </div>
       </div>
     </section>
