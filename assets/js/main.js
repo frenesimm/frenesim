@@ -211,14 +211,17 @@ function initAviseme() {
 // =====================
 function initEditalButtons() {
   const resultButton = document.getElementById('btn-resultado-preliminar');
-  if (!resultButton) return;
+  const finalResultButton = document.getElementById('btn-resultado-final');
 
-  // Liberação do resultado às 18:00 do dia 09/09/2026 (Horário de Brasília)
-  const targetDate = new Date('2026-09-09T18:00:00-03:00'); 
+  // Liberação do resultado preliminar às 18:00 do dia 09/09/2026 (Horário de Brasília)
+  const targetDatePreliminar = new Date('2026-09-09T18:00:00-03:00'); 
+  // Liberação do resultado final às 18:00 do dia 14/09/2026 (Horário de Brasília)
+  const targetDateFinal = new Date('2026-09-14T18:00:00-03:00');
 
   function checkTime() {
     const now = new Date();
-    if (now >= targetDate) {
+    
+    if (resultButton && now >= targetDatePreliminar) {
       const link = document.createElement('a');
       link.href = 'assets/docs/Resultado%20Preliminar%20Curadoria%20FRENESIM%202026.pdf';
       link.download = 'Resultado-Preliminar-Curadoria-FRENESIM-2026.pdf';
@@ -230,8 +233,24 @@ function initEditalButtons() {
       if (resultButton.parentNode) {
         resultButton.parentNode.replaceChild(link, resultButton);
       }
-    } else {
-      // Checa novamente em 30 segundos
+    }
+
+    if (finalResultButton && now >= targetDateFinal) {
+      const linkFinal = document.createElement('a');
+      linkFinal.href = 'assets/docs/Resultado%20Final%20-%20Curadoria%20de%20Marcas%20FRENESIM%202026.pdf';
+      linkFinal.download = 'Resultado-Final-Curadoria-FRENESIM-2026.pdf';
+      linkFinal.target = '_blank';
+      linkFinal.className = 'btn btn-outline-branco';
+      linkFinal.setAttribute('aria-label', 'Baixar o Resultado Final');
+      linkFinal.innerHTML = '↓ Resultado final (PDF)';
+      
+      if (finalResultButton.parentNode) {
+        finalResultButton.parentNode.replaceChild(linkFinal, finalResultButton);
+      }
+    }
+
+    // Se algum dos botões ainda não foi liberado, checa novamente em 30 segundos
+    if ((resultButton && now < targetDatePreliminar) || (finalResultButton && now < targetDateFinal)) {
       setTimeout(checkTime, 30000);
     }
   }

@@ -143,5 +143,5 @@ export const CRONOGRAMA = [
   { data: '04/09 a 08/09/2026', titulo: 'Período de análise curatorial', sub: '', destaque: false },
   { data: '09/09/2026',         titulo: 'Publicação dos resultados preliminares com pontuações', sub: '', destaque: false },
   { data: '10/09 a 14/09/2026', titulo: 'Prazo para recurso administrativo', sub: '', destaque: false },
-  { data: '15/09/2026',         titulo: 'Publicação final dos resultados', sub: '', destaque: true },
+  { data: '14/09/2026',         titulo: 'Publicação final dos resultados', sub: '', destaque: true },
 ];
