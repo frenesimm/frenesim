@@ -653,6 +653,35 @@ function initProdutoGallery() {
 }
 
 // =====================
+// 13. GALERIA DO PATROCINADOR (ENTRELINHAS)
+// =====================
+function initPatrocinadorGallery() {
+  const mainImg = document.getElementById('patrocinador-main-img');
+  const zoomBtn = document.getElementById('patrocinador-zoom-btn');
+  const overlay = document.getElementById('lightbox-overlay');
+  const lightboxImg = document.getElementById('lightbox-img');
+
+  if (!mainImg) return;
+
+  function openZoom() {
+    if (!overlay || !lightboxImg) return;
+    lightboxImg.src = mainImg.src;
+    lightboxImg.alt = mainImg.alt;
+    overlay.classList.add('active');
+    overlay.setAttribute('aria-hidden', 'false');
+    document.body.style.overflow = 'hidden';
+  }
+
+  mainImg.addEventListener('click', openZoom);
+  if (zoomBtn) {
+    zoomBtn.addEventListener('click', (e) => {
+      e.stopPropagation();
+      openZoom();
+    });
+  }
+}
+
+// =====================
 // INIT
 // =====================
 document.addEventListener('DOMContentLoaded', () => {
@@ -668,4 +697,5 @@ document.addEventListener('DOMContentLoaded', () => {
   initEquipeModal();
   initTimelineFade();
   initProdutoGallery();
+  initPatrocinadorGallery();
 });
