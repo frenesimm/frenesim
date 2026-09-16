@@ -12,7 +12,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet" />
   <link rel="preload" as="image" href="assets/images/hero/banner-site-frenesim-capa.webp" fetchpriority="high" media="(max-width: 640px)" />
   <link rel="preload" as="image" href="assets/images/hero/banner-site-frenesim-capa.png" fetchpriority="high" media="(min-width: 641px)" />
-  <link rel="stylesheet" href="assets/css/style.css?v=30" />
+  <link rel="stylesheet" href="assets/css/style.css?v=31" />
 </head>
 <body>
 
@@ -27,11 +27,10 @@
       <li><a href="#primeira-edicao">1º edição</a></li>
       <li><a href="#ingressos">Ingressos</a></li>
       <li><a href="#produtos">Produtos</a></li>
-      <li><a href="#edital">Edital</a></li>
       <li><a href="#contato">Contato</a></li>
     </ul>
 
-    <a href="#edital" class="nav-cta" id="nav-cta-top">Edital de Marcas</a>
+    <a href="#ingressos" class="nav-cta" id="nav-cta-top" aria-label="Garantir Ingressos">Garantir Ingressos ✦</a>
 
     <button class="nav-hamburger" id="hamburger" aria-label="Abrir menu" aria-expanded="false">
       <span></span><span></span><span></span>
@@ -47,9 +46,13 @@
         <li><a href="#primeira-edicao" class="nav-mobile-link">1º edição</a></li>
         <li><a href="#ingressos" class="nav-mobile-link">Ingressos</a></li>
         <li><a href="#produtos" class="nav-mobile-link">Produtos</a></li>
-        <li><a href="#edital" class="nav-mobile-link">Edital</a></li>
         <li><a href="#contato" class="nav-mobile-link">Contato</a></li>
       </ul>
+      <div style="padding: 24px 0 0; width: 100%;">
+        <a href="#ingressos" class="btn btn-magenta nav-mobile-link" style="width: 100%; text-align: center; justify-content: center; box-shadow: 0 0 20px rgba(255, 0, 152, 0.5);">
+          Garantir Ingressos →
+        </a>
+      </div>
     </nav>
   </div>
 
@@ -97,11 +100,11 @@
           </div>
 
           <div class="hero-ctas">
-            <button class="btn btn-disabled" disabled aria-label="Ingressos em breve">
-              Ingressos em breve
-            </button>
-            <a href="#edital" class="btn btn-outline-branco" id="cta-inscrever-hero" aria-label="Ver o edital de marcas">
-              Edital de Marcas →
+            <a href="#ingressos" class="btn btn-magenta hero-btn-ingressos" id="cta-ingressos-hero" aria-label="Garantir Ingressos para o Frenesim 2026">
+              Garantir Ingressos →
+            </a>
+            <a href="https://cheers.com.br/evento/frenesim-2026-35305" target="_blank" rel="noopener noreferrer" class="btn btn-outline-magenta hero-btn-cheers" id="cta-cheers-hero" aria-label="Acessar página de ingressos na plataforma Cheers">
+              Ingressos na Cheers ↗
             </a>
           </div>
         </div>
@@ -725,77 +728,6 @@
 
     <div class="divider"></div>
 
-    <!-- ============ EDITAL — Cor principal: Bordô, apoio: Mostarda ============ -->
-    <section id="edital" class="section-pad" aria-labelledby="edital-titulo">
-      <div class="container">
-        <div class="section-header">
-          <span class="tag tag-amarelo">Edital 2026</span>
-        </div>
-
-        <!-- Cronograma -->
-        <div class="edital-timeline-container reveal" style="max-width: 800px; margin: 0 auto;">
-          <div class="edital-timeline" role="table" aria-label="Cronograma do edital">
-
-            <div class="tl-row" role="row">
-              <div class="tl-data" role="rowheader">03/08/2026</div>
-              <div class="tl-desc" role="cell">
-                <span>Abertura das inscrições online</span>
-              </div>
-            </div>
-            <div class="tl-row" role="row">
-              <div class="tl-data" role="rowheader">03/09/2026</div>
-              <div class="tl-desc" role="cell">
-                <span>Encerramento das inscrições</span>
-                <small>— até 23h59</small>
-              </div>
-            </div>
-            <div class="tl-row" role="row">
-              <div class="tl-data" role="rowheader">04/09 a 08/09/2026</div>
-              <div class="tl-desc" role="cell">
-                <span>Período de análise curatorial</span>
-              </div>
-            </div>
-            <div class="tl-row" role="row">
-              <div class="tl-data" role="rowheader">09/09/2026</div>
-              <div class="tl-desc" role="cell">
-                <span>Publicação dos resultados preliminares com pontuações</span>
-              </div>
-            </div>
-            <div class="tl-row" role="row">
-              <div class="tl-data" role="rowheader">10/09 a 14/09/2026</div>
-              <div class="tl-desc" role="cell">
-                <span>Prazo para recurso administrativo</span>
-              </div>
-            </div>
-            <div class="tl-row destaque" role="row">
-              <div class="tl-data" role="rowheader">14/09/2026</div>
-              <div class="tl-desc" role="cell">
-                <strong>Publicação final dos resultados</strong>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Botões de Ação do Edital -->
-        <div class="edital-botoes reveal reveal-d1">
-          <a href="assets/docs/edital-frenesim-2026.pdf" download="Edital-de-Selecao-de-Marcas-FRENESIM-2026.pdf" target="_blank" class="btn btn-outline-branco" aria-label="Baixar o edital completo">
-            ↓ O edital (PDF)
-          </a>
-          <button class="btn btn-disabled" id="btn-resultado-preliminar" disabled aria-label="Resultados preliminares em breve">
-            Resultados preliminares (Em breve)
-          </button>
-          <button class="btn btn-disabled" id="btn-resultado-final" disabled aria-label="Resultado final em breve">
-            Resultado final (Em breve)
-          </button>
-        </div>
-
-      </div>
-    </section>
-
-    <div class="divider"></div>
-
-
-
     <!-- ============ LOCAL — Cor: Azul (repetida) ============ -->
     <section id="local" class="section-pad" aria-labelledby="local-titulo">
       <div class="container">
@@ -885,8 +817,8 @@
         <nav class="footer-nav" aria-label="Links do rodapé">
           <a href="mailto:frenesimdf@gmail.com">E-mail</a>
           <a href="https://instagram.com/frenesimm" target="_blank" rel="noopener noreferrer">Instagram</a>
+          <a href="#ingressos">Ingressos</a>
           <a href="#produtos">Produtos</a>
-          <a href="#edital">Edital</a>
         </nav>
       </div>
     </div>
@@ -909,6 +841,6 @@
     <img class="lightbox-img" id="lightbox-img" alt="Foto ampliada" />
   </div>
 
-  <script src="assets/js/main.js?v=30"></script>
+  <script src="assets/js/main.js?v=31"></script>
 </body>
 </html>

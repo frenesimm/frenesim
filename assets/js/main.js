@@ -212,6 +212,7 @@ function initAviseme() {
 function initEditalButtons() {
   const resultButton = document.getElementById('btn-resultado-preliminar');
   const finalResultButton = document.getElementById('btn-resultado-final');
+  if (!resultButton && !finalResultButton) return;
 
   // Liberação do resultado preliminar às 18:00 do dia 09/09/2026 (Horário de Brasília)
   const targetDatePreliminar = new Date('2026-09-09T18:00:00-03:00'); 
