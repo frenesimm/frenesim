@@ -544,77 +544,51 @@
     <div class="divider"></div>
 
     <!-- ============ INGRESSOS — Cor principal: Magenta ============ -->
-    <section id="ingressos" class="section-pad" aria-labelledby="ingressos-titulo">
+    <section id="ingressos" class="section-pad ingressos-section-open" aria-labelledby="ingressos-titulo">
       <div class="ingressos-deco" aria-hidden="true">
         <span class="ingressos-deco-text">INGRESSOS</span>
       </div>
 
       <div class="container">
-        <div class="ingressos-inner">
+        <div class="ingressos-inner ingressos-box-highlight">
           <!-- Badge piscando -->
-          <div class="ingressos-badge" role="status" aria-live="polite">
-            <span class="dot" aria-hidden="true" style="background-color: var(--magenta);"></span>
-            <span class="t-label" style="color:var(--cinza-text);">Save the date</span>
+          <div class="ingressos-badge ingressos-badge-open" role="status" aria-live="polite">
+            <span class="dot dot-pulsing-green" aria-hidden="true"></span>
+            <span class="t-label" style="color:var(--verde); font-weight: 700; letter-spacing: 1.5px;">VENDAS ABERTAS ✦ LOTE OFICIAL</span>
           </div>
 
           <!-- Título -->
           <div class="ingressos-titulo">
             <h2 class="t-h1 reveal" id="ingressos-titulo">
-              AS VENDAS ABREM<br>
-              <em>DIA 18/09.</em>
+              VENDAS <em>ABERTAS!</em>
             </h2>
           </div>
 
           <!-- Subtexto -->
-          <p class="t-body ingressos-sub reveal reveal-d1" style="max-width: 650px; margin: 0 auto 32px;">
-            Os ingressos oficiais do FRENESIM 2026 estarão disponíveis exclusivamente pela plataforma <strong style="color: var(--magenta);">Cheers</strong>. Enquanto o dia não chega, acesse a página do evento, siga nosso perfil na plataforma e prepare-se para garantir o lote promocional!
+          <p class="t-body ingressos-sub reveal reveal-d1" style="max-width: 680px; margin: 0 auto 28px; font-size: 1.15rem; line-height: 1.6;">
+            Os ingressos oficiais do <strong>FRENESIM 2026</strong> já estão liberados! Garanta seu lugar no desfile-festa mais aguardado de Goiânia exclusivamente pela plataforma <strong style="color: var(--magenta);">Cheers</strong>.
           </p>
 
-          <!-- CTAs da Cheers -->
-          <div class="ingressos-cta reveal reveal-d1" style="display: flex; gap: 16px; justify-content: center; margin-bottom: 48px; flex-wrap: wrap;">
-            <a href="https://cheers.com.br/evento/frenesim-2026-35305" target="_blank" class="btn btn-magenta" aria-label="Acessar página do evento na Cheers">
-              Acessar Evento na Cheers
+          <!-- Destaques chamativos -->
+          <div class="ingressos-features reveal reveal-d1">
+            <span class="ingressos-feature-pill">⚡ Lote Promocional Disponível</span>
+            <span class="ingressos-feature-pill">🎟️ Venda 100% Segura via Cheers</span>
+            <span class="ingressos-feature-pill">🔥 Passarela + Performance + Pista</span>
+          </div>
+
+          <!-- CTAs da Cheers (Super chamativos) -->
+          <div class="ingressos-cta reveal reveal-d2">
+            <a href="https://cheers.com.br/evento/frenesim-2026-35305" target="_blank" rel="noopener noreferrer" class="btn btn-magenta btn-ingressos-master" id="cta-ingressos-main" aria-label="Comprar Ingresso Agora na Cheers">
+              GARANTIR MEU INGRESSO AGORA 🎟️
             </a>
-            <a href="https://cheers.com.br/pagina/frenesim~17066" target="_blank" class="btn btn-outline-branco" style="border-color: var(--magenta); color: var(--magenta);" onmouseover="this.style.backgroundColor='var(--magenta)'; this.style.color='#fff'" onmouseout="this.style.backgroundColor='transparent'; this.style.color='var(--magenta)'" aria-label="Seguir perfil na Cheers">
-              Seguir Perfil Oficial
+            <a href="https://cheers.com.br/pagina/frenesim~17066" target="_blank" rel="noopener noreferrer" class="btn btn-outline-magenta btn-ingressos-secondary" aria-label="Seguir Perfil Oficial na Cheers">
+              Seguir Perfil Oficial na Cheers ↗
             </a>
           </div>
 
-          <div style="width: 100%; height: 1px; background: rgba(0,0,0,0.1); max-width: 300px; margin: 0 auto 32px;" class="reveal reveal-d2"></div>
-
-          <div class="ingressos-avise-wrapper" style="width: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center; position: relative;">
-            <p class="t-body ingressos-sub reveal reveal-d2" style="font-size: 0.95rem; margin-bottom: 24px; color: var(--cinza-text);">
-              Quer ser avisado em primeira mão?
-            </p>
-
-            <!-- Formulário avise-me -->
-            <form class="avise-form reveal reveal-d2" id="avise-form" novalidate aria-label="Formulário avise-me de ingressos">
-              <div class="form-row">
-                <input
-                  type="email"
-                  name="email"
-                  id="avise-email"
-                  class="form-input"
-                  placeholder="seu@email.com"
-                  autocomplete="email"
-                  aria-label="Seu e-mail"
-                />
-                <input
-                  type="text"
-                  name="instagram"
-                  id="avise-instagram"
-                  class="form-input"
-                  placeholder="@seuinstagram"
-                  autocomplete="off"
-                  aria-label="Seu Instagram"
-                />
-              </div>
-              <button type="submit" class="btn btn-magenta" style="width:100%;" id="btn-avise-me">
-                Avise-me
-              </button>
-              <p class="form-hint">Sem spam. A gente promete.</p>
-            </form>
-          </div>
+          <p class="ingressos-notice reveal reveal-d2">
+            🔒 Compra rápida e garantida · Pix ou Cartão em até 12x na Cheers
+          </p>
         </div>
       </div>
     </section>
