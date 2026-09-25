@@ -2648,6 +2648,36 @@ section {
   box-shadow: 0 14px 40px rgba(0, 0, 0, 0.6), 0 0 28px rgba(0, 255, 191, 0.16);
 }
 
+/* Variante FIU-FIU (Bebida Oficial) */
+.patrocinador-featured.patrocinador-fiufiu {
+  border-color: rgba(255, 0, 152, 0.35);
+  box-shadow: 0 10px 35px rgba(0, 0, 0, 0.5), 0 0 20px rgba(255, 0, 152, 0.1);
+}
+
+.patrocinador-featured.patrocinador-fiufiu:hover {
+  border-color: rgba(255, 0, 152, 0.7);
+  box-shadow: 0 14px 40px rgba(0, 0, 0, 0.6), 0 0 28px rgba(255, 0, 152, 0.25);
+}
+
+.patrocinador-featured.patrocinador-fiufiu .patrocinador-badge-top {
+  background: var(--magenta);
+  color: var(--branco);
+}
+
+.patrocinador-featured.patrocinador-fiufiu .patrocinador-zoom-trigger:hover {
+  background: var(--magenta);
+  color: var(--branco);
+  border-color: var(--magenta);
+}
+
+.patrocinador-featured.patrocinador-fiufiu .patrocinador-category {
+  color: var(--magenta);
+}
+
+.patrocinador-featured.patrocinador-fiufiu .patrocinador-highlight-bullet {
+  color: var(--amarelo);
+}
+
 /* Coluna Visual — Arte Oficial Única */
 .patrocinador-visual {
   display: flex;

@@ -653,32 +653,34 @@ function initProdutoGallery() {
 }
 
 // =====================
-// 13. GALERIA DO PATROCINADOR (ENTRELINHAS)
+// 13. GALERIA DOS PATROCINADORES (ENTRELINHAS & FIU-FIU)
 // =====================
 function initPatrocinadorGallery() {
-  const mainImg = document.getElementById('patrocinador-main-img');
-  const zoomBtn = document.getElementById('patrocinador-zoom-btn');
   const overlay = document.getElementById('lightbox-overlay');
   const lightboxImg = document.getElementById('lightbox-img');
+  if (!overlay || !lightboxImg) return;
 
-  if (!mainImg) return;
-
-  function openZoom() {
-    if (!overlay || !lightboxImg) return;
-    lightboxImg.src = mainImg.src;
-    lightboxImg.alt = mainImg.alt;
+  function openZoom(src, alt) {
+    lightboxImg.src = src;
+    lightboxImg.alt = alt;
     overlay.classList.add('active');
     overlay.setAttribute('aria-hidden', 'false');
     document.body.style.overflow = 'hidden';
   }
 
-  mainImg.addEventListener('click', openZoom);
-  if (zoomBtn) {
-    zoomBtn.addEventListener('click', (e) => {
-      e.stopPropagation();
-      openZoom();
-    });
-  }
+  document.querySelectorAll('.patrocinador-main-wrap').forEach(wrap => {
+    const img = wrap.querySelector('.patrocinador-main-img');
+    const btn = wrap.querySelector('.patrocinador-zoom-trigger');
+    if (img) {
+      img.addEventListener('click', () => openZoom(img.src, img.alt));
+    }
+    if (btn && img) {
+      btn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        openZoom(img.src, img.alt);
+      });
+    }
+  });
 }
 
 // =====================
