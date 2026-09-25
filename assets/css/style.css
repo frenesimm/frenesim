@@ -3590,6 +3590,27 @@ footer {
   align-items: center;
 }
 
+@media (max-width: 640px) {
+  .edital-modelos-card {
+    padding: 20px 16px;
+  }
+  
+  .edital-modelos-actions {
+    flex-direction: column;
+    align-items: stretch;
+    width: 100%;
+  }
+
+  .edital-modelos-actions .btn {
+    width: 100%;
+    text-align: center;
+    justify-content: center;
+    white-space: normal;
+    word-break: break-word;
+    box-sizing: border-box;
+  }
+}
+
 /* -------------------
    SEÇÃO INGRESSOS - VENDAS ABERTAS (SUPER CHAMATIVO)
    ------------------- */
