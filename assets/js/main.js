@@ -684,9 +684,41 @@ function initPatrocinadorGallery() {
 }
 
 // =====================
+// 14. EXPIRAÇÃO DO RESULTADO EDITAL DE MODELOS (05/10/2026)
+// =====================
+function checkEditalExpiry() {
+  // A partir de 05/10/2026 00:00:00 (Horário Oficial de Brasília UTC-3)
+  const expiryDate = new Date('2026-10-05T00:00:00-03:00');
+  const now = new Date();
+
+  if (now >= expiryDate) {
+    const editalSection = document.getElementById('edital-modelos');
+    if (editalSection) {
+      const prevEl = editalSection.previousElementSibling;
+      if (prevEl && prevEl.classList.contains('divider')) {
+        prevEl.remove();
+      }
+      editalSection.remove();
+    }
+
+    // Remove links de navegação do edital (desktop, mobile e footer)
+    const links = document.querySelectorAll('a[href="#edital-modelos"]');
+    links.forEach(link => {
+      const parentLi = link.closest('li');
+      if (parentLi) {
+        parentLi.remove();
+      } else {
+        link.remove();
+      }
+    });
+  }
+}
+
+// =====================
 // INIT
 // =====================
 document.addEventListener('DOMContentLoaded', () => {
+  checkEditalExpiry();
   initNav();
   initReveal();
   initMarquee();

@@ -12,7 +12,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet" />
   <link rel="preload" as="image" href="assets/images/hero/banner-site-frenesim-capa.webp" fetchpriority="high" media="(max-width: 640px)" />
   <link rel="preload" as="image" href="assets/images/hero/banner-site-frenesim-capa.png" fetchpriority="high" media="(min-width: 641px)" />
-  <link rel="stylesheet" href="assets/css/style.css?v=37" />
+  <link rel="stylesheet" href="assets/css/style.css?v=39" />
 </head>
 <body>
 
@@ -42,40 +42,54 @@
   <!-- Menu mobile overlay -->
   <div class="nav-mobile" id="nav-mobile" role="dialog" aria-label="Menu de navegação">
     <button class="nav-mobile-close" id="nav-mobile-close" aria-label="Fechar menu">✕</button>
-    <nav>
-      <ul class="nav-mobile-list" role="list">
-        <li><a href="#sobre" class="nav-mobile-link">Sobre</a></li>
-        <li><a href="#primeira-edicao" class="nav-mobile-link">1º edição</a></li>
-        <li><a href="#ingressos" class="nav-mobile-link">Ingressos</a></li>
-        <li><a href="#produtos" class="nav-mobile-link">Produtos</a></li>
-        <li><a href="#patrocinadores" class="nav-mobile-link">Patrocinadores</a></li>
-        <li>
-          <a href="#edital-modelos" class="nav-mobile-link nav-mobile-edital">
-            Resultado Edital de Modelos
-          </a>
-        </li>
-        <li><a href="#contato" class="nav-mobile-link">Contato</a></li>
-      </ul>
-      <div style="padding: 24px 0 0; width: 100%;">
-        <a href="#ingressos" class="btn btn-magenta nav-mobile-link" style="width: 100%; text-align: center; justify-content: center; box-shadow: 0 0 20px rgba(255, 0, 152, 0.5);">
-          Garantir Ingressos →
-        </a>
+    <div class="nav-mobile-inner">
+      <div class="nav-mobile-header">
+        <span class="nav-mobile-tag">BACKSTAGE MENU</span>
+        <span class="nav-mobile-status"><span class="dot-pulsing-green" aria-hidden="true"></span> 12.11.26</span>
       </div>
-    </nav>
+      <nav>
+        <ul class="nav-mobile-list" role="list">
+          <li><a href="#sobre" class="nav-mobile-link"><span class="nav-num">01</span> Sobre</a></li>
+          <li><a href="#primeira-edicao" class="nav-mobile-link"><span class="nav-num">02</span> 1º edição</a></li>
+          <li><a href="#ingressos" class="nav-mobile-link"><span class="nav-num">03</span> Ingressos</a></li>
+          <li><a href="#produtos" class="nav-mobile-link"><span class="nav-num">04</span> Produtos</a></li>
+          <li><a href="#patrocinadores" class="nav-mobile-link"><span class="nav-num">05</span> Patrocinadores</a></li>
+          <li>
+            <a href="#edital-modelos" class="nav-mobile-link nav-mobile-edital">
+              <span class="nav-num">06</span> Resultado Edital
+            </a>
+          </li>
+          <li><a href="#contato" class="nav-mobile-link"><span class="nav-num">07</span> Contato</a></li>
+        </ul>
+        <div class="nav-mobile-footer">
+          <a href="#ingressos" class="btn btn-magenta nav-mobile-cta" id="nav-mobile-cta-btn">
+            Garantir Ingressos ✦
+          </a>
+          <span class="nav-mobile-meta">DESFILE-FESTA · GOIÂNIA, GO</span>
+        </div>
+      </nav>
+    </div>
   </div>
 
   <main>
 
-    <!-- ============ HERO — Cor principal: Azul ============ -->
+    <!-- ============ HERO — Cor principal: Azul & Neon Club ============ -->
     <section id="hero" aria-label="Hero — FRENESIM 2º edição">
       <div class="hero-accent-top" aria-hidden="true"></div>
       <div class="hero-accent-corner" aria-hidden="true"></div>
 
+      <!-- Iluminação atmosférica de passarela e pista (Neon Club Ambience) -->
+      <div class="hero-glow hero-glow-magenta" aria-hidden="true"></div>
+      <div class="hero-glow hero-glow-blue" aria-hidden="true"></div>
+
       <div class="hero-content">
-        <!-- Pré-label -->
+        <!-- Pré-label / Badges de Passarela -->
         <div class="hero-pre">
-          <span class="tag tag-azul">2º edição</span>
-          <span class="tag tag-verde" style="background:transparent;color:var(--verde);border:1px solid var(--verde);">2026</span>
+          <span class="hero-live-badge">
+            <span class="dot-pulsing-green" aria-hidden="true"></span>
+            2º EDIÇÃO 2026
+          </span>
+          <span class="hero-subtag">✦ GOIÂNIA RUNWAY &amp; CLUB</span>
         </div>
 
         <!-- Logo oficial como elemento principal do hero -->
@@ -86,27 +100,40 @@
                id="hero-logo" />
         </div>
 
-        <!-- Barra de dados -->
+        <!-- Barra de dados e manifesto fashion -->
         <div class="hero-bottom">
 
-          <!-- Data em box -->
-          <div class="hero-date-box" aria-label="Data do evento">
-            <span class="hero-date-box-label">Data</span>
-            <span class="hero-date-box-value">12.11.26</span>
-            <span class="hero-date-box-city">Goiânia · GO · Brasil</span>
+          <!-- Credencial de Data (Estética Backstage Lanyard Pass) -->
+          <div class="hero-date-ticket" aria-label="Data e local do evento: 12 de Novembro de 2026 em Goiânia">
+            <div class="date-ticket-top">
+              <span class="date-ticket-tag">DATA OFICIAL · DESFILE-FESTA</span>
+              <span class="date-ticket-code">// 12.NOV.26 //</span>
+            </div>
+            <div class="date-ticket-body">
+              <span class="date-ticket-label">DATA OFICIAL</span>
+              <span class="date-ticket-value">12.11.26</span>
+              <span class="date-ticket-city">GOIÂNIA · GO · A PARTIR DAS 19H</span>
+            </div>
+            <div class="date-ticket-barcode" aria-hidden="true">
+              <span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+            </div>
           </div>
 
+          <!-- Manchete Editorial de Moda -->
           <div class="hero-desc-wrap">
-            <p class="hero-desc">
-              Desfile-festa em Goiânia.
-            </p>
+            <div class="hero-fashion-statement" aria-label="Moda é festa. Festa é moda.">
+              <span class="statement-line statement-solid">MODA É FESTA.</span>
+              <span class="statement-line statement-neon">FESTA É MODA.</span>
+            </div>
             <p class="hero-desc-destaque">
               Passarela, performance e pista na mesma noite.
             </p>
-            <p class="hero-tagline">Moda é festa.</p>
-            <p class="hero-tagline">Festa é moda.</p>
+            <p class="hero-desc">
+              O desfile-festa que conecta criadores locais, alta moda e pista de dança em Goiânia.
+            </p>
           </div>
 
+          <!-- Botões CTAs -->
           <div class="hero-ctas">
             <a href="#ingressos" class="btn btn-magenta hero-btn-ingressos" id="cta-ingressos-hero" aria-label="Garantir Ingressos para o Frenesim 2026">
               Garantir Ingressos →
@@ -114,11 +141,12 @@
             <a href="https://cheers.com.br/evento/frenesim-2026-35305" target="_blank" rel="noopener noreferrer" class="btn btn-outline-magenta hero-btn-cheers" id="cta-cheers-hero" aria-label="Acessar página de ingressos na plataforma Cheers">
               Ingressos na Cheers ↗
             </a>
+            <span class="hero-cta-trust">✦ Vendas Abertas · Plataforma Cheers</span>
           </div>
         </div>
       </div>
 
-      <!-- Faixa de cores arco-íris -->
+      <!-- Faixa de cores arco-íris oficial da identidade -->
       <div class="hero-stripe" aria-hidden="true">
         <span style="background:#FF0098"></span>
         <span style="background:#FFF800"></span>
@@ -130,25 +158,26 @@
       </div>
     </section>
 
-    <!-- ============ MARQUEE ============ -->
-    <div class="marquee-wrap" aria-hidden="true">
+    <!-- ============ MARQUEE — FITA TICKER RUNWAY ============ -->
+    <div class="marquee-wrap marquee-fashion" aria-hidden="true">
       <div class="marquee-track" id="marquee-track">
-        <span>FRENESIM</span><span class="dot">·</span>
-        <span>MODA É FESTA</span><span class="dot">·</span>
-        <span>PASSARELA</span><span class="dot">·</span>
-        <span>PERFORMANCE</span><span class="dot">·</span>
-        <span>GOIÂNIA</span><span class="dot">·</span>
-        <span>DA PASSARELA PRA PISTA</span><span class="dot">·</span>
-        <span>CORPO COM ATITUDE</span><span class="dot">·</span>
-        <span>CURADORIA COM CRITÉRIO</span><span class="dot">·</span>
-        <span>FRENESIM</span><span class="dot">·</span>
-        <span>MODA É FESTA</span><span class="dot">·</span>
-        <span>PASSARELA</span><span class="dot">·</span>
-        <span>PERFORMANCE</span><span class="dot">·</span>
-        <span>GOIÂNIA</span><span class="dot">·</span>
-        <span>DA PASSARELA PRA PISTA</span><span class="dot">·</span>
-        <span>CORPO COM ATITUDE</span><span class="dot">·</span>
-        <span>CURADORIA COM CRITÉRIO</span><span class="dot">·</span>
+        <span class="marquee-item marquee-neon-yellow">FRENESIM</span><span class="marquee-glyph">✦</span>
+        <span class="marquee-item marquee-solid">MODA É FESTA</span><span class="marquee-glyph">⚡</span>
+        <span class="marquee-item marquee-neon-magenta">PASSARELA</span><span class="marquee-glyph">✶</span>
+        <span class="marquee-item marquee-neon-green">PERFORMANCE</span><span class="marquee-glyph">🪩</span>
+        <span class="marquee-item marquee-solid">PISTA NA MESMA NOITE</span><span class="marquee-glyph">✦</span>
+        <span class="marquee-item marquee-neon-cyan">GOIÂNIA 12.11.26</span><span class="marquee-glyph">✕</span>
+        <span class="marquee-item marquee-outline">CORPO COM ATITUDE</span><span class="marquee-glyph">✦</span>
+        <span class="marquee-item marquee-neon-yellow">CURADORIA COM CRITÉRIO</span><span class="marquee-glyph">⚡</span>
+        <!-- Duplicação idêntica para o loop infinito contínuo -->
+        <span class="marquee-item marquee-neon-yellow">FRENESIM</span><span class="marquee-glyph">✦</span>
+        <span class="marquee-item marquee-solid">MODA É FESTA</span><span class="marquee-glyph">⚡</span>
+        <span class="marquee-item marquee-neon-magenta">PASSARELA</span><span class="marquee-glyph">✶</span>
+        <span class="marquee-item marquee-neon-green">PERFORMANCE</span><span class="marquee-glyph">🪩</span>
+        <span class="marquee-item marquee-solid">PISTA NA MESMA NOITE</span><span class="marquee-glyph">✦</span>
+        <span class="marquee-item marquee-neon-cyan">GOIÂNIA 12.11.26</span><span class="marquee-glyph">✕</span>
+        <span class="marquee-item marquee-outline">CORPO COM ATITUDE</span><span class="marquee-glyph">✦</span>
+        <span class="marquee-item marquee-neon-yellow">CURADORIA COM CRITÉRIO</span><span class="marquee-glyph">⚡</span>
       </div>
     </div>
 
@@ -163,50 +192,55 @@
             </div>
 
             <h1 class="t-h1 sobre-titulo reveal" id="sobre-titulo">
-              PASSARELA.<br>
-              PISTA.<br>
-              <em>PERFORMANCE.</em>
+              <span class="sobre-word sobre-word-solid">PASSARELA.</span>
+              <span class="sobre-word sobre-word-neon">PISTA.</span>
+              <span class="sobre-word sobre-word-accent">PERFORMANCE.</span>
             </h1>
 
             <div class="sobre-paragrafos reveal reveal-d1">
+              <div class="sobre-manifesto-highlight">
+                <span class="manifesto-quote" aria-hidden="true">“</span>
+                <p class="manifesto-text">
+                  A moda desce da passarela pra pista. A passarela vira manifesto: <strong>festivo, cênico, coletivo</strong>.
+                </p>
+              </div>
               <p class="t-body">
-                O FRENESIM reúne criadores locais e público numa noite em que a moda desce da passarela pra pista. A passarela vira manifesto: festivo, cênico, coletivo.
-              </p>
-              <p class="t-body">
-                Aqui tem marca com proposta, corpo com atitude e curadoria com critério.
+                O FRENESIM reúne criadores locais e público numa noite em que a moda ganha ritmo de pista e liberdade criativa em Goiânia.
               </p>
             </div>
 
-            <!-- Equipe -->
-            <div class="equipe-list reveal reveal-d2" style="margin-top: 48px;">
-              <div class="equipe-row">
-                <span class="equipe-label">Criação &amp; Direção</span>
-                <span class="equipe-nomes">Laura Calais &amp; Thayna Morais</span>
+            <!-- Equipe curatorial rápida -->
+            <div class="equipe-chips-grid reveal reveal-d2">
+              <div class="equipe-chip">
+                <span class="chip-label">Criação &amp; Direção</span>
+                <span class="chip-val">Laura Calais &amp; Thayna Morais</span>
               </div>
-              <div class="equipe-row">
-                <span class="equipe-label">Cidade</span>
-                <span class="equipe-nomes">Goiânia, GO — Brasil</span>
-              </div>
-              <div class="equipe-row">
-                <span class="equipe-label">Formato</span>
-                <span class="equipe-nomes">Desfile-Festa Anual</span>
+              <div class="equipe-chip">
+                <span class="chip-label">Cidade &amp; Formato</span>
+                <span class="chip-val">Goiânia, GO · Desfile-Festa Anual</span>
               </div>
             </div>
           </div>
 
           <!-- Coluna direita: blocos de destaque -->
           <div class="sobre-right">
-            <!-- Prêmio UFG -->
-            <div class="sobre-premio reveal reveal-d1">
-              <span class="label">Reconhecimento</span>
-              <p>Reconhecido pelo UFG Fashion Business na categoria Inovação</p>
+            <!-- Prêmio UFG — Badge Fashion Innovation -->
+            <div class="sobre-premio-badge reveal reveal-d1">
+              <div class="premio-badge-top">
+                <span class="premio-star" aria-hidden="true">✦</span>
+                <span class="premio-badge-label">Reconhecimento Oficial</span>
+                <span class="premio-badge-tag">INOVAÇÃO</span>
+              </div>
+              <p class="premio-badge-name">Reconhecido pelo <strong>UFG Fashion Business</strong> na categoria Inovação</p>
+              <span class="premio-badge-sub">UNIVERSIDADE FEDERAL DE GOIÁS · FAV</span>
             </div>
-
-
 
             <!-- Carrossel de equipe infinito -->
             <div class="equipe-carousel-wrap reveal reveal-d3" id="equipe-carousel-section">
-              <span class="equipe-secao-label" id="equipe-carousel-label">Equipe</span>
+              <div class="equipe-secao-header">
+                <span class="equipe-secao-label" id="equipe-carousel-label">Equipe Oficial</span>
+                <span class="equipe-hint">✦ Toque no card p/ bio e redes ↺</span>
+              </div>
 
               <div class="equipe-carousel" id="equipe-carousel" aria-label="Carrossel de equipe" role="region">
                 <div class="equipe-carousel-track" id="equipe-carousel-track">
@@ -437,35 +471,54 @@
 
     <div class="divider"></div>
 
-    <!-- ============ 1º edição — Cor principal: Vermelho ============ -->
-    <section id="primeira-edicao" class="section-pad" aria-labelledby="edicao-titulo">
+    <!-- ============ 1º edição — Cor principal: Vermelho & Arquivo Fashion ============ -->
+    <section id="primeira-edicao" class="section-pad edicao-archive-section" aria-labelledby="edicao-titulo">
       <div class="container">
         <!-- Header -->
         <div class="edicao-header">
           <span class="edicao-ano-bg" aria-hidden="true">2024</span>
           <div class="edicao-header-info">
-            <span class="tag tag-rosa">1º edição</span>
-            <h2 class="t-h2 reveal" id="edicao-titulo" style="color:var(--branco);">
-              Novembro de 2024
+            <span class="tag tag-rosa tag-archive-badge">✦ ARCHIVE · 1º EDIÇÃO</span>
+            <h2 class="t-h1 edicao-titulo-fashion reveal" id="edicao-titulo">
+              A PRIMEIRA ONDA
             </h2>
+            <p class="t-sub edicao-sub-fashion reveal reveal-d1">
+              Novembro de 2024 · Base Ambiente · Goiânia, GO
+            </p>
           </div>
         </div>
 
-        <!-- Números de impacto -->
-        <div class="numeros-grid reveal">
-          <div class="numero-item">
+        <!-- Números de impacto Neon -->
+        <div class="numeros-grid numeros-grid-neon reveal">
+          <div class="numero-item numero-item-neon">
+            <div class="numero-item-top">
+              <span class="numero-dot"></span>
+              <span class="numero-tag">PÚBLICO</span>
+            </div>
             <span class="numero-valor">+330</span>
             <span class="numero-label">Pessoas pagantes</span>
           </div>
-          <div class="numero-item">
+          <div class="numero-item numero-item-neon">
+            <div class="numero-item-top">
+              <span class="numero-dot"></span>
+              <span class="numero-tag">CURADORIA</span>
+            </div>
             <span class="numero-valor">6</span>
-            <span class="numero-label">Marcas locais</span>
+            <span class="numero-label">Marcas locais autorais</span>
           </div>
-          <div class="numero-item">
+          <div class="numero-item numero-item-neon">
+            <div class="numero-item-top">
+              <span class="numero-dot"></span>
+              <span class="numero-tag">DIGITAL</span>
+            </div>
             <span class="numero-valor">165K</span>
-            <span class="numero-label">Alcance social</span>
+            <span class="numero-label">Alcance nas redes</span>
           </div>
-          <div class="numero-item">
+          <div class="numero-item numero-item-neon">
+            <div class="numero-item-top">
+              <span class="numero-dot"></span>
+              <span class="numero-tag">PASSARELA</span>
+            </div>
             <span class="numero-valor">25</span>
             <span class="numero-label">Looks desfilados</span>
           </div>
@@ -473,44 +526,42 @@
 
         <!-- Conteúdo -->
         <div class="edicao-conteudo">
-          <!-- Ficha Técnica -->
+          <!-- Ficha Técnica Editorial (Runway Call Sheet) -->
           <div class="reveal">
-            <span class="programacao-label">Ficha Técnica</span>
-            <div class="ficha-tecnica" role="table" aria-label="Ficha técnica da 1º edição">
+            <div class="callsheet-header">
+              <span class="programacao-label">RUNWAY CALL SHEET // 2024</span>
+              <span class="callsheet-status">[ ARCHIVE VERIFIED ]</span>
+            </div>
+            <div class="ficha-tecnica ficha-callsheet" role="table" aria-label="Ficha técnica da 1º edição">
 
-              <div class="ficha-row ficha-row-destaque" role="row">
-                <span class="ficha-cat ficha-cat-normal" role="rowheader">Local</span>
-                <span class="ficha-val" role="cell">Base Ambiente</span>
+              <div class="ficha-row ficha-row-callsheet" role="row">
+                <span class="ficha-cat ficha-badge-cat" role="rowheader">LOCAL</span>
+                <span class="ficha-val" role="cell"><strong>Base Ambiente</strong> · Goiânia</span>
               </div>
 
-              <div class="ficha-row ficha-row-destaque" role="row">
-                <span class="ficha-cat ficha-cat-normal" role="rowheader">Marcas</span>
-                <span class="ficha-val" role="cell">ACHEI SUPER COOL, LAIKE, NEFELIA, ISUED, OPHION, SANTO</span>
+              <div class="ficha-row ficha-row-callsheet" role="row">
+                <span class="ficha-cat ficha-badge-cat" role="rowheader">MARCAS</span>
+                <span class="ficha-val" role="cell">ACHEI SUPER COOL · LAIKE · NEFELIA · ISUED · OPHION · SANTO</span>
               </div>
 
-              <div class="ficha-row ficha-row-destaque" role="row">
-                <span class="ficha-cat ficha-cat-normal" role="rowheader">Intervenção Visual</span>
+              <div class="ficha-row ficha-row-callsheet" role="row">
+                <span class="ficha-cat ficha-badge-cat" role="rowheader">VISUAIS</span>
                 <span class="ficha-val" role="cell">VJ Lucas Trabachini</span>
               </div>
 
-              <div class="ficha-row ficha-row-destaque" role="row">
-                <span class="ficha-cat ficha-cat-normal" role="rowheader">Atrações Musicais</span>
+              <div class="ficha-row ficha-row-callsheet" role="row">
+                <span class="ficha-cat ficha-badge-cat" role="rowheader">LINE-UP DJ</span>
                 <span class="ficha-val" role="cell">DJ Nalí &middot; DJ KFnoBeat</span>
               </div>
 
-              <div class="ficha-row ficha-row-destaque" role="row">
-                <span class="ficha-cat ficha-cat-normal" role="rowheader">Gastronomia</span>
+              <div class="ficha-row ficha-row-callsheet" role="row">
+                <span class="ficha-cat ficha-badge-cat" role="rowheader">GASTRONOMIA</span>
                 <span class="ficha-val" role="cell">No local do evento</span>
               </div>
 
-              <div class="ficha-row ficha-row-destaque" role="row">
-                <span class="ficha-cat ficha-cat-normal" role="rowheader">Patrocinador</span>
-                <span class="ficha-val" role="cell">TREME-TREME</span>
-              </div>
-
-              <div class="ficha-row ficha-row-destaque" role="row">
-                <span class="ficha-cat ficha-cat-normal" role="rowheader">Apoio</span>
-                <span class="ficha-val" role="cell">TANK CHEIO</span>
+              <div class="ficha-row ficha-row-callsheet" role="row">
+                <span class="ficha-cat ficha-badge-cat" role="rowheader">PARCERIAS</span>
+                <span class="ficha-val" role="cell">Patrocínio: TREME-TREME &nbsp;·&nbsp; Apoio: TANK CHEIO</span>
               </div>
 
             </div>
@@ -973,7 +1024,7 @@
 
     <div class="divider"></div>
 
-    <!-- ============ LOCAL — Cor: Azul (repetida) ============ -->
+    <!-- ============ LOCAL — Layout Original com Radar Tech ============ -->
     <section id="local" class="section-pad" aria-labelledby="local-titulo">
       <div class="container">
         <div class="local-grid">
@@ -994,13 +1045,22 @@
             </p>
           </div>
 
-          <div class="local-map-placeholder reveal reveal-d2">
-            <div class="local-map-inner">
-              <svg class="local-map-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" aria-hidden="true">
-                <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/>
-                <circle cx="12" cy="9" r="2.5"/>
-              </svg>
-              <p>Goiânia - Goiás</p>
+          <!-- No lugar do mapa: o radarzinho -->
+          <div class="local-radar-card reveal reveal-d2" aria-hidden="true">
+            <div class="radar-scope">
+              <div class="radar-ring radar-ring-1"></div>
+              <div class="radar-ring radar-ring-2"></div>
+              <div class="radar-ring radar-ring-3"></div>
+              <div class="radar-axis-x"></div>
+              <div class="radar-axis-y"></div>
+              <div class="radar-sweep"></div>
+              <div class="radar-blip">
+                <span class="radar-blip-dot"></span>
+                <span class="radar-blip-label">DROP ZONE</span>
+              </div>
+            </div>
+            <div class="radar-meta">
+              <span>GPS: GOIÂNIA // BRASIL</span>
             </div>
           </div>
         </div>
@@ -1009,30 +1069,33 @@
 
     <div class="divider"></div>
 
-    <!-- ============ CONTATO ============ -->
-    <section id="contato" class="section-pad" aria-labelledby="contato-titulo">
+    <!-- ============ CONTATO & CONEXÃO FASHION ============ -->
+    <section id="contato" class="section-pad contato-fashion-section" aria-labelledby="contato-titulo">
       <div class="container">
         <div class="section-header">
-          <span class="tag tag-outline">Contato &amp; Redes</span>
-          <h2 class="t-h2 reveal" id="contato-titulo">Fale com a gente</h2>
+          <span class="tag tag-outline tag-contact-badge">✦ CANAL DIRETO</span>
+          <h2 class="t-h1 contato-titulo-fashion reveal" id="contato-titulo">FALE COM A GENTE</h2>
+          <p class="t-sub reveal reveal-d1">Imprensa, curadoria de marcas, parcerias e informações gerais.</p>
         </div>
 
-        <div class="contato-grid">
-          <div class="contato-item reveal">
-            <span class="contato-label">E-mail</span>
-            <a href="mailto:frenesimdf@gmail.com" class="contato-link">
-              frenesimdf@gmail.com
-            </a>
-          </div>
-          <div class="contato-item reveal reveal-d1">
-            <span class="contato-label">Instagram</span>
-            <a href="https://instagram.com/frenesimm"
-               class="contato-link"
-               target="_blank"
-               rel="noopener noreferrer">
-              @frenesimm
-            </a>
-          </div>
+        <div class="contato-grid-fashion">
+          <a href="mailto:frenesimdf@gmail.com" class="contato-card-neon reveal" aria-label="Enviar e-mail para frenesimdf@gmail.com">
+            <div class="contato-card-header">
+              <span class="contato-badge-tag">E-MAIL OFICIAL</span>
+              <span class="contato-card-icon">✉</span>
+            </div>
+            <span class="contato-card-value">frenesimdf@gmail.com</span>
+            <span class="contato-card-sub">Contato direto com a direção e curadoria →</span>
+          </a>
+
+          <a href="https://instagram.com/frenesimm" class="contato-card-neon contato-card-ig reveal reveal-d1" target="_blank" rel="noopener noreferrer" aria-label="Acessar Instagram @frenesimm">
+            <div class="contato-card-header">
+              <span class="contato-badge-tag tag-ig">INSTAGRAM OFICIAL</span>
+              <span class="contato-card-icon">↗</span>
+            </div>
+            <span class="contato-card-value">@frenesimm</span>
+            <span class="contato-card-sub">Acompanhe novidades diárias e bastidores →</span>
+          </a>
         </div>
       </div>
     </section>
