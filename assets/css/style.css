@@ -177,10 +177,7 @@ body {
 }
 
 body {
-  background-color: #100106;
-  background-image: var(--bg-gradient);
-  background-attachment: fixed;
-  background-size: cover;
+  background-color: #0c0105;
   color: var(--branco);
   font-family: var(--font-body);
   font-size: 16px;
@@ -191,20 +188,41 @@ body {
   min-height: 100vh;
 }
 
+/* Camada atmosférica de névoa e luzes volumétricas de passarela (Fixed Full-Page) */
+body::after {
+  content: '';
+  position: fixed;
+  inset: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: #0c0105;
+  background-image: 
+    radial-gradient(ellipse 90% 45% at 50% -5%, rgba(255, 0, 152, 0.22), transparent 65%),
+    radial-gradient(ellipse 65% 55% at 95% 28%, rgba(0, 0, 255, 0.18), transparent 60%),
+    radial-gradient(ellipse 70% 55% at 5% 62%, rgba(131, 0, 44, 0.48), transparent 65%),
+    radial-gradient(ellipse 60% 45% at 90% 82%, rgba(0, 255, 191, 0.15), transparent 60%),
+    radial-gradient(ellipse 80% 40% at 50% 102%, rgba(255, 248, 0, 0.12), transparent 70%),
+    radial-gradient(circle at 50% 50%, rgba(42, 5, 16, 0.7) 0%, rgba(18, 2, 8, 0.95) 75%, #080003 100%),
+    linear-gradient(180deg, #100106 0%, #1e030c 25%, #280410 50%, #1a0209 75%, #080003 100%);
+  background-size: cover;
+  pointer-events: none;
+  z-index: -2;
+}
+
 /* Camada cinematográfica 35mm — Granulação analógica fotográfica de alta definição */
 body::before {
   content: '';
   position: fixed;
   inset: 0;
-  width: 100%;
-  height: 100%;
+  width: 100vw;
+  height: 100vh;
   background-image: url('../images/grain-35mm.png');
   background-repeat: repeat;
-  background-size: 220px 220px;
+  background-size: 180px 180px;
   pointer-events: none;
   z-index: 9999;
   mix-blend-mode: overlay;
-  opacity: 0.38;
+  opacity: 0.45;
 }
 
 /* Animações Neon Sutis / Respiração Noturna */
@@ -2126,7 +2144,7 @@ section {
    14. SEÇÃO 1ª EDIÇÃO — Cor: Rosa claro principal
    ------------------- */
 #primeira-edicao {
-  background: var(--bg);
+  background: transparent;
   border-top: 4px solid var(--rosa);
   /* border-top no mobile — não rouba largura */
 }
@@ -2493,7 +2511,7 @@ section {
    15. INGRESSOS — Cor: Magenta principal
    ------------------- */
 #ingressos {
-  background: var(--bg);
+  background: transparent;
   position: relative;
   overflow: hidden;
   isolation: isolate;
@@ -2645,7 +2663,7 @@ section {
    15.5 PRODUTOS — Cor: Magenta principal
    ------------------- */
 #produtos {
-  background: var(--bg);
+  background: transparent;
   position: relative;
 }
 
@@ -2963,7 +2981,7 @@ section {
    16. PATROCINADORES — Cor: Verde principal, apoio: Magenta
    ------------------- */
 #patrocinadores {
-  background: var(--bg);
+  background: transparent;
   position: relative;
   overflow: hidden;
   width: 100%;
@@ -3459,7 +3477,7 @@ section {
    19. LOCAL — Cor: Azul (repetida)
    ------------------- */
 #local {
-  background: var(--bg);
+  background: transparent;
 }
 
 /* =====================================================
@@ -3639,7 +3657,7 @@ section {
    CONTATO — DIRECT CHANNELS
    ===================================================== */
 #contato {
-  background: var(--bg-2);
+  background: transparent;
   border-top: 1px solid var(--cinza-2);
 }
 
@@ -3745,7 +3763,9 @@ section {
 
 /* Footer */
 footer {
-  background: var(--bg);
+  background: rgba(12, 1, 5, 0.75);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
   border-top: 1px solid var(--cinza-2);
 }
 
