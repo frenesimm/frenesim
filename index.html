@@ -12,7 +12,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet" />
   <link rel="preload" as="image" href="assets/images/hero/banner-site-frenesim-capa.webp" fetchpriority="high" media="(max-width: 640px)" />
   <link rel="preload" as="image" href="assets/images/hero/banner-site-frenesim-capa.png" fetchpriority="high" media="(min-width: 641px)" />
-  <link rel="stylesheet" href="assets/css/style.css?v=41" />
+  <link rel="stylesheet" href="assets/css/style.css?v=42" />
 </head>
 <body>
 
@@ -114,6 +114,36 @@
               <span class="date-ticket-value">12.11.26</span>
               <span class="date-ticket-city">GOIÂNIA · GO · A PARTIR DAS 19H</span>
             </div>
+
+            <!-- Mini Contador Regressivo Neon Digital -->
+            <div class="date-ticket-countdown" id="ticket-countdown" aria-label="Contagem regressiva até o desfile">
+              <div class="countdown-tagline">
+                <span class="countdown-pulse-dot" aria-hidden="true"></span>
+                <span>FALTAM PARA O DESFILE</span>
+              </div>
+              <div class="countdown-digits">
+                <div class="countdown-unit">
+                  <span class="countdown-val" id="countdown-days">--</span>
+                  <span class="countdown-lbl">DIAS</span>
+                </div>
+                <span class="countdown-colon">:</span>
+                <div class="countdown-unit">
+                  <span class="countdown-val" id="countdown-hours">--</span>
+                  <span class="countdown-lbl">HRS</span>
+                </div>
+                <span class="countdown-colon">:</span>
+                <div class="countdown-unit">
+                  <span class="countdown-val" id="countdown-mins">--</span>
+                  <span class="countdown-lbl">MIN</span>
+                </div>
+                <span class="countdown-colon">:</span>
+                <div class="countdown-unit">
+                  <span class="countdown-val" id="countdown-secs">--</span>
+                  <span class="countdown-lbl">SEG</span>
+                </div>
+              </div>
+            </div>
+
             <div class="date-ticket-barcode" aria-hidden="true">
               <span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span>
             </div>

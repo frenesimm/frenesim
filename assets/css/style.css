@@ -1372,6 +1372,87 @@ section {
   margin-top: 3px;
 }
 
+/* Mini Contador Regressivo Neon Integrado na Credencial */
+.date-ticket-countdown {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  padding: 8px 14px 10px;
+  background: rgba(10, 1, 5, 0.7);
+  border-top: 1px solid rgba(255, 0, 152, 0.3);
+  border-bottom: 1px dashed rgba(255, 255, 255, 0.12);
+}
+
+.countdown-tagline {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-family: var(--font-label);
+  font-size: 0.52rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--amarelo);
+}
+
+.countdown-pulse-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: var(--amarelo);
+  box-shadow: 0 0 8px var(--amarelo);
+  animation: pulse-dot 1.2s infinite alternate;
+}
+
+.countdown-digits {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.countdown-unit {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 28px;
+}
+
+.countdown-val {
+  font-family: var(--font-title);
+  font-weight: 900;
+  font-size: 1.18rem;
+  line-height: 1;
+  color: var(--verde);
+  text-shadow: 0 0 10px rgba(0, 255, 191, 0.65);
+  letter-spacing: 0.04em;
+  font-variant-numeric: tabular-nums;
+}
+
+.countdown-lbl {
+  font-family: var(--font-label);
+  font-size: 0.45rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  color: var(--cinza-text);
+  margin-top: 2px;
+}
+
+.countdown-colon {
+  font-family: var(--font-title);
+  font-weight: 900;
+  font-size: 0.95rem;
+  color: var(--magenta);
+  text-shadow: 0 0 8px rgba(255, 0, 152, 0.6);
+  line-height: 1;
+  margin-bottom: 6px;
+  animation: colonBlink 1s infinite alternate;
+}
+
+@keyframes colonBlink {
+  0% { opacity: 0.3; }
+  100% { opacity: 1; }
+}
+
 .date-ticket-barcode {
   display: flex;
   gap: 2px;
