@@ -75,16 +75,20 @@
 
   /* Base — degradê atmosférico Bordô sofisticado */
   --bg: #2A0510;
-  --bg-dark: #150208;
-  --bg-deep: #1A030A;
+  --bg-dark: #120107;
+  --bg-deep: #180209;
   --bg-rich: #3D0719;
   --bg-light: #560B24;
-  --bg-gradient: radial-gradient(ellipse 90% 60% at 50% -10%, rgba(131, 0, 44, 0.45), transparent 70%),
-                 radial-gradient(circle at 90% 40%, rgba(91, 12, 38, 0.35), transparent 50%),
-                 radial-gradient(circle at 10% 70%, rgba(74, 10, 31, 0.4), transparent 50%),
-                 linear-gradient(180deg, #160209 0%, #2A0510 30%, #22040D 65%, #130107 100%);
-  --bg-2: #22040D;
-  --bg-card: rgba(74, 10, 31, 0.85); /* cards levemente mais claros com translucidez para o degradê */
+  --bg-gradient: 
+    radial-gradient(ellipse 90% 45% at 50% -5%, rgba(255, 0, 152, 0.20), transparent 65%),
+    radial-gradient(ellipse 65% 55% at 95% 28%, rgba(0, 0, 255, 0.16), transparent 60%),
+    radial-gradient(ellipse 70% 55% at 5% 62%, rgba(131, 0, 44, 0.45), transparent 65%),
+    radial-gradient(ellipse 60% 45% at 90% 82%, rgba(0, 255, 191, 0.14), transparent 60%),
+    radial-gradient(ellipse 80% 40% at 50% 102%, rgba(255, 248, 0, 0.12), transparent 70%),
+    radial-gradient(circle at 50% 50%, rgba(42, 5, 16, 0.65) 0%, rgba(18, 2, 8, 0.95) 75%, #0b0104 100%),
+    linear-gradient(180deg, #100106 0%, #1e030c 25%, #280410 50%, #1a0209 75%, #080003 100%);
+  --bg-2: #18020a;
+  --bg-card: rgba(58, 8, 24, 0.75); /* cards translúcidos com profundidade */
   --bg-input: #4A0A1F;
   --branco: #FFFFFF;
   --cinza-1: #150208; /* escureci ainda mais o cinza-1 caso seja usado para sombras */
@@ -173,7 +177,7 @@ body {
 }
 
 body {
-  background-color: #160209;
+  background-color: #100106;
   background-image: var(--bg-gradient);
   background-attachment: fixed;
   background-size: cover;
@@ -187,19 +191,20 @@ body {
   min-height: 100vh;
 }
 
-/* Camada marcante de textura / granulação analógica de poster */
+/* Camada cinematográfica 35mm — Granulação analógica fotográfica de alta definição */
 body::before {
   content: '';
   position: fixed;
   inset: 0;
   width: 100%;
   height: 100%;
-  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix type='matrix' values='1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 1.2 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.12'/%3E%3C/svg%3E");
+  background-image: url('../images/grain-35mm.png');
   background-repeat: repeat;
-  background-size: 180px 180px;
+  background-size: 220px 220px;
   pointer-events: none;
   z-index: 9999;
   mix-blend-mode: overlay;
+  opacity: 0.38;
 }
 
 /* Animações Neon Sutis / Respiração Noturna */
@@ -1525,34 +1530,23 @@ section {
 }
 
 /* -------------------
-   13. SOBRE — Cor: Amarelo principal
+   13. SEÇÕES — Fundos Translúcidos Integrados à Atmosfera Noturna
    ------------------- */
-#sobre {
-  background: var(--bg);
-}
-
-#primeira-edicao {
-  background: var(--bg);
-}
-
-#ingressos {
-  background: var(--bg);
-}
-
-#edital {
-  background: var(--bg);
-}
-
-#patrocinadores {
-  background: var(--bg);
-}
-
+#sobre,
+#primeira-edicao,
+#ingressos,
+#produtos,
+#edital,
+#edital-modelos,
+#patrocinadores,
 #local {
-  background: var(--bg);
+  background: transparent;
 }
 
 #contato {
-  background: var(--bg);
+  background: rgba(14, 1, 6, 0.45);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
 }
 
 .sobre-grid {
