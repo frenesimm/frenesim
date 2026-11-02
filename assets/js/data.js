@@ -16,9 +16,11 @@ export const EVENTO = {
   tagline:    'Moda é festa — Festa é moda',
   formato:    ['Passarela', 'Performance', 'Pista'],
 
-  localConfirmado: false,
-  local:       null,              // Atualizar quando confirmar
-  localBairro: null,
+  localConfirmado: true,
+  local:       'Salve! Goró, borogodó e ziriguidum',
+  localBairro: 'St. Marista',
+  localEndereco: 'Avenida Portugal, nº 997, Qd. J15 Lt. 03 — St. Marista, Goiânia - GO',
+  localInstagramUrl: 'https://www.instagram.com/de.umsalve',
 };
 
 export const EQUIPE = [
